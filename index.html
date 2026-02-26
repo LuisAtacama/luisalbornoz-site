@@ -1,157 +1,146 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="es">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Luis Albornoz</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@300;400;500&display=swap" rel="stylesheet">
-
 <style>
-:root{
-  --bg:#000000;
-  --fg:#f4f4f4;
-  --muted:rgba(255,255,255,.55);
-  --max:760px;
+body {
+  margin: 0;
+  background: #000;
+  color: #fff;
+  font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif;
+  display: flex;
+  min-height: 100vh;
+  overflow: hidden;
 }
 
-*{box-sizing:border-box;}
+.container {
+  width: 55%;
+  padding: 8% 6%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  z-index: 2;
+}
 
-html,body{
-  margin:0;
-  padding:0;
-  background:var(--bg);
-  color:var(--fg);
-  font-family:"Inter Tight", system-ui, sans-serif;
-  overflow-x:hidden;
+h1 {
+  font-size: 2.4rem;
+  font-weight: 400;
+  margin-bottom: 1rem;
+  letter-spacing: 0.5px;
+}
+
+.subtitle {
+  font-size: 0.8rem;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: #aaa;
+  margin-bottom: 3rem;
+}
+
+p {
+  max-width: 520px;
+  line-height: 1.7;
+  color: #ccc;
+  margin-bottom: 1.2rem;
+}
+
+.footer {
+  margin-top: 3rem;
+  font-size: 0.75rem;
+  color: #666;
+}
+
+.cv-link {
+  margin-top: 2rem;
+  display: inline-block;
+  text-decoration: none;
+  color: #fff;
+  border-bottom: 1px solid #444;
+  padding-bottom: 3px;
+  transition: opacity 0.3s ease;
+}
+
+.cv-link:hover {
+  opacity: 0.6;
 }
 
 /* VIDEO FANTASMA */
-.video-bg{
-  position:fixed;
-  top:0;
-  left:0;
-  width:100%;
-  height:100%;
-  overflow:hidden;
-  z-index:-1;
+
+.video-wrapper {
+  position: fixed;
+  right: 5%;
+  bottom: 0;
+  height: 100%;
+  display: flex;
+  align-items: flex-end;
+  pointer-events: none;
 }
 
-.video-bg video{
-  width:100%;
-  height:100%;
-  object-fit:cover;
-  filter:blur(6px) grayscale(100%);
-  opacity:0.08;
+.video-ghost {
+  height: 95vh;
+  opacity: 0.08;
+  filter: grayscale(100%) contrast(110%);
+  animation: slowFloat 18s ease-in-out infinite alternate;
 }
 
-/* CONTENIDO */
-.wrap{
-  min-height:100vh;
-  display:flex;
-  justify-content:flex-start;
-  align-items:flex-start;
-  padding:clamp(50px,7vw,90px) 12vw 60px 12vw;
+/* Movimiento leve hacia abajo */
+
+@keyframes slowFloat {
+  0% { transform: translateY(0px); }
+  100% { transform: translateY(20px); }
 }
 
-.content{
-  width:100%;
-  max-width:var(--max);
-}
-
-h1{
-  margin:0;
-  font-size:clamp(24px,3vw,39px);
-  font-weight:500;
-  letter-spacing:-0.015em;
-}
-
-.role{
-  margin-top:22px;
-  font-size:13px;
-  letter-spacing:.14em;
-  text-transform:uppercase;
-  color:var(--muted);
-}
-
-.text{
-  margin-top:80px;
-  font-size:20px;
-  line-height:1.9;
-  font-weight:300;
-}
-
-.text p{
-  margin:0 0 28px 0;
-}
-
-.statement{
-  margin-top:60px;
-  font-weight:400;
-}
-
-.footer{
-  margin-top:130px;
-  font-size:13px;
-  color:var(--muted);
-}
-
-.footer a{
-  color:var(--fg);
-  text-decoration:none;
-  transition:.3s ease;
-}
-
-.footer a:hover{
-  opacity:.7;
+@media (max-width: 900px) {
+  .container {
+    width: 100%;
+    padding: 12% 8%;
+  }
+  .video-wrapper {
+    display: none;
+  }
 }
 </style>
 </head>
 
 <body>
 
-<div class="video-bg">
-  <video autoplay muted loop playsinline>
-    <source src="retrato.mp4" type="video/mp4">
-  </video>
+<div class="container">
+  <h1>Luis Albornoz</h1>
+  <div class="subtitle">Gestor Cultural · Ilusionista · Creador</div>
+
+  <p>
+    Trabajo desde el desierto de Atacama, desarrollando procesos culturales que integran arte, territorio e innovación social.
+  </p>
+
+  <p>
+    Exploro el asombro como herramienta de transformación y descentralización como práctica concreta de desarrollo cultural.
+  </p>
+
+  <p>
+    Me interesa la fragilidad, el tiempo y la experiencia humana como espacios de encuentro entre personas y comunidades.
+  </p>
+
+  <p>
+    El arte no es opcional.  
+    Es una obligación si queremos una sociedad más humana y más sensible.
+  </p>
+
+  <a href="cv-luis-albornoz.pdf" target="_blank" class="cv-link">
+    Ver Curriculum
+  </a>
+
+  <div class="footer">
+    Copiapó, Chile
+  </div>
 </div>
 
-<div class="wrap">
-  <div class="content">
-
-    <h1>Luis Albornoz</h1>
-
-    <div class="role">
-      Gestor cultural · Ilusionista · Creador
-    </div>
-
-    <div class="text">
-      <p>
-        Trabajo desde el desierto de Atacama, desarrollando procesos culturales que integran arte, territorio e innovación social.
-      </p>
-
-      <p>
-        Exploro el asombro como herramienta de transformación y la descentralización como práctica concreta de desarrollo cultural.
-      </p>
-
-      <p>
-        Me interesa la fragilidad, el tiempo y la experiencia humana como espacios de encuentro entre personas y comunidades.
-      </p>
-
-      <p class="statement">
-        El arte no es opcional.<br>
-        Es una obligación si queremos una sociedad más humana y más sensible.
-      </p>
-    </div>
-
-    <div class="footer">
-      Copiapó, Chile<br><br>
-      <a href="mailto:luis@luisalbornoz.cl">Contacto</a> ·
-      <a href="https://www.instagram.com/luisalbornozcortes/" target="_blank">Archivo visual</a> ·
-      <a href="https://www.instagram.com/luisalbornozcortes/" target="_blank">RRSS</a>
-    </div>
-
-  </div>
+<div class="video-wrapper">
+  <video autoplay muted loop playsinline class="video-ghost">
+    <source src="retrato.mp4" type="video/mp4">
+  </video>
 </div>
 
 </body>
