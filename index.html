@@ -5,118 +5,186 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Luis Albornoz</title>
 
+<link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@300;400;500&display=swap" rel="stylesheet">
+
 <style>
-  body{
-    margin:0;
-    background:#000;
-    color:#fff;
-    font-family:-apple-system,BlinkMacSystemFont,"Helvetica Neue",Arial,sans-serif;
-    display:flex;
-    min-height:100vh;
-    overflow:hidden;
-  }
+:root{
+  --bg:#000;
+  --fg:#f4f4f4;
+  --muted:rgba(255,255,255,.60);
+  --hair:rgba(255,255,255,.20);
+}
 
-  .container{
-    width:55%;
-    padding:8% 6%;
-    display:flex;
-    flex-direction:column;
-    justify-content:center;
-    z-index:2;
-  }
+*{ box-sizing:border-box; }
 
-  h1{
-    font-size:2.4rem;
-    font-weight:400;
-    margin:0 0 1rem 0;
-    letter-spacing:.5px;
-  }
+html,body{
+  margin:0;
+  padding:0;
+  background:var(--bg);
+  color:var(--fg);
+  font-family:"Inter Tight", system-ui, -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif;
+  -webkit-font-smoothing:antialiased;
+  overflow:hidden;
+}
 
-  .subtitle{
-    font-size:.8rem;
-    letter-spacing:3px;
-    text-transform:uppercase;
-    color:#aaa;
-    margin-bottom:3rem;
-  }
+.container{
+  width:55%;
+  padding:8% 6%;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  z-index:2;
+}
 
-  p{
-    max-width:520px;
-    line-height:1.7;
-    color:#ccc;
-    margin:0 0 1.2rem 0;
-  }
+h1{
+  font-size:2.4rem;
+  font-weight:500;
+  margin:0 0 1rem 0;
+  letter-spacing:-0.01em;
+}
 
-  .footer{
-    margin-top:3rem;
-    font-size:.75rem;
-    color:#666;
-  }
+.subtitle{
+  font-size:0.8rem;
+  letter-spacing:0.18em;
+  text-transform:uppercase;
+  color:var(--muted);
+  margin-bottom:3rem;
+  font-weight:300;
+}
 
-  .cv-link{
-    margin-top:2rem;
-    display:inline-block;
-    text-decoration:none;
-    color:#fff;
-    border-bottom:1px solid #444;
-    padding-bottom:3px;
-    transition:opacity .3s ease;
-  }
-  .cv-link:hover{ opacity:.6; }
+p{
+  max-width:540px;
+  line-height:1.75;
+  color:rgba(255,255,255,.78);
+  margin:0 0 1.2rem 0;
+  font-weight:300;
+  font-size:1.05rem;
+}
 
-  /* VIDEO “CASI FANTASMA” */
-  .video-wrapper{
-    position:fixed;
-    right:5%;
-    bottom:0;
-    height:100%;
-    display:flex;
-    align-items:flex-end;
-    pointer-events:none;
-  }
+.statement{
+  margin-top:.2rem;
+  color:rgba(255,255,255,.86);
+  font-weight:400;
+}
 
-  .video-ghost{
-    height:95vh;
-    opacity:0.088;              /* +10% presencia aprox (0.08 → 0.088) */
-    filter: grayscale(100%) saturate(0) contrast(110%) blur(0.6px);
-    animation: slowFloat 27s ease-in-out infinite alternate; /* 50% más lento */
-    mix-blend-mode: normal;
-  }
+.footer{
+  margin-top:3rem;
+  max-width:540px;
+  font-size:0.82rem;
+  color:rgba(255,255,255,.60);
+}
 
-  /* Movimiento ultra sutil hacia abajo */
-  @keyframes slowFloat{
-    0%   { transform: translateY(0px); }
-    100% { transform: translateY(12px); }
-  }
+.footer-line{
+  height:1px;
+  background:rgba(255,255,255,.28);
+  width:100%;
+  margin:26px 0 16px 0;
+}
 
-  @media (max-width:900px){
-    .container{ width:100%; padding:12% 8%; }
-    .video-wrapper{ display:none; }
-  }
+.footer-links{
+  letter-spacing:0.14em;
+  text-transform:uppercase;
+  font-weight:300;
+}
+
+.footer-links a{
+  color:var(--fg);
+  text-decoration:none;
+  border-bottom:1px solid transparent;
+  transition:opacity .25s ease, border-color .25s ease;
+}
+
+.footer-links a:hover{
+  opacity:.75;
+  border-color:rgba(255,255,255,.28);
+}
+
+.footer-loc{
+  margin-top:14px;
+  letter-spacing:0.03em;
+}
+
+/* VIDEO FANTASMA */
+.video-wrapper{
+  position:fixed;
+  right:5%;
+  bottom:0;
+  height:100%;
+  display:flex;
+  align-items:flex-end;
+  pointer-events:none;
+}
+
+.video-wrapper::after{
+  content:"";
+  position:absolute;
+  bottom:0;
+  right:0;
+  width:220px;
+  height:220px;
+  background:radial-gradient(circle at bottom right,
+            rgba(0,0,0,1) 40%,
+            rgba(0,0,0,0.85) 65%,
+            rgba(0,0,0,0.6) 80%,
+            transparent 100%);
+  pointer-events:none;
+}
+
+.video-ghost{
+  height:95vh;
+  opacity:0.088;
+  filter:grayscale(100%) saturate(0) contrast(110%) blur(0.6px);
+  animation:slowFloat 27s ease-in-out infinite alternate;
+}
+
+@keyframes slowFloat{
+  0%   { transform: translateY(0px); }
+  100% { transform: translateY(12px); }
+}
+
+@media (max-width:900px){
+  .container{ width:100%; padding:12% 8%; }
+  .video-wrapper{ display:none; }
+  body{ overflow:auto; }
+}
 </style>
 </head>
 
 <body>
 
-  <div class="container">
-    <h1>Luis Albornoz</h1>
-    <div class="subtitle">Gestor Cultural · Ilusionista · Creador</div>
+<div class="container">
+  <h1>Luis Albornoz</h1>
+  <div class="subtitle">Gestor Cultural · Ilusionista · Creador</div>
 
-    <p>Trabajo desde el desierto de Atacama, desarrollando procesos culturales que integran arte, territorio e innovación social.</p>
-    <p>Exploro el asombro como herramienta de transformación y descentralización como práctica concreta de desarrollo cultural.</p>
-    <p>Me interesa la fragilidad, el tiempo y la experiencia humana como espacios de encuentro entre personas y comunidades.</p>
-    <p>El arte no es opcional.<br>Es una obligación si queremos una sociedad más humana y más sensible.</p>
+  <p>Trabajo desde el desierto de Atacama, desarrollando procesos culturales que integran arte, territorio e innovación social.</p>
+  <p>Exploro el asombro como herramienta de transformación y la descentralización como práctica concreta de desarrollo cultural.</p>
+  <p>Me interesa la fragilidad, el tiempo y la experiencia humana como espacios de encuentro entre personas y comunidades.</p>
 
-    <a href="cv-luis-albornoz.pdf" target="_blank" class="cv-link">Ver Curriculum</a>
+  <p class="statement">
+    El arte no es opcional.<br>
+    Es una obligación si queremos una sociedad más humana y más sensible.
+  </p>
 
-    <div class="footer">Copiapó, Chile</div>
+  <div class="footer">
+    <div class="footer-line"></div>
+
+    <div class="footer-links">
+      <a href="mailto:luisalbornoz@gmail.com">CONTACTO</a>
+      &nbsp;·&nbsp;
+      <a href="cv-luisalbornoz.pdf" target="_blank">CV</a>
+      &nbsp;·&nbsp;
+      <a href="https://www.instagram.com/luisalbornozcortes/" target="_blank" rel="noopener">IG</a>
+    </div>
+
+    <div class="footer-loc">Copiapó. Chile.</div>
   </div>
+</div>
 
-  <div class="video-wrapper">
-    <video autoplay muted loop playsinline class="video-ghost">
-      <source src="retrato.mp4" type="video/mp4">
-    </video>
-  </div>
+<div class="video-wrapper">
+  <video autoplay muted loop playsinline class="video-ghost">
+    <source src="retrato.mp4" type="video/mp4">
+  </video>
+</div>
 
 </body>
 </html>
