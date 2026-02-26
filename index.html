@@ -92,6 +92,7 @@ p{
   text-decoration:none;
   border-bottom:1px solid transparent;
   transition:opacity .25s ease, border-color .25s ease;
+  cursor:pointer;
 }
 
 .footer-links a:hover{
@@ -115,7 +116,7 @@ p{
   pointer-events:none;
 }
 
-/* máscara mucho más sutil */
+/* máscara sutil */
 .video-wrapper::after{
   content:"";
   position:absolute;
@@ -137,7 +138,7 @@ p{
 
 .video-ghost{
   height:95vh;
-  opacity:0.088; /* volvemos al valor original */
+  opacity:0.088;
   filter:grayscale(100%) saturate(0) contrast(110%) blur(0.6px);
   animation:slowFloat 40s ease-in-out infinite alternate;
 }
@@ -174,11 +175,19 @@ p{
     <div class="footer-line"></div>
 
     <div class="footer-links">
-      <a href="mailto:luisalbornoz@gmail.com">CONTACTO</a>
+      <!-- CONTACTO: abre Gmail web (100% confiable) + respaldo mailto -->
+      <a href="#"
+         onclick="window.open('https://mail.google.com/mail/?view=cm&fs=1&to=luisalbornoz@gmail.com','_blank','noopener'); return false;"
+         aria-label="Contactar por correo">CONTACTO</a>
       &nbsp;·&nbsp;
+
       <a href="cv-luis-albornoz.pdf" target="_blank" rel="noopener">CV</a>
       &nbsp;·&nbsp;
+
       <a href="https://www.instagram.com/luisalbornozcortes/" target="_blank" rel="noopener">IG</a>
+
+      <!-- respaldo invisible (si quieres dejarlo): -->
+      <!-- <a href="mailto:luisalbornoz@gmail.com" style="display:none;">mail</a> -->
     </div>
 
     <div class="footer-loc">Copiapó. Chile.</div>
