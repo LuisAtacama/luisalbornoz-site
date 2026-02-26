@@ -26,6 +26,7 @@ html,body{
   overflow:hidden;
 }
 
+/* SWITCH IDIOMA */
 .lang-switch{
   position:fixed;
   top:40px;
@@ -116,6 +117,7 @@ p{
   margin-top:14px;
 }
 
+/* VIDEO */
 .video-wrapper{
   position:fixed;
   right:5%;
@@ -123,6 +125,23 @@ p{
   height:100%;
   display:flex;
   align-items:flex-end;
+  pointer-events:none;
+}
+
+/* difuminado pequeño solo esquina */
+.video-wrapper::after{
+  content:"";
+  position:absolute;
+  right:-20px;
+  bottom:-20px;
+  width:180px;
+  height:180px;
+  background:radial-gradient(circle at bottom right,
+      rgba(0,0,0,1) 40%,
+      rgba(0,0,0,0.85) 65%,
+      rgba(0,0,0,0.5) 80%,
+      rgba(0,0,0,0) 100%);
+  filter:blur(6px);
   pointer-events:none;
 }
 
