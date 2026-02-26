@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Luis Albornoz</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@300;400;500&display=swap" rel="stylesheet">
@@ -115,26 +115,27 @@ p{
   pointer-events:none;
 }
 
+/* oscurece esquina inferior derecha para tapar iconos flotantes */
 .video-wrapper::after{
   content:"";
   position:absolute;
   bottom:0;
   right:0;
-  width:220px;
-  height:220px;
+  width:300px;
+  height:300px;
   background:radial-gradient(circle at bottom right,
-            rgba(0,0,0,1) 40%,
-            rgba(0,0,0,0.85) 65%,
-            rgba(0,0,0,0.6) 80%,
+            rgba(0,0,0,1) 45%,
+            rgba(0,0,0,0.9) 65%,
+            rgba(0,0,0,0.7) 80%,
             transparent 100%);
   pointer-events:none;
 }
 
 .video-ghost{
   height:95vh;
-  opacity:0.088;
+  opacity:0.10; /* 10% menos fantasma */
   filter:grayscale(100%) saturate(0) contrast(110%) blur(0.6px);
-  animation:slowFloat 27s ease-in-out infinite alternate;
+  animation:slowFloat 40s ease-in-out infinite alternate; /* 50% más lento aprox */
 }
 
 @keyframes slowFloat{
@@ -171,7 +172,7 @@ p{
     <div class="footer-links">
       <a href="mailto:luisalbornoz@gmail.com">CONTACTO</a>
       &nbsp;·&nbsp;
-     <a href="cv-luis-albornoz.pdf" target="_blank">CV</a>
+      <a href="cv-luis-albornoz.pdf" target="_blank" rel="noopener">CV</a>
       &nbsp;·&nbsp;
       <a href="https://www.instagram.com/luisalbornozcortes/" target="_blank" rel="noopener">IG</a>
     </div>
@@ -182,7 +183,7 @@ p{
 
 <div class="video-wrapper">
   <video autoplay muted loop playsinline class="video-ghost">
-    <source src="retrato.mp4" type="video/mp4">
+    <source src="retrato.mp4" type="video/mp4" />
   </video>
 </div>
 
