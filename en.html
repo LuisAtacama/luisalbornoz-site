@@ -8,7 +8,141 @@
 <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@300;400;500&display=swap" rel="stylesheet">
 
 <style>
-/* mismo CSS que arriba — puedes copiarlo idéntico */
+:root{
+  --bg:#000;
+  --fg:#f4f4f4;
+  --muted:rgba(255,255,255,.60);
+}
+
+*{ box-sizing:border-box; }
+
+html,body{
+  margin:0;
+  padding:0;
+  background:var(--bg);
+  color:var(--fg);
+  font-family:"Inter Tight", system-ui, -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif;
+  -webkit-font-smoothing:antialiased;
+  overflow:hidden;
+}
+
+.lang-switch{
+  position:fixed;
+  top:40px;
+  right:60px;
+  font-size:0.75rem;
+  letter-spacing:0.2em;
+  text-transform:uppercase;
+  color:var(--muted);
+}
+
+.lang-switch a{
+  color:var(--muted);
+  text-decoration:none;
+  margin-left:8px;
+}
+
+.lang-switch a.active{
+  color:#fff;
+}
+
+.container{
+  width:55%;
+  padding:8% 6%;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  position:relative;
+  z-index:2;
+}
+
+h1{
+  font-size:2.4rem;
+  font-weight:500;
+  margin:0 0 1rem 0;
+  letter-spacing:-0.01em;
+}
+
+.subtitle{
+  font-size:0.8rem;
+  letter-spacing:0.18em;
+  text-transform:uppercase;
+  color:var(--muted);
+  margin-bottom:3rem;
+  font-weight:300;
+}
+
+p{
+  max-width:540px;
+  line-height:1.75;
+  color:rgba(255,255,255,.78);
+  margin:0 0 1.2rem 0;
+  font-weight:300;
+  font-size:1.05rem;
+}
+
+.statement{
+  margin-top:.2rem;
+  color:rgba(255,255,255,.86);
+  font-weight:400;
+}
+
+.footer{
+  margin-top:3rem;
+  max-width:540px;
+  font-size:0.82rem;
+  color:rgba(255,255,255,.60);
+}
+
+.footer-line{
+  height:1px;
+  background:rgba(255,255,255,.28);
+  width:100%;
+  margin:26px 0 16px 0;
+}
+
+.footer-links{
+  letter-spacing:0.14em;
+  text-transform:uppercase;
+  font-weight:300;
+}
+
+.footer-links a{
+  color:var(--fg);
+  text-decoration:none;
+}
+
+.footer-loc{
+  margin-top:14px;
+}
+
+.video-wrapper{
+  position:fixed;
+  right:5%;
+  bottom:0;
+  height:100%;
+  display:flex;
+  align-items:flex-end;
+  pointer-events:none;
+}
+
+.video-ghost{
+  height:95vh;
+  opacity:0.088;
+  filter:grayscale(100%) contrast(110%) blur(0.6px);
+  animation:slowFloat 40s ease-in-out infinite alternate;
+}
+
+@keyframes slowFloat{
+  0% { transform: translateY(0px); }
+  100% { transform: translateY(12px); }
+}
+
+@media (max-width:900px){
+  .container{ width:100%; padding:12% 8%; }
+  .video-wrapper{ display:none; }
+  body{ overflow:auto; }
+}
 </style>
 </head>
 
@@ -24,7 +158,7 @@
   <div class="subtitle">Cultural Manager · Illusionist · Creator</div>
 
   <p>I work from the Atacama Desert, developing cultural processes that integrate art, territory, and social innovation.</p>
-  <p>I explore wonder as a tool for transformation, and decentralization as a concrete practice for cultural development.</p>
+  <p>I explore wonder as a tool for transformation and decentralization as a concrete practice for cultural development.</p>
   <p>I am interested in fragility, time, and the human experience as spaces of encounter between people and communities.</p>
 
   <p class="statement">
@@ -34,13 +168,21 @@
 
   <div class="footer">
     <div class="footer-line"></div>
+
     <div class="footer-links">
       <a href="mailto:luisalbornoz@gmail.com">CONTACT</a> ·
       <a href="cv-luis-albornoz.pdf" target="_blank">CV</a> ·
       <a href="https://www.instagram.com/luisalbornozcortes/" target="_blank">IG</a>
     </div>
+
     <div class="footer-loc">Copiapó, Chile.</div>
   </div>
+</div>
+
+<div class="video-wrapper">
+  <video autoplay muted loop playsinline class="video-ghost">
+    <source src="retrato.mp4" type="video/mp4" />
+  </video>
 </div>
 
 </body>
