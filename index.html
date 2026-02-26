@@ -26,6 +26,26 @@ html,body{
   overflow:hidden;
 }
 
+.lang-switch{
+  position:fixed;
+  top:40px;
+  right:60px;
+  font-size:0.75rem;
+  letter-spacing:0.2em;
+  text-transform:uppercase;
+  color:var(--muted);
+}
+
+.lang-switch a{
+  color:var(--muted);
+  text-decoration:none;
+  margin-left:8px;
+}
+
+.lang-switch a.active{
+  color:#fff;
+}
+
 .container{
   width:55%;
   padding:8% 6%;
@@ -90,22 +110,12 @@ p{
 .footer-links a{
   color:var(--fg);
   text-decoration:none;
-  border-bottom:1px solid transparent;
-  transition:opacity .25s ease, border-color .25s ease;
-  cursor:pointer;
-}
-
-.footer-links a:hover{
-  opacity:.75;
-  border-color:rgba(255,255,255,.28);
 }
 
 .footer-loc{
   margin-top:14px;
-  letter-spacing:0.03em;
 }
 
-/* VIDEO */
 .video-wrapper{
   position:fixed;
   right:5%;
@@ -116,35 +126,15 @@ p{
   pointer-events:none;
 }
 
-/* máscara sutil */
-.video-wrapper::after{
-  content:"";
-  position:absolute;
-  right:-60px;
-  bottom:-60px;
-  width:420px;
-  height:420px;
-  border-radius:999px;
-  background:radial-gradient(circle at 70% 70%,
-    rgba(0,0,0,0.85) 0%,
-    rgba(0,0,0,0.55) 40%,
-    rgba(0,0,0,0.25) 65%,
-    rgba(0,0,0,0.0) 85%
-  );
-  filter: blur(12px);
-  opacity:0.6;
-  pointer-events:none;
-}
-
 .video-ghost{
   height:95vh;
   opacity:0.088;
-  filter:grayscale(100%) saturate(0) contrast(110%) blur(0.6px);
+  filter:grayscale(100%) contrast(110%) blur(0.6px);
   animation:slowFloat 40s ease-in-out infinite alternate;
 }
 
 @keyframes slowFloat{
-  0%   { transform: translateY(0px); }
+  0% { transform: translateY(0px); }
   100% { transform: translateY(12px); }
 }
 
@@ -157,6 +147,11 @@ p{
 </head>
 
 <body>
+
+<div class="lang-switch">
+  <a href="index.html" class="active">ES</a> ·
+  <a href="en.html">EN</a>
+</div>
 
 <div class="container">
   <h1>Luis Albornoz</h1>
@@ -173,23 +168,11 @@ p{
 
   <div class="footer">
     <div class="footer-line"></div>
-
     <div class="footer-links">
-      <!-- CONTACTO: abre Gmail web (100% confiable) + respaldo mailto -->
-      <a href="#"
-         onclick="window.open('https://mail.google.com/mail/?view=cm&fs=1&to=luisalbornoz@gmail.com','_blank','noopener'); return false;"
-         aria-label="Contactar por correo">CONTACTO</a>
-      &nbsp;·&nbsp;
-
-      <a href="cv-luis-albornoz.pdf" target="_blank" rel="noopener">CV</a>
-      &nbsp;·&nbsp;
-
-      <a href="https://www.instagram.com/luisalbornozcortes/" target="_blank" rel="noopener">IG</a>
-
-      <!-- respaldo invisible (si quieres dejarlo): -->
-      <!-- <a href="mailto:luisalbornoz@gmail.com" style="display:none;">mail</a> -->
+      <a href="mailto:luisalbornoz@gmail.com">CONTACTO</a> ·
+      <a href="cv-luis-albornoz.pdf" target="_blank">CV</a> ·
+      <a href="https://www.instagram.com/luisalbornozcortes/" target="_blank">IG</a>
     </div>
-
     <div class="footer-loc">Copiapó. Chile.</div>
   </div>
 </div>
