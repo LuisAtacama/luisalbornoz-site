@@ -35,12 +35,17 @@ html,body{
   letter-spacing:0.2em;
   text-transform:uppercase;
   color:var(--muted);
+  z-index:9999;
+  pointer-events:auto;
 }
 
 .lang-switch a{
   color:var(--muted);
   text-decoration:none;
-  margin-left:8px;
+  display:inline-block;
+  padding:10px 8px;
+  margin-left:6px;
+  pointer-events:auto;
 }
 
 .lang-switch a.active{
@@ -125,7 +130,11 @@ p{
   height:100%;
   display:flex;
   align-items:flex-end;
-  pointer-events:none;
+  pointer-events:none !important;
+}
+
+.video-wrapper *{
+  pointer-events:none !important;
 }
 
 /* small blur only bottom-right corner */
@@ -142,7 +151,6 @@ p{
       rgba(0,0,0,0.5) 80%,
       rgba(0,0,0,0) 100%);
   filter:blur(6px);
-  pointer-events:none;
 }
 
 .video-ghost{
@@ -161,6 +169,10 @@ p{
   .container{ width:100%; padding:12% 8%; }
   .video-wrapper{ display:none; }
   body{ overflow:auto; }
+  .lang-switch{
+    top:18px;
+    right:18px;
+  }
 }
 </style>
 </head>
