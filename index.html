@@ -26,7 +26,7 @@ html,body{
   overflow:hidden;
 }
 
-/* SWITCH IDIOMA */
+/* INTERRUPTOR DE IDIOMA */
 .lang-switch{
   position:fixed;
   top:40px;
@@ -122,46 +122,44 @@ p{
   margin-top:14px;
 }
 
-/* VIDEO */
+/* CONTENEDOR DE VIDEO - 40% Y JUSTIFICADO DERECHA ABAJO */
 .video-wrapper{
   position:fixed;
-  right:5%;
+  right:0;
   bottom:0;
-  height:100%;
+  height:40vh; /* Tamaño al 40% */
   display:flex;
   align-items:flex-end;
   pointer-events:none !important;
+  z-index: 1;
 }
 
-.video-wrapper *{
-  pointer-events:none !important;
-}
-
+/* SOMBRA PARA DIFUMINAR BORDES Y LOGO */
 .video-wrapper::after{
   content:"";
   position:absolute;
-  right:-20px;
-  bottom:-20px;
-  width:180px;
-  height:180px;
+  right:0;
+  bottom:0;
+  width:100%;
+  height:100%;
   background:radial-gradient(circle at bottom right,
-      rgba(0,0,0,1) 40%,
-      rgba(0,0,0,0.85) 65%,
-      rgba(0,0,0,0.5) 80%,
-      rgba(0,0,0,0) 100%);
-  filter:blur(6px);
+      rgba(0,0,0,1) 10%, 
+      rgba(0,0,0,0.4) 50%,
+      rgba(0,0,0,0) 90%);
+  filter:blur(10px);
+  z-index: 10;
 }
 
 .video-ghost{
-  height:95vh;
-  opacity:0.088;
-  filter:grayscale(100%) contrast(110%) blur(0.6px);
+  height:100%;
+  opacity:0.12; 
+  filter:grayscale(100%) contrast(110%) blur(0.5px);
   animation:slowFloat 40s ease-in-out infinite alternate;
 }
 
 @keyframes slowFloat{
   0% { transform: translateY(0px); }
-  100% { transform: translateY(12px); }
+  100% { transform: translateY(8px); }
 }
 
 @media (max-width:900px){
@@ -187,23 +185,25 @@ p{
   <h1>Luis Albornoz</h1>
   <div class="subtitle">Gestor Cultural · Ilusionista · Creador</div>
 
-  <p>Trabajo desde el desierto de Atacama, desarrollando procesos culturales que integran arte, territorio e innovación social.</p>
-  <p>Exploro el asombro como herramienta de transformación y la descentralización como práctica concreta de desarrollo cultural.</p>
-  <p>Me interesa la fragilidad, el tiempo y la experiencia humana como espacios de encuentro entre personas y comunidades.</p>
+  <p>Desde el Desierto de Atacama, desarrollo procesos culturales que entrelazan arte, territorio e innovación social.</p>
+
+  <p>Exploro el asombro como un catalizador para la transformación y la descentralización como una práctica concreta para el desarrollo cultural. Mi trabajo se centra en la fragilidad, el tiempo y la experiencia humana —espacios esenciales para la conexión genuina entre individuos y comunidades.</p>
 
   <p class="statement">
     El arte no es opcional.<br>
-    Es una obligación si queremos una sociedad más humana y más sensible.
+    Es una obligación fundamental si queremos fomentar una sociedad más humana y sensible.
   </p>
 
   <div class="footer">
     <div class="footer-line"></div>
+
     <div class="footer-links">
       <a href="mailto:luisalbornoz@gmail.com">CONTACTO</a> ·
       <a href="cv-luis-albornoz.pdf" target="_blank">CV</a> ·
       <a href="https://www.instagram.com/luisalbornozcortes/" target="_blank">IG</a>
     </div>
-    <div class="footer-loc">Copiapó. Chile.</div>
+
+    <div class="footer-loc">Copiapó, Chile.</div>
   </div>
 </div>
 
