@@ -5,13 +5,15 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Luis Albornoz</title>
 
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@300;400;500&display=swap" rel="stylesheet">
 
 <style>
 :root{
   --bg:#000;
   --fg:#f4f4f4;
-  --muted:rgba(255,255,255,.60);
+  --muted:rgba(255,255,255,.65); /* Opacidad sutilmente aumentada para mejor legibilidad */
 }
 
 *{ box-sizing:border-box; }
@@ -34,7 +36,6 @@ html,body{
   font-size:0.75rem;
   letter-spacing:0.2em;
   text-transform:uppercase;
-  color:var(--muted);
   z-index:9999;
   pointer-events:auto;
 }
@@ -45,11 +46,11 @@ html,body{
   display:inline-block;
   padding:10px 8px;
   margin-left:6px;
-  pointer-events:auto;
+  transition: color 0.4s ease; /* Micro-interacción: transición suave */
 }
 
-.lang-switch a.active{
-  color:#fff;
+.lang-switch a:hover, .lang-switch a.active{
+  color:#fff; /* Efecto hover iluminado */
 }
 
 .container{
@@ -69,11 +70,13 @@ h1{
   letter-spacing:-0.01em;
 }
 
-.subtitle{
+/* Semántica web: cambiado a h2 */
+h2.subtitle{
   font-size:0.8rem;
   letter-spacing:0.18em;
   text-transform:uppercase;
   color:var(--muted);
+  margin-top:0;
   margin-bottom:3rem;
   font-weight:300;
 }
@@ -93,7 +96,7 @@ p{
   font-weight:400;
 }
 
-.footer{
+.site-footer{
   margin-top:3rem;
   max-width:540px;
   font-size:0.82rem;
@@ -114,15 +117,20 @@ p{
 }
 
 .footer-links a{
-  color:var(--fg);
+  color:var(--muted); /* Inicia con el color atenuado */
   text-decoration:none;
+  transition: color 0.4s ease; /* Micro-interacción */
+}
+
+.footer-links a:hover{
+  color:#fff; /* Se ilumina al pasar el cursor */
 }
 
 .footer-loc{
   margin-top:14px;
 }
 
-/* VIDEO WRAPPER - VOLVEMOS AL TAMAÑO GRANDE (95vh) */
+/* VIDEO WRAPPER */
 .video-wrapper{
   position:fixed;
   right:5%;
@@ -134,7 +142,6 @@ p{
   z-index: 1;
 }
 
-/* SOMBRA PARA DIFUMINAR BORDES Y LOGO */
 .video-wrapper::after{
   content:"";
   position:absolute;
@@ -143,16 +150,16 @@ p{
   width:350px;
   height:350px;
   background:radial-gradient(circle at bottom right,
-      rgba(0,0,0,1) 30%,     
+      rgba(0,0,0,1) 30%,      
       rgba(0,0,0,0.8) 50%,
       rgba(0,0,0,0) 85%);    
-  filter:blur(15px);         
+  filter:blur(15px);          
   z-index: 10;
 }
 
 .video-ghost{
-  height:95vh; /* Volvemos al 95% de la altura */
-  opacity:0.088; /* Volvemos a la opacidad sutil original */
+  height:95vh; 
+  opacity:0.088; 
   filter:grayscale(100%) contrast(110%) blur(0.6px);
   animation:slowFloat 40s ease-in-out infinite alternate;
 }
@@ -165,7 +172,11 @@ p{
 @media (max-width:900px){
   .container{ width:100%; padding:12% 8%; }
   .video-wrapper{ display:none; }
-  body{ overflow:auto; }
+  body{ 
+    overflow:auto; 
+    /* Fallback visual: un sutil degradado oscuro para mantener la atmósfera en móviles */
+    background: radial-gradient(circle at bottom right, #111 0%, #000 60%);
+  }
   .lang-switch{
     top:18px;
     right:18px;
@@ -176,14 +187,14 @@ p{
 
 <body>
 
-<div class="lang-switch">
+<nav class="lang-switch" aria-label="Selector de idioma">
   <a href="index.html" class="active">ES</a> ·
   <a href="en.html">EN</a>
-</div>
+</nav>
 
-<div class="container">
+<main class="container">
   <h1>Luis Albornoz</h1>
-  <div class="subtitle">Gestor Cultural · Ilusionista · Creador</div>
+  <h2 class="subtitle">Gestor Cultural · Ilusionista · Creador</h2>
 
   <p>Trabajo desde el desierto de Atacama, desarrollando procesos culturales que integran arte, territorio e innovación social.</p>
 
@@ -196,7 +207,7 @@ p{
     Es una obligación si queremos una sociedad más humana y más sensible.
   </p>
 
-  <div class="footer">
+  <footer class="site-footer">
     <div class="footer-line"></div>
 
     <div class="footer-links">
@@ -206,11 +217,12 @@ p{
     </div>
 
     <div class="footer-loc">Copiapó, Chile.</div>
-  </div>
-</div>
+  </footer>
+</main>
 
 <div class="video-wrapper">
   <video autoplay muted loop playsinline class="video-ghost">
+    <source src="retrato.webm" type="video/webm" />
     <source src="retrato.mp4" type="video/mp4" />
   </video>
 </div>
