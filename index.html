@@ -132,22 +132,35 @@ p{
 /* VIDEO WRAPPER */
 .video-wrapper{
   position:fixed;
-  right:0; /* El video queda anclado a la derecha */
+  right:0; 
   bottom:0;
   height:100%;
   display:flex;
   align-items:flex-end;
   pointer-events:none !important;
   z-index: 1;
-  /* LA MAGIA: Esta máscara desvanece el video hacia la izquierda y arriba, borrando cualquier corte o diferencia de color sin oscurecer tu rostro */
   -webkit-mask-image: radial-gradient(ellipse at 100% 100%, black 50%, transparent 95%);
   mask-image: radial-gradient(ellipse at 100% 100%, black 50%, transparent 95%);
 }
 
+/* NUEVO: Sombra focalizada para ocultar el icono en la esquina inferior derecha */
+.video-wrapper::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 150px; /* Ancho de la sombra */
+  height: 150px; /* Alto de la sombra */
+  /* Degradado que va de negro sólido en la esquina a transparente */
+  background: radial-gradient(circle at bottom right, rgba(0,0,0,1) 15%, rgba(0,0,0,0) 70%);
+  z-index: 5;
+  pointer-events: none;
+}
+
 .video-ghost{
   height:95vh; 
-  opacity:0.09; /* Restaurada la opacidad para que tenga presencia */
-  filter:grayscale(100%) contrast(110%); /* Quitamos el desenfoque extra para recuperar la nitidez */
+  opacity:0.09; 
+  filter:grayscale(100%) contrast(110%); 
   animation:slowFloat 40s ease-in-out infinite alternate;
 }
 
