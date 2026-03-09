@@ -141,6 +141,12 @@ p{
   margin-top:14px;
 }
 
+.section-label{
+  color:rgba(255,255,255,.35);
+  font-size:0.7rem;
+  margin-right:8px;
+}
+
 /* VIDEO WRAPPER */
 .video-wrapper{
   position:fixed;
@@ -155,7 +161,6 @@ p{
   mask-image: radial-gradient(ellipse at 100% 100%, black 50%, transparent 95%);
 }
 
-/* Sombra focalizada para ocultar el icono en la esquina inferior derecha */
 .video-wrapper::after {
   content: "";
   position: absolute;
@@ -221,8 +226,15 @@ p{
     <div class="footer-line"></div>
 
     <div class="footer-links">
+      <span class="section-label">WORKS:</span> 
+      <a href="#" onclick="accessProfessional('obra')">UN MAGO EN EL DESIERTO</a> · 
+      <a href="#" onclick="accessProfessional('charla')">EN BUSCA DE LA BELLEZA</a>
+      
+      <br><br>
+
+      <span class="section-label">KIT DE PRENSA:</span> 
+      <a href="#" onclick="accessProfessional('cv')">CV</a> · 
       <a href="mailto:luisalbornoz@gmail.com">CONTACTO</a> ·
-      <a href="luis-albornoz-cv-gestor-cultural-ilusionista.pdf" target="_blank">CV</a> ·
       <a href="https://www.instagram.com/luisalbornozcortes/" target="_blank">IG</a>
     </div>
 
@@ -236,6 +248,24 @@ p{
     <source src="luis-albornoz-ilusionista-creador-atacama.mp4" type="video/mp4" />
   </video>
 </div>
+
+<script>
+  function accessProfessional(tipo) {
+    const masterKey = "ALBORNOZ2026"; 
+    const input = prompt("Acceso Restringido. Por favor, ingresa la clave de acceso profesional:");
+
+    if (input === masterKey) {
+      let file = "";
+      if (tipo === 'cv') file = "luis-albornoz-cv-gestor-cultural-ilusionista.pdf";
+      if (tipo === 'obra') file = "luis-albornoz-un-mago-en-el-desierto-dossier.pdf";
+      if (tipo === 'charla') file = "luis-albornoz-en-busca-de-la-belleza-conferencia.pdf";
+      
+      window.open(file, '_blank');
+    } else if (input !== null) {
+      alert("Clave incorrecta. Contacta a Luis Albornoz para solicitar acceso.");
+    }
+  }
+</script>
 
 </body>
 </html>
