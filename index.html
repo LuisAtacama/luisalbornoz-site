@@ -107,44 +107,54 @@ p{
   font-weight:400;
 }
 
+/* FOOTER CON ESTRUCTURA SEGÚN CAPTURA */
 .site-footer{
-  margin-top:3rem;
+  margin-top:4rem;
   max-width:540px;
-  font-size:0.82rem;
-  color:rgba(255,255,255,.60);
 }
 
 .footer-line{
   height:1px;
-  background:rgba(255,255,255,.28);
+  background:rgba(255,255,255,.15);
   width:100%;
-  margin:26px 0 16px 0;
+  margin-bottom:24px;
 }
 
-.footer-links{
-  letter-spacing:0.14em;
-  text-transform:uppercase;
-  font-weight:300;
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  font-size: 0.82rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  font-weight: 300;
 }
 
-.footer-links a{
-  color:var(--muted); 
-  text-decoration:none;
-  transition: color 0.4s ease; 
+.footer-left, .footer-right {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
 }
 
-.footer-links a:hover{
-  color:#fff; 
+.footer-right {
+  text-align: right;
 }
 
-.footer-loc{
-  margin-top:14px;
+.footer-links a {
+  color: var(--muted);
+  text-decoration: none;
+  transition: color 0.4s ease;
 }
 
-.section-label{
-  color:rgba(255,255,255,.35);
-  font-size:0.7rem;
-  margin-right:8px;
+.footer-links a:hover {
+  color: #fff;
+}
+
+.footer-loc {
+  margin-top: 32px;
+  font-size: 0.82rem;
+  color: rgba(255,255,255,.45);
+  font-weight: 300;
 }
 
 /* VIDEO WRAPPER */
@@ -202,7 +212,7 @@ p{
 
 <body>
 
-<nav class="lang-switch" aria-label="Selector de idioma">
+<nav class="lang-switch">
   <a href="index.html" class="active">ES</a> ·
   <a href="en.html">EN</a>
 </nav>
@@ -212,9 +222,7 @@ p{
   <h2 class="subtitle">Gestor Cultural · Ilusionista · Creador</h2>
 
   <p>Trabajo desde el desierto de Atacama, desarrollando procesos culturales que integran arte, territorio e innovación social.</p>
-
   <p>Exploro el asombro como herramienta de transformación y la descentralización como práctica concreta de desarrollo cultural.</p>
-
   <p>Me interesa la fragilidad, el tiempo y la experiencia humana como espacios de encuentro entre personas y comunidades.</p>
 
   <p class="statement">
@@ -224,21 +232,20 @@ p{
 
   <footer class="site-footer">
     <div class="footer-line"></div>
-
-    <div class="footer-links">
-      <span class="section-label">WORKS:</span> 
-      <a href="#" onclick="accessProfessional('obra')">UN MAGO EN EL DESIERTO</a> · 
-      <a href="#" onclick="accessProfessional('charla')">EN BUSCA DE LA BELLEZA</a>
+    
+    <div class="footer-content footer-links">
+      <div class="footer-left">
+        <a href="mailto:luisalbornoz@gmail.com">CONTACTO</a>
+        <a href="https://www.instagram.com/luisalbornozcortes/" target="_blank">IG</a>
+      </div>
       
-      <br><br>
-
-      <span class="section-label">KIT DE PRENSA:</span> 
-      <a href="#" onclick="accessProfessional('cv')">CV</a> · 
-      <a href="mailto:luisalbornoz@gmail.com">CONTACTO</a> ·
-      <a href="https://www.instagram.com/luisalbornozcortes/" target="_blank">IG</a>
+      <div class="footer-right">
+        <a href="#" onclick="accessProfessional('works')">WORKS</a>
+        <a href="#" onclick="accessProfessional('press')">KIT DE PRENSA</a>
+      </div>
     </div>
 
-    <div class="footer-loc">Copiapó, Chile.</div>
+    <div class="footer-loc">Copiapó. Región de Atacama. Chile</div>
   </footer>
 </main>
 
@@ -255,12 +262,15 @@ p{
     const input = prompt("Acceso Restringido. Por favor, ingresa la clave de acceso profesional:");
 
     if (input === masterKey) {
-      let file = "";
-      if (tipo === 'cv') file = "luis-albornoz-cv-gestor-cultural-ilusionista.pdf";
-      if (tipo === 'obra') file = "luis-albornoz-un-mago-en-el-desierto-dossier.pdf";
-      if (tipo === 'charla') file = "luis-albornoz-en-busca-de-la-belleza-conferencia.pdf";
-      
-      window.open(file, '_blank');
+      if (tipo === 'works') {
+        const choice = prompt("Selecciona el archivo:\n1. Obra: Un Mago en el Desierto\n2. Charla-taller: En Busca de la Belleza\n(Escribe 1 o 2)");
+        if (choice === "1") window.open("luis-albornoz-un-mago-en-el-desierto-dossier.pdf", '_blank');
+        else if (choice === "2") window.open("luis-albornoz-en-busca-de-la-belleza-conferencia.pdf", '_blank');
+        else alert("Opción no válida.");
+      } 
+      else if (tipo === 'press') {
+        window.open("luis-albornoz-cv-gestor-cultural-ilusionista.pdf", '_blank');
+      }
     } else if (input !== null) {
       alert("Clave incorrecta. Contacta a Luis Albornoz para solicitar acceso.");
     }
