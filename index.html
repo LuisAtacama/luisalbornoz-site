@@ -6,15 +6,7 @@
 
 <title>Luis Albornoz | Gestor Cultural, Ilusionista y Creador Escénico</title>
 <meta name="description" content="Luis Albornoz, gestor cultural e ilusionista radicado en el Desierto de Atacama, Chile. Desarrollo de proyectos escénicos que integran arte, territorio e innovación social." />
-<meta name="author" content="Luis Albornoz" />
-<meta name="keywords" content="Luis Albornoz, Gestor Cultural, Ilusionista, Mago, Creador Escénico, Desierto de Atacama, Copiapó, Chile, Fundación Atacamágica, Un Mago en el Desierto" />
-
 <meta name="google-site-verification" content="WfhN4uwgfAY53lBUNFtJsojvkcrOlKd6Qm2Or3vjobs" />
-
-<meta property="og:title" content="Luis Albornoz | Gestor Cultural e Ilusionista" />
-<meta property="og:description" content="Procesos culturales desde el Desierto de Atacama. Explorando el asombro como herramienta de transformación." />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="https://luisalbornoz.cl/" /> 
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -25,165 +17,89 @@
   --bg:#000;
   --fg:#f4f4f4;
   --muted:rgba(255,255,255,.65); 
+  --label-color: rgba(255,255,255,.35);
 }
 
 *{ box-sizing:border-box; }
 
 html,body{
-  margin:0;
-  padding:0;
-  background:var(--bg);
-  color:var(--fg);
-  font-family:"Inter Tight", system-ui, -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif;
+  margin:0; padding:0;
+  background:var(--bg); color:var(--fg);
+  font-family:"Inter Tight", sans-serif;
   -webkit-font-smoothing:antialiased;
   overflow:hidden;
 }
 
-/* SELECTOR DE IDIOMA */
 .lang-switch{
-  position:fixed;
-  top:40px;
-  right:60px;
-  font-size:0.75rem;
-  letter-spacing:0.2em;
-  text-transform:uppercase;
-  z-index:9999;
+  position:fixed; top:40px; right:60px;
+  font-size:0.75rem; letter-spacing:0.2em;
+  text-transform:uppercase; z-index:9999;
 }
 
-.lang-switch a{
-  color:var(--muted);
-  text-decoration:none;
-  padding:10px 8px;
-  transition: color 0.4s ease;
-}
-
+.lang-switch a{ color:var(--muted); text-decoration:none; padding:10px 8px; transition: 0.4s; }
 .lang-switch a.active{ color:#fff; }
 
 .container{
-  width:55%;
-  padding:8% 6%;
-  display:flex;
-  flex-direction:column;
-  justify-content:center;
-  position:relative;
-  z-index:2;
+  width:55%; padding:8% 6%;
+  display:flex; flex-direction:column;
+  justify-content:center; position:relative; z-index:2;
 }
 
 h1{ font-size:2.4rem; font-weight:500; margin:0 0 1rem 0; letter-spacing:-0.01em; }
 
 h2.subtitle{
-  font-size:0.8rem;
-  letter-spacing:0.18em;
-  text-transform:uppercase;
-  color:var(--muted);
-  margin-top:0;
-  margin-bottom:3rem;
-  font-weight:300;
+  font-size:0.8rem; letter-spacing:0.18em;
+  text-transform:uppercase; color:var(--muted);
+  margin-top:0; margin-bottom:3rem; font-weight:300;
 }
 
 p{
-  max-width:540px;
-  line-height:1.75;
-  color:rgba(255,255,255,.78);
-  margin:0 0 1.2rem 0;
-  font-weight:300;
-  font-size:1.05rem;
+  max-width:540px; line-height:1.75;
+  color:rgba(255,255,255,.78); margin:0 0 1.2rem 0;
+  font-weight:300; font-size:1.05rem;
 }
 
-.statement{
-  margin-top:.2rem;
-  color:rgba(255,255,255,.86);
-  font-weight:400;
-}
+.statement{ margin-top:.2rem; color:rgba(255,255,255,.86); font-weight:400; }
 
-/* FOOTER CON ESTRUCTURA SEGÚN CAPTURA */
-.site-footer{
-  margin-top:4rem;
-  max-width:580px;
-}
-
-.footer-line{
-  height:1px;
-  background:rgba(255,255,255,.15);
-  width:100%;
-  margin-bottom:24px;
-}
+.site-footer{ margin-top:4rem; max-width:580px; }
+.footer-line{ height:1px; background:rgba(255,255,255,.15); width:100%; margin-bottom:24px; }
 
 .footer-content {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  font-size: 0.82rem;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  font-weight: 300;
+  display: flex; justify-content: space-between;
+  align-items: flex-start; font-size: 0.82rem;
+  letter-spacing: 0.12em; text-transform: uppercase; font-weight: 300;
 }
 
-.footer-left, .footer-right {
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-}
-
+.footer-left, .footer-right { display: flex; flex-direction: column; gap: 12px; }
 .footer-right { text-align: right; }
 
-.footer-links a {
-  color: var(--muted);
-  text-decoration: none;
-  transition: color 0.4s ease;
-}
-
+.footer-links a { color: var(--muted); text-decoration: none; transition: 0.4s; }
 .footer-links a:hover { color: #fff; }
 
 .section-label {
-  color: rgba(255,255,255,.35);
-  font-size: 0.7rem;
-  margin-right: 8px;
-  letter-spacing: 0.05em;
+  color: var(--label-color); font-size: 0.7rem;
+  margin-right: 8px; letter-spacing: 0.05em;
 }
 
-.footer-loc {
-  margin-top: 32px;
-  font-size: 0.82rem;
-  color: rgba(255,255,255,.45);
-  font-weight: 300;
-}
+.footer-loc { margin-top: 32px; font-size: 0.82rem; color: rgba(255,255,255,.45); font-weight: 300; }
 
-/* VIDEO WRAPPER */
 .video-wrapper{
-  position:fixed;
-  right:0; bottom:0; height:100%;
-  display:flex; align-items:flex-end;
-  pointer-events:none !important;
-  z-index: 1;
+  position:fixed; right:0; bottom:0; height:100%;
+  display:flex; align-items:flex-end; pointer-events:none; z-index: 1;
   -webkit-mask-image: radial-gradient(ellipse at 100% 100%, black 50%, transparent 95%);
-  mask-image: radial-gradient(ellipse at 100% 100%, black 50%, transparent 95%);
-}
-
-.video-wrapper::after {
-  content: "";
-  position: absolute; bottom: 0; right: 0;
-  width: 150px; height: 150px; 
-  background: radial-gradient(circle at bottom right, rgba(0,0,0,1) 15%, rgba(0,0,0,0) 70%);
-  z-index: 5;
 }
 
 .video-ghost{
-  height:95vh; opacity:0.09; 
-  filter:grayscale(100%) contrast(110%); 
+  height:95vh; opacity:0.09; filter:grayscale(100%) contrast(110%); 
   animation:slowFloat 40s ease-in-out infinite alternate;
 }
 
-@keyframes slowFloat{
-  0% { transform: translateY(0px); }
-  100% { transform: translateY(12px); }
-}
+@keyframes slowFloat{ 0% { transform: translateY(0) } 100% { transform: translateY(12px) } }
 
 @media (max-width:900px){
   .container{ width:100%; padding:12% 8%; }
   .video-wrapper{ display:none; }
-  body{ overflow:auto; background: radial-gradient(circle at bottom right, #111 0%, #000 60%); }
-  .lang-switch{ top:18px; right:18px; }
+  body{ overflow:auto; }
 }
 </style>
 </head>
@@ -210,30 +126,25 @@ p{
 
   <footer class="site-footer">
     <div class="footer-line"></div>
-    
     <div class="footer-content footer-links">
       <div class="footer-left">
         <a href="mailto:luisalbornoz@gmail.com">CONTACTO</a>
         <a href="https://www.instagram.com/luisalbornozcortes/" target="_blank">IG</a>
       </div>
-      
       <div class="footer-right">
         <div>
-          <span class="section-label">OBRA</span>
+          <span class="section-label">CREACIÓN</span>
           <a href="#" onclick="accessProfessional('obra')">UN MAGO EN EL DESIERTO</a>
         </div>
-        
         <div>
-          <span class="section-label">CHARLA</span>
-          <a href="#" onclick="accessProfessional('charla')">EN BUSCA DE LA BELLEZA</a>
+          <span class="section-label">CONFERENCIAS Y TALLERES</span>
+          <a href="#" onclick="accessProfessional('transferencia')">EN BUSCA DE LA BELLEZA</a>
         </div>
-
         <div style="margin-top:12px;">
           <a href="#" onclick="accessProfessional('press')">KIT DE PRENSA</a>
         </div>
       </div>
     </div>
-
     <div class="footer-loc">Copiapó. Región de Atacama. Chile</div>
   </footer>
 </main>
@@ -251,14 +162,24 @@ p{
     const input = prompt("Acceso Restringido. Por favor, ingresa la clave de acceso profesional:");
 
     if (input === masterKey) {
-      let file = "";
-      if (tipo === 'obra') file = "luis-albornoz-un-mago-en-el-desierto-dossier.pdf";
-      if (tipo === 'charla') file = "luis-albornoz-en-busca-de-la-belleza-conferencia.pdf";
-      if (tipo === 'press') file = "luis-albornoz-cv-gestor-cultural-ilusionista.pdf";
-      
-      if (file) window.open(file, '_blank');
+      if (tipo === 'obra') {
+        window.open("luis-albornoz-un-mago-en-el-desierto-dossier.pdf", '_blank');
+      } 
+      else if (tipo === 'transferencia') {
+        const perfil = prompt("Selecciona tu perfil para el dossier adecuado:\n1. Empresa / Innovación\n2. Institución Cultural / Social\n(Escribe 1 o 2)");
+        if (perfil === "1") {
+          window.open("luis-albornoz-belleza-empresa.pdf", '_blank');
+        } else if (perfil === "2") {
+          window.open("luis-albornoz-belleza-cultural.pdf", '_blank');
+        } else {
+          alert("Opción no válida.");
+        }
+      }
+      else if (tipo === 'press') {
+        window.open("luis-albornoz-cv-gestor-cultural-ilusionista.pdf", '_blank');
+      }
     } else if (input !== null) {
-      alert("Clave incorrecta. Contacta a Luis Albornoz para solicitar acceso.");
+      alert("Clave incorrecta.");
     }
   }
 </script>
