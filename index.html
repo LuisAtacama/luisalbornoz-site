@@ -5,11 +5,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
 <title>Luis Albornoz | Gestor Cultural, Ilusionista y Creador Escénico</title>
-
-<meta name="description" content="Luis Albornoz, gestor cultural e ilusionista radicado en el Desierto de Atacama, Chile. Desarrollo de proyectos escénicos que integran arte, territorio e innovación social." />
+<meta name="description" content="Luis Albornoz, gestor cultural e ilusionista radicado en el Desierto de Atacama, Chile. Proyectos escénicos que integran arte, territorio e innovación social." />
 <meta name="author" content="Luis Albornoz" />
 <meta name="keywords" content="Luis Albornoz, Gestor Cultural, Ilusionista, Mago, Creador Escénico, Desierto de Atacama, Copiapó, Chile, Fundación Atacamágica, Un Mago en el Desierto" />
-
 <meta name="google-site-verification" content="WfhN4uwgfAY53lBUNFtJsojvkcrOlKd6Qm2Or3vjobs" />
 
 <meta property="og:title" content="Luis Albornoz | Gestor Cultural e Ilusionista" />
@@ -40,7 +38,7 @@ html,body{
   overflow:hidden;
 }
 
-/* INTERRUPTOR DE IDIOMA */
+/* SELECTOR IDIOMA */
 .lang-switch{
   position:fixed;
   top:40px;
@@ -49,21 +47,16 @@ html,body{
   letter-spacing:0.2em;
   text-transform:uppercase;
   z-index:9999;
-  pointer-events:auto;
 }
 
 .lang-switch a{
   color:var(--muted);
   text-decoration:none;
-  display:inline-block;
   padding:10px 8px;
-  margin-left:6px;
   transition: color 0.4s ease;
 }
 
-.lang-switch a:hover, .lang-switch a.active{
-  color:#fff;
-}
+.lang-switch a.active{ color:#fff; }
 
 .container{
   width:55%;
@@ -75,12 +68,7 @@ html,body{
   z-index:2;
 }
 
-h1{
-  font-size:2.4rem;
-  font-weight:500;
-  margin:0 0 1rem 0;
-  letter-spacing:-0.01em;
-}
+h1{ font-size:2.4rem; font-weight:500; margin:0 0 1rem 0; letter-spacing:-0.01em; }
 
 h2.subtitle{
   font-size:0.8rem;
@@ -107,7 +95,7 @@ p{
   font-weight:400;
 }
 
-/* FOOTER CON ESTRUCTURA SEGÚN CAPTURA */
+/* FOOTER MINIMALISTA ESTRATÉGICO */
 .site-footer{
   margin-top:4rem;
   max-width:540px;
@@ -136,9 +124,7 @@ p{
   gap: 12px;
 }
 
-.footer-right {
-  text-align: right;
-}
+.footer-right { text-align: right; }
 
 .footer-links a {
   color: var(--muted);
@@ -146,9 +132,7 @@ p{
   transition: color 0.4s ease;
 }
 
-.footer-links a:hover {
-  color: #fff;
-}
+.footer-links a:hover { color: #fff; }
 
 .footer-loc {
   margin-top: 32px;
@@ -157,14 +141,11 @@ p{
   font-weight: 300;
 }
 
-/* VIDEO WRAPPER */
+/* VIDEO FONDO */
 .video-wrapper{
   position:fixed;
-  right:0; 
-  bottom:0;
-  height:100%;
-  display:flex;
-  align-items:flex-end;
+  right:0; bottom:0; height:100%;
+  display:flex; align-items:flex-end;
   pointer-events:none !important;
   z-index: 1;
   -webkit-mask-image: radial-gradient(ellipse at 100% 100%, black 50%, transparent 95%);
@@ -173,19 +154,14 @@ p{
 
 .video-wrapper::after {
   content: "";
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  width: 150px; 
-  height: 150px; 
+  position: absolute; bottom: 0; right: 0;
+  width: 150px; height: 150px; 
   background: radial-gradient(circle at bottom right, rgba(0,0,0,1) 15%, rgba(0,0,0,0) 70%);
   z-index: 5;
-  pointer-events: none;
 }
 
 .video-ghost{
-  height:95vh; 
-  opacity:0.09; 
+  height:95vh; opacity:0.09; 
   filter:grayscale(100%) contrast(110%); 
   animation:slowFloat 40s ease-in-out infinite alternate;
 }
@@ -198,14 +174,8 @@ p{
 @media (max-width:900px){
   .container{ width:100%; padding:12% 8%; }
   .video-wrapper{ display:none; }
-  body{ 
-    overflow:auto; 
-    background: radial-gradient(circle at bottom right, #111 0%, #000 60%);
-  }
-  .lang-switch{
-    top:18px;
-    right:18px;
-  }
+  body{ overflow:auto; background: radial-gradient(circle at bottom right, #111 0%, #000 60%); }
+  .lang-switch{ top:18px; right:18px; }
 }
 </style>
 </head>
