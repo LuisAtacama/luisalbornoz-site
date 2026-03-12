@@ -100,7 +100,9 @@
         .video-wrapper {
             position: fixed; right: 0; bottom: 0; height: 100%;
             display: flex; align-items: flex-end; pointer-events: none; z-index: 1;
-            -webkit-mask-image: radial-gradient(ellipse at 100% 100%, black 50%, transparent 95%);
+            /* MÁSCARA REFORZADA: Oscurece más la esquina inferior derecha para tapar el icono */
+            -webkit-mask-image: radial-gradient(circle at 95% 95%, transparent 10%, black 60%);
+            mask-image: radial-gradient(circle at 95% 95%, transparent 10%, black 60%);
         }
 
         .video-ghost {
@@ -140,7 +142,7 @@
             <div class="footer-line"></div>
             <div class="footer-content footer-links">
                 <div class="footer-left">
-                    <a href="mailto:luisalbornoz@gmail.com?subject=Consulta%20Profesional" onclick="copyOnly('es')">CONTACTO</a>
+                    <a href="mailto:luisalbornoz@gmail.com?subject=Consulta%20Profesional" target="mailFrame" onclick="copyOnly('es')">CONTACTO</a>
                     <a href="https://www.instagram.com/luisalbornozcortes/" target="_blank">IG</a>
                 </div>
                 <div class="footer-right">
@@ -152,6 +154,8 @@
             <div class="footer-loc">Copiapó. Región de Atacama. Chile</div>
         </footer>
     </main>
+
+    <iframe name="mailFrame" style="display:none"></iframe>
 
     <div id="copy-notice">Correo copiado al portapapeles</div>
 
