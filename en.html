@@ -1,13 +1,13 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Luis Albornoz | Cultural Manager, Magician & Artist</title>
-    <meta name="description" content="Luis Albornoz, cultural manager and illusionist based in the Atacama Desert, Chile. Developing stage projects that integrate art, territory, and social innovation." />
+    <title>Luis Albornoz | Gestor Cultural, Ilusionista y Creador Escénico</title>
+    <meta name="description" content="Luis Albornoz, gestor cultural e ilusionista radicado en el Desierto de Atacama, Chile. Desarrollo de proyectos escénicos que integran arte, territorio e innovación social." />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=IM+Fell+DW+Pica+SC&family=Inter+Tight:wght@300;400;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=IM+Fell+DW+Pica+SC&display=swap" rel="stylesheet">
 
     <style>
         :root {
@@ -21,9 +21,8 @@
         html, body {
             margin: 0; padding: 0;
             background: var(--bg); color: var(--fg);
-            font-family: "Inter Tight", sans-serif;
+            font-family: "EB Garamond", serif; /* Nueva tipografía para todo el sitio */
             -webkit-font-smoothing: antialiased;
-            /* Allows scroll on smaller notebook screens */
             overflow-x: hidden;
             overflow-y: auto;
             height: 100%;
@@ -31,12 +30,12 @@
 
         .lang-switch {
             position: fixed; top: 40px; right: 60px;
-            font-size: 0.75rem; letter-spacing: 0.2em;
+            font-size: 0.85rem; letter-spacing: 0.1em;
             text-transform: uppercase; z-index: 9999;
         }
 
-        .lang-switch a { color: var(--muted); text-decoration: none; padding: 10px 8px; transition: 0.4s; }
-        .lang-switch a.active { color: #fff; }
+        .lang-switch a { color: var(--muted); text-decoration: none; padding: 10px 8px; transition: 0.4s; font-family: "EB Garamond", serif; }
+        .lang-switch a.active { color: #fff; font-weight: 600; }
 
         .container {
             width: 55%; padding: 8% 6%;
@@ -45,7 +44,7 @@
             min-height: 100vh;
         }
 
-        /* Name with IM Fell DW Pica SC */
+        /* Tu nombre en IM Fell DW Pica SC */
         h1 { 
             font-family: "IM Fell DW Pica SC", serif;
             font-weight: 400;
@@ -56,26 +55,34 @@
         }
 
         h2.subtitle {
-            font-size: 0.8rem; letter-spacing: 0.18em;
+            font-family: "EB Garamond", serif;
+            font-size: 0.9rem; letter-spacing: 0.15em;
             text-transform: uppercase; color: var(--muted);
-            margin-top: 0; margin-bottom: 3rem; font-weight: 300;
+            margin-top: 0; margin-bottom: 3.5rem; font-weight: 400;
+            font-style: italic; /* El itálico de Garamond es muy elegante */
         }
 
         p {
-            max-width: 540px; line-height: 1.75;
-            color: rgba(255, 255, 255, .78); margin: 0 0 1.2rem 0;
-            font-weight: 300; font-size: 1.05rem;
+            max-width: 540px; line-height: 1.6;
+            color: rgba(255, 255, 255, .85); margin: 0 0 1.5rem 0;
+            font-weight: 400; font-size: 1.2rem; /* Garamond suele verse un poco más pequeña, subimos el tamaño */
         }
 
-        .statement { margin-top: .2rem; color: rgba(255, 255, 255, .86); font-weight: 400; }
+        .statement { 
+            margin-top: .5rem; 
+            color: #fff; 
+            font-weight: 400; 
+            font-style: italic;
+            font-size: 1.25rem;
+        }
 
         .site-footer { margin-top: 4rem; max-width: 580px; padding-bottom: 40px; }
         .footer-line { height: 1px; background: rgba(255, 255, 255, .15); width: 100%; margin-bottom: 24px; }
 
         .footer-content {
             display: flex; justify-content: space-between;
-            align-items: flex-start; font-size: 0.82rem;
-            letter-spacing: 0.12em; text-transform: uppercase; font-weight: 300;
+            align-items: flex-start; font-size: 0.9rem;
+            letter-spacing: 0.08em; text-transform: uppercase;
         }
 
         .footer-left, .footer-right { display: flex; flex-direction: column; gap: 12px; }
@@ -84,7 +91,7 @@
         .footer-links a { color: var(--muted); text-decoration: none; transition: 0.4s; }
         .footer-links a:hover { color: #fff; }
 
-        .footer-loc { margin-top: 32px; font-size: 0.82rem; color: rgba(255,255,255,.45); font-weight: 300; }
+        .footer-loc { margin-top: 32px; font-size: 0.9rem; color: rgba(255,255,255,.45); font-style: italic; }
 
         .video-wrapper {
             position: fixed; right: 0; bottom: 0; height: 100%;
@@ -108,37 +115,37 @@
 <body>
 
     <nav class="lang-switch">
-        <a href="index.html">ES</a> · 
-        <a href="en.html" class="active">EN</a>
+        <a href="index.html" class="active">ES</a> · 
+        <a href="en.html">EN</a>
     </nav>
 
     <main class="container">
         <h1>Luis Albornoz</h1>
-        <h2 class="subtitle">Cultural Manager · Magician · Artist</h2>
+        <h2 class="subtitle">Gestor Cultural · Ilusionista · Creador</h2>
 
-        <p>I work from the Atacama Desert, developing cultural processes that integrate art, territory, and social innovation.</p>
-        <p>I explore wonder as a tool for transformation and decentralization as a concrete practice of cultural development.</p>
-        <p>I am interested in fragility, time, and the human experience as spaces for encounter between people and communities.</p>
+        <p>Trabajo desde el desierto de Atacama, desarrollando procesos culturales que integran arte, territorio e innovación social.</p>
+        <p>Exploro el asombro como herramienta de transformación y la descentralización como práctica concreta de desarrollo cultural.</p>
+        <p>Me interesa la fragilidad, el tiempo y la experiencia humana como espacios de encuentro entre personas y comunidades.</p>
 
         <p class="statement">
-            Art is not optional.<br>
-            It is an obligation if we want a more humane and sensitive society.
+            El arte no es opcional.<br>
+            Es una obligación si queremos una sociedad más humana y más sensible.
         </p>
 
         <footer class="site-footer">
             <div class="footer-line"></div>
             <div class="footer-content footer-links">
                 <div class="footer-left">
-                    <a href="mailto:luisalbornoz@gmail.com">CONTACT</a>
+                    <a href="mailto:luisalbornoz@gmail.com">CONTACTO</a>
                     <a href="https://www.instagram.com/luisalbornozcortes/" target="_blank">IG</a>
                 </div>
                 <div class="footer-right">
-                    <a href="#" onclick="accessProfessional('obra')">PROJECTS</a>
-                    <a href="#" onclick="accessProfessional('transferencia')">CONFERENCES</a>
-                    <a href="#" onclick="accessProfessional('press')">PRESS KIT</a>
+                    <a href="#" onclick="accessProfessional('obra')">CREACIÓN</a>
+                    <a href="#" onclick="accessProfessional('transferencia')">CONFERENCIAS</a>
+                    <a href="#" onclick="accessProfessional('press')">KIT DE PRENSA</a>
                 </div>
             </div>
-            <div class="footer-loc">Copiapó. Atacama Region. Chile</div>
+            <div class="footer-loc">Copiapó. Región de Atacama. Chile</div>
         </footer>
     </main>
 
@@ -152,29 +159,27 @@
     <script>
         function accessProfessional(tipo) {
             const masterKey = "DESIERTO2026";
-            // Updated English prompt
-            const input = prompt("Restricted Access. Enter key:");
+            const input = prompt("Acceso Restringido. Ingresa clave:");
 
             if (input === masterKey) {
                 if (tipo === 'obra') {
                     window.open("luis-albornoz-un-mago-en-el-desierto-dossier.pdf", '_blank');
                 } 
                 else if (tipo === 'transferencia') {
-                    const profile = prompt("Select your profile for the appropriate dossier:\n1. Corporate / Innovation\n2. Cultural / Social Institution\n(Enter 1 or 2)");
-                    if (profile === "1") {
-                        window.open("luis-albornoz-beauty-corporate.pdf", '_blank');
-                    } else if (profile === "2") {
-                        window.open("luis-albornoz-beauty-cultural.pdf", '_blank');
+                    const perfil = prompt("Selecciona tu perfil para el dossier adecuado:\n1. Empresa / Innovación\n2. Institución Cultural / Social\n(Escribe 1 o 2)");
+                    if (perfil === "1") {
+                        window.open("luis-albornoz-belleza-empresa.pdf", '_blank');
+                    } else if (perfil === "2") {
+                        window.open("luis-albornoz-belleza-cultural.pdf", '_blank');
                     } else {
-                        alert("Invalid option.");
+                        alert("Opción no válida.");
                     }
                 }
                 else if (tipo === 'press') {
-                    // Links to the organized Media Kit Folder
                     window.open("https://drive.google.com/drive/folders/1Z386t4rUbsZg7R92Y4rG-MYBZl6e0bnV?usp=sharing", '_blank');
                 }
             } else if (input !== null) {
-                alert("Incorrect key.");
+                alert("Clave incorrecta.");
             }
         }
     </script>
