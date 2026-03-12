@@ -7,7 +7,7 @@
     <meta name="description" content="Luis Albornoz, gestor cultural e ilusionista radicado en el Desierto de Atacama, Chile. Desarrollo de proyectos escénicos que integran arte, territorio e innovación social." />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@700&family=Inter+Tight:wght@300;400;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=IM+Fell+DW+Pica+SC&family=Inter+Tight:wght@300;400;500&display=swap" rel="stylesheet">
 
     <style>
         :root {
@@ -23,7 +23,6 @@
             background: var(--bg); color: var(--fg);
             font-family: "Inter Tight", sans-serif;
             -webkit-font-smoothing: antialiased;
-            /* Permite scroll en notebooks con pantallas pequeñas */
             overflow-x: hidden;
             overflow-y: auto;
             height: 100%;
@@ -45,13 +44,14 @@
             min-height: 100vh;
         }
 
-        /* Tu nombre con la nueva tipografía Fraunces Bold */
+        /* Estilo para tu nombre con IM Fell DW Pica SC */
         h1 { 
-            font-family: "Fraunces", serif;
-            font-weight: 700;
-            font-size: 2.8rem;
-            margin: 0 0 1rem 0; 
-            letter-spacing: -0.01em; 
+            font-family: "IM Fell DW Pica SC", serif;
+            font-weight: 400; /* Esta fuente tiene su propio grosor histórico */
+            font-size: 3.2rem; /* Aumentamos un poco el tamaño para lucir sus detalles */
+            margin: 0 0 0.8rem 0; 
+            letter-spacing: 0.02em; 
+            color: #fff;
         }
 
         h2.subtitle {
@@ -151,7 +151,6 @@
     <script>
         function accessProfessional(tipo) {
             const masterKey = "ALBORNOZ2026";
-            // Texto del prompt actualizado
             const input = prompt("Acceso Restringido. Ingresa clave:");
 
             if (input === masterKey) {
@@ -169,7 +168,6 @@
                     }
                 }
                 else if (tipo === 'press') {
-                    // Acceso a la carpeta organizada de Google Drive
                     window.open("https://drive.google.com/drive/folders/1Z386t4rUbsZg7R92Y4rG-MYBZl6e0bnV?usp=sharing", '_blank');
                 }
             } else if (input !== null) {
