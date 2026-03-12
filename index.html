@@ -100,7 +100,7 @@
         .video-wrapper {
             position: fixed; right: 0; bottom: 0; height: 100%;
             display: flex; align-items: flex-end; pointer-events: none; z-index: 1;
-            /* MÁSCARA QUIRÚRGICA: Solo oculta el rincón inferior derecho */
+            /* Máscara quirúrgica: oculta solo el rincón inferior derecho */
             -webkit-mask-image: radial-gradient(ellipse at 98% 98%, transparent 0%, black 15%);
             mask-image: radial-gradient(ellipse at 98% 98%, transparent 0%, black 15%);
         }
@@ -167,13 +167,20 @@
     <script>
         function handleContact(lang) {
             const email = "luisalbornoz@gmail.com";
-            // Solo copia al portapapeles para evitar errores de navegación
+            
+            // 1. Copia al portapapeles para todos los dispositivos
             navigator.clipboard.writeText(email).then(() => {
                 const notice = document.getElementById('copy-notice');
                 notice.innerText = lang === 'es' ? "Correo copiado al portapapeles" : "Email copied to clipboard";
                 notice.style.opacity = "1";
                 setTimeout(() => { notice.style.opacity = "0"; }, 2500);
             });
+
+            // 2. Solo intenta abrir el gestor de correo en dispositivos móviles
+            const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+            if (isMobile) {
+                window.location.href = `mailto:${email}?subject=Consulta%20Profesional`;
+            }
         }
 
         function accessProfessional(tipo) {
