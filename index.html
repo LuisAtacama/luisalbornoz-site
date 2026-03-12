@@ -1,184 +1,219 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Luis Albornoz | Ilusionista, Gestor Cultural y Conferencista</title>
-    <meta name="description" content="Luis Albornoz, ilusionista y gestor cultural radicado en el Desierto de Atacama. Desarrollo de proyectos escénicos e innovación social." />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=IM+Fell+DW+Pica+SC&family=Inter+Tight:wght@300;400;500&display=swap" rel="stylesheet">
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Luis Albornoz</title>
 
-    <style>
-        :root {
-            --bg: #000;
-            --fg: #f4f4f4;
-            --muted: rgba(255, 255, 255, .65);
-        }
+<link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@300;400;500&display=swap" rel="stylesheet">
 
-        * { box-sizing: border-box; }
+<style>
+:root{
+  --bg:#000;
+  --fg:#f4f4f4;
+  --muted:rgba(255,255,255,.60);
+}
 
-        html, body {
-            margin: 0; padding: 0;
-            background: var(--bg); color: var(--fg);
-            font-family: "Inter Tight", sans-serif;
-            -webkit-font-smoothing: antialiased;
-            overflow-x: hidden;
-            overflow-y: auto;
-            height: 100%;
-        }
+*{ box-sizing:border-box; }
 
-        .lang-switch {
-            position: fixed; top: 40px; right: 60px;
-            font-size: 0.75rem; letter-spacing: 0.2em;
-            text-transform: uppercase; z-index: 9999;
-        }
+html,body{
+  margin:0;
+  padding:0;
+  background:var(--bg);
+  color:var(--fg);
+  font-family:"Inter Tight", system-ui, -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif;
+  -webkit-font-smoothing:antialiased;
+  overflow:hidden;
+}
 
-        .lang-switch a { color: var(--muted); text-decoration: none; padding: 10px 8px; transition: 0.4s; }
-        .lang-switch a.active { color: #fff; }
+/* INTERRUPTOR DE IDIOMA */
+.lang-switch{
+  position:fixed;
+  top:40px;
+  right:60px;
+  font-size:0.75rem;
+  letter-spacing:0.2em;
+  text-transform:uppercase;
+  color:var(--muted);
+  z-index:9999;
+  pointer-events:auto;
+}
 
-        .container {
-            width: 55%; padding: 8% 6%;
-            display: flex; flex-direction: column;
-            justify-content: center; position: relative; z-index: 2;
-            min-height: 100vh;
-        }
+.lang-switch a{
+  color:var(--muted);
+  text-decoration:none;
+  display:inline-block;
+  padding:10px 8px;
+  margin-left:6px;
+  pointer-events:auto;
+}
 
-        /* Tu nombre en IM Fell DW Pica SC */
-        h1 { 
-            font-family: "IM Fell DW Pica SC", serif;
-            font-weight: 400;
-            font-size: 3.2rem;
-            margin: 0 0 0.8rem 0; 
-            letter-spacing: 0.02em; 
-            color: #fff;
-        }
+.lang-switch a.active{
+  color:#fff;
+}
 
-        /* Subtítulo actualizado según tu indicación */
-        h2.subtitle {
-            font-size: 0.75rem; 
-            letter-spacing: 0.25em; /* Un poco más de aire para el nuevo texto */
-            text-transform: uppercase; 
-            color: var(--muted);
-            margin-top: 0; 
-            margin-bottom: 3rem; 
-            font-weight: 300;
-        }
+.container{
+  width:55%;
+  padding:8% 6%;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  position:relative;
+  z-index:2;
+}
 
-        p {
-            max-width: 540px; line-height: 1.75;
-            color: rgba(255, 255, 255, .78); margin: 0 0 1.2rem 0;
-            font-weight: 300; font-size: 1.05rem;
-        }
+h1{
+  font-size:2.4rem;
+  font-weight:500;
+  margin:0 0 1rem 0;
+  letter-spacing:-0.01em;
+}
 
-        .statement { margin-top: .2rem; color: rgba(255, 255, 255, .86); font-weight: 400; }
+.subtitle{
+  font-size:0.8rem;
+  letter-spacing:0.18em;
+  text-transform:uppercase;
+  color:var(--muted);
+  margin-bottom:3rem;
+  font-weight:300;
+}
 
-        .site-footer { margin-top: 4rem; max-width: 580px; padding-bottom: 40px; }
-        .footer-line { height: 1px; background: rgba(255, 255, 255, .15); width: 100%; margin-bottom: 24px; }
+p{
+  max-width:540px;
+  line-height:1.75;
+  color:rgba(255,255,255,.78);
+  margin:0 0 1.2rem 0;
+  font-weight:300;
+  font-size:1.05rem;
+}
 
-        .footer-content {
-            display: flex; justify-content: space-between;
-            align-items: flex-start; font-size: 0.82rem;
-            letter-spacing: 0.12em; text-transform: uppercase; font-weight: 300;
-        }
+.statement{
+  margin-top:.2rem;
+  color:rgba(255,255,255,.86);
+  font-weight:400;
+}
 
-        .footer-left, .footer-right { display: flex; flex-direction: column; gap: 12px; }
-        .footer-right { text-align: right; }
+.footer{
+  margin-top:3rem;
+  max-width:540px;
+  font-size:0.82rem;
+  color:rgba(255,255,255,.60);
+}
 
-        .footer-links a { color: var(--muted); text-decoration: none; transition: 0.4s; }
-        .footer-links a:hover { color: #fff; }
+.footer-line{
+  height:1px;
+  background:rgba(255,255,255,.28);
+  width:100%;
+  margin:26px 0 16px 0;
+}
 
-        .footer-loc { margin-top: 32px; font-size: 0.82rem; color: rgba(255,255,255,.45); font-weight: 300; }
+.footer-links{
+  letter-spacing:0.14em;
+  text-transform:uppercase;
+  font-weight:300;
+}
 
-        .video-wrapper {
-            position: fixed; right: 0; bottom: 0; height: 100%;
-            display: flex; align-items: flex-end; pointer-events: none; z-index: 1;
-            -webkit-mask-image: radial-gradient(ellipse at 100% 100%, black 50%, transparent 95%);
-        }
+.footer-links a{
+  color:var(--fg);
+  text-decoration:none;
+}
 
-        .video-ghost {
-            height: 95vh; opacity: 0.09; filter: grayscale(100%) contrast(110%);
-            animation: slowFloat 40s ease-in-out infinite alternate;
-        }
+.footer-loc{
+  margin-top:14px;
+}
 
-        @keyframes slowFloat { 0% { transform: translateY(0) } 100% { transform: translateY(12px) } }
+/* VIDEO WRAPPER */
+.video-wrapper{
+  position:fixed;
+  right:5%;
+  bottom:0;
+  height:100%;
+  display:flex;
+  align-items:flex-end;
+  pointer-events:none !important;
+  z-index: 1;
+}
 
-        @media (max-width: 900px) {
-            .container { width: 100%; padding: 12% 8%; }
-            .video-wrapper { display: none; }
-        }
-    </style>
+/* SOMBRA PARA DIFUMINAR BORDES Y LOGO */
+.video-wrapper::after{
+  content:"";
+  position:absolute;
+  right:-30px;
+  bottom:-30px;
+  width:350px;
+  height:350px;
+  background:radial-gradient(circle at bottom right,
+      rgba(0,0,0,1) 30%,     
+      rgba(0,0,0,0.8) 50%,
+      rgba(0,0,0,0) 85%);    
+  filter:blur(15px);         
+  z-index: 10;
+}
+
+.video-ghost{
+  height:95vh;
+  opacity:0.088;
+  filter:grayscale(100%) contrast(110%) blur(0.6px);
+  animation:slowFloat 40s ease-in-out infinite alternate;
+}
+
+@keyframes slowFloat{
+  0% { transform: translateY(0px); }
+  100% { transform: translateY(12px); }
+}
+
+@media (max-width:900px){
+  .container{ width:100%; padding:12% 8%; }
+  .video-wrapper{ display:none; }
+  body{ overflow:auto; }
+  .lang-switch{
+    top:18px;
+    right:18px;
+  }
+}
+</style>
 </head>
+
 <body>
 
-    <nav class="lang-switch">
-        <a href="index.html" class="active">ES</a> · 
-        <a href="en.html">EN</a>
-    </nav>
+<div class="lang-switch">
+  <a href="index.html" class="active">ES</a> ·
+  <a href="en.html">EN</a>
+</div>
 
-    <main class="container">
-        <h1>Luis Albornoz</h1>
-        <h2 class="subtitle">ILUSIONISTA · GESTOR CULTURAL · CONFERENCISTA</h2>
+<div class="container">
+  <h1>Luis Albornoz</h1>
+  <div class="subtitle">Gestor Cultural · Ilusionista · Creador</div>
 
-        <p>Trabajo desde el desierto de Atacama, desarrollando procesos culturales que integran arte, territorio e innovación social.</p>
-        <p>Exploro el asombro como herramienta de transformación y la descentralización como práctica concreta de desarrollo cultural.</p>
-        <p>Me interesa la fragilidad, el tiempo y la experiencia humana como espacios de encuentro entre personas y comunidades.</p>
+  <p>Radicado en el desierto de Atacama, desarrollo procesos culturales que entrelazan arte, territorio e innovación social.</p>
 
-        <p class="statement">
-            El arte no es opcional.<br>
-            Es una obligación si queremos una sociedad más humana y más sensible.
-        </p>
+  <p>Exploro el asombro como herramienta de transformación y la descentralización como práctica concreta para el desarrollo cultural.</p>
 
-        <footer class="site-footer">
-            <div class="footer-line"></div>
-            <div class="footer-content footer-links">
-                <div class="footer-left">
-                    <a href="mailto:luisalbornoz@gmail.com">CONTACTO</a>
-                    <a href="https://www.instagram.com/luisalbornozcortes/" target="_blank">IG</a>
-                </div>
-                <div class="footer-right">
-                    <a href="#" onclick="accessProfessional('obra')">CREACIÓN</a>
-                    <a href="#" onclick="accessProfessional('transferencia')">CONFERENCIAS</a>
-                    <a href="#" onclick="accessProfessional('press')">KIT DE PRENSA</a>
-                </div>
-            </div>
-            <div class="footer-loc">Copiapó. Región de Atacama. Chile</div>
-        </footer>
-    </main>
+  <p>Me interesa la fragilidad, el tiempo y la experiencia humana como espacios de encuentro entre personas y comunidades.</p>
 
-    <div class="video-wrapper">
-        <video autoplay muted loop playsinline class="video-ghost">
-            <source src="luis-albornoz-ilusionista-creador-atacama.webm" type="video/webm" />
-            <source src="luis-albornoz-ilusionista-creador-atacama.mp4" type="video/mp4" />
-        </video>
+  <p class="statement">
+    El arte no es opcional.<br>
+    Es una obligación si queremos una sociedad más humana y más sensible.
+  </p>
+
+  <div class="footer">
+    <div class="footer-line"></div>
+
+    <div class="footer-links">
+      <a href="mailto:luisalbornoz@gmail.com">CONTACTO</a> ·
+      <a href="cv-luis-albornoz.pdf" target="_blank">CV</a> ·
+      <a href="https://www.instagram.com/luisalbornozcortes/" target="_blank">IG</a>
     </div>
 
-    <script>
-        function accessProfessional(tipo) {
-            const masterKey = "DESIERTO2026";
-            const input = prompt("Acceso Restringido. Ingresa clave:");
+    <div class="footer-loc">Copiapó, Chile.</div>
+  </div>
+</div>
 
-            if (input === masterKey) {
-                if (tipo === 'obra') {
-                    window.open("luis-albornoz-un-mago-en-el-desierto-dossier.pdf", '_blank');
-                } 
-                else if (tipo === 'transferencia') {
-                    const perfil = prompt("Selecciona tu perfil para el dossier adecuado:\n1. Empresa / Innovación\n2. Institución Cultural / Social\n(Escribe 1 o 2)");
-                    if (perfil === "1") {
-                        window.open("luis-albornoz-belleza-empresa.pdf", '_blank');
-                    } else if (perfil === "2") {
-                        window.open("luis-albornoz-belleza-cultural.pdf", '_blank');
-                    } else {
-                        alert("Opción no válida.");
-                    }
-                }
-                else if (tipo === 'press') {
-                    window.open("https://drive.google.com/drive/folders/1Z386t4rUbsZg7R92Y4rG-MYBZl6e0bnV?usp=sharing", '_blank');
-                }
-            } else if (input !== null) {
-                alert("Clave incorrecta.");
-            }
-        }
-    </script>
+<div class="video-wrapper">
+  <video autoplay muted loop playsinline class="video-ghost">
+    <source src="retrato.mp4" type="video/mp4" />
+  </video>
+</div>
+
 </body>
 </html>
