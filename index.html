@@ -88,7 +88,6 @@
 
         .footer-loc { margin-top: 32px; font-size: 0.82rem; color: rgba(255,255,255,.45); font-weight: 300; }
 
-        /* Aviso de copiado discreto */
         #copy-notice {
             position: fixed; bottom: 40px; left: 60px;
             font-size: 0.7rem; letter-spacing: 0.1em;
@@ -141,7 +140,7 @@
             <div class="footer-line"></div>
             <div class="footer-content footer-links">
                 <div class="footer-left">
-                    <a onclick="copyEmail('es')">CONTACTO</a>
+                    <a href="mailto:luisalbornoz@gmail.com?subject=Consulta%20Profesional" onclick="copyOnly('es')">CONTACTO</a>
                     <a href="https://www.instagram.com/luisalbornozcortes/" target="_blank">IG</a>
                 </div>
                 <div class="footer-right">
@@ -164,21 +163,14 @@
     </div>
 
     <script>
-        function copyEmail(lang) {
+        function copyOnly(lang) {
             const email = "luisalbornoz@gmail.com";
-            
-            // 1. Copia inmediata al portapapeles (Infalible)
             navigator.clipboard.writeText(email).then(() => {
                 const notice = document.getElementById('copy-notice');
                 notice.innerText = lang === 'es' ? "Correo copiado al portapapeles" : "Email copied to clipboard";
                 notice.style.opacity = "1";
                 setTimeout(() => { notice.style.opacity = "0"; }, 2500);
             });
-
-            // 2. Intento de apertura de mailto con ligero retraso para no interferir con la copia
-            setTimeout(() => {
-                window.location.href = `mailto:${email}?subject=Consulta%20Profesional`;
-            }, 100);
         }
 
         function accessProfessional(tipo) {
