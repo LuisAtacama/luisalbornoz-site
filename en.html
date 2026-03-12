@@ -7,7 +7,7 @@
     <meta name="description" content="Luis Albornoz, cultural manager and illusionist based in the Atacama Desert, Chile. Developing stage projects that integrate art, territory, and social innovation." />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@700&family=Inter+Tight:wght@300;400;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=IM+Fell+DW+Pica+SC&family=Inter+Tight:wght@300;400;500&display=swap" rel="stylesheet">
 
     <style>
         :root {
@@ -23,7 +23,7 @@
             background: var(--bg); color: var(--fg);
             font-family: "Inter Tight", sans-serif;
             -webkit-font-smoothing: antialiased;
-            /* Allows scroll on smaller screens */
+            /* Allows scroll on smaller notebook screens */
             overflow-x: hidden;
             overflow-y: auto;
             height: 100%;
@@ -45,13 +45,14 @@
             min-height: 100vh;
         }
 
-        /* Name in Fraunces Bold */
+        /* Name with IM Fell DW Pica SC */
         h1 { 
-            font-family: "Fraunces", serif;
-            font-weight: 700;
-            font-size: 2.8rem;
-            margin: 0 0 1rem 0; 
-            letter-spacing: -0.01em; 
+            font-family: "IM Fell DW Pica SC", serif;
+            font-weight: 400;
+            font-size: 3.2rem;
+            margin: 0 0 0.8rem 0; 
+            letter-spacing: 0.02em; 
+            color: #fff;
         }
 
         h2.subtitle {
@@ -150,8 +151,8 @@
 
     <script>
         function accessProfessional(tipo) {
-            const masterKey = "ALBORNOZ2026";
-            // Updated access prompt in English
+            const masterKey = "DESIERTO2026";
+            // Updated English prompt
             const input = prompt("Restricted Access. Enter key:");
 
             if (input === masterKey) {
@@ -169,6 +170,7 @@
                     }
                 }
                 else if (tipo === 'press') {
+                    // Links to the organized Media Kit Folder
                     window.open("https://drive.google.com/drive/folders/1Z386t4rUbsZg7R92Y4rG-MYBZl6e0bnV?usp=sharing", '_blank');
                 }
             } else if (input !== null) {
