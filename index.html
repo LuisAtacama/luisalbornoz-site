@@ -100,9 +100,9 @@
         .video-wrapper {
             position: fixed; right: 0; bottom: 0; height: 100%;
             display: flex; align-items: flex-end; pointer-events: none; z-index: 1;
-            /* Máscara reforzada para tapar el icono inferior derecho */
-            -webkit-mask-image: radial-gradient(circle at 95% 95%, transparent 10%, black 60%);
-            mask-image: radial-gradient(circle at 95% 95%, transparent 10%, black 60%);
+            /* MÁSCARA QUIRÚRGICA: Solo oculta el rincón inferior derecho */
+            -webkit-mask-image: radial-gradient(ellipse at 98% 98%, transparent 0%, black 15%);
+            mask-image: radial-gradient(ellipse at 98% 98%, transparent 0%, black 15%);
         }
 
         .video-ghost {
@@ -167,18 +167,13 @@
     <script>
         function handleContact(lang) {
             const email = "luisalbornoz@gmail.com";
-            
-            // 1. Copiar al portapapeles (Acción inmediata e infalible)
+            // Solo copia al portapapeles para evitar errores de navegación
             navigator.clipboard.writeText(email).then(() => {
                 const notice = document.getElementById('copy-notice');
                 notice.innerText = lang === 'es' ? "Correo copiado al portapapeles" : "Email copied to clipboard";
                 notice.style.opacity = "1";
                 setTimeout(() => { notice.style.opacity = "0"; }, 2500);
             });
-
-            // 2. Intento de apertura directa (Sin iframes ni targets raros que Safari bloquea)
-            const mailtoLink = `mailto:${email}?subject=Consulta%20Profesional`;
-            window.location.href = mailtoLink;
         }
 
         function accessProfessional(tipo) {
