@@ -44,11 +44,11 @@
             min-height: 100vh;
         }
 
-        /* AJUSTE NOMBRE: Inter Tight, peso 900 y ancho controlado */
+        /* AJUSTE: Nombre reducido y en Inter Tight */
         h1 { 
             font-family: "Inter Tight", sans-serif;
             font-weight: 900;
-            font-size: clamp(2.5rem, 6vw, 4.2rem); 
+            font-size: 2.7rem; /* Reducido levemente */
             margin: 0; 
             letter-spacing: -0.02em; 
             color: #fff;
@@ -56,21 +56,21 @@
             width: 100%;
             max-width: 540px;
             line-height: 1;
+            text-align: left;
         }
 
-        /* AJUSTE BAJADA: Flexbox para ocupar el mismo ancho que el nombre (cuadrado) */
+        /* AJUSTE: Bajada justificada a la izquierda (sin expandir) */
         h2.subtitle {
-            font-size: 0.68rem; 
+            font-size: 0.72rem; 
             text-transform: uppercase; 
             color: var(--muted);
             margin-top: 0.6rem; 
-            margin-bottom: 3.5rem; 
+            margin-bottom: 3rem; 
             font-weight: 300;
-            display: flex;
-            justify-content: space-between; /* Expande el texto de borde a borde */
+            letter-spacing: 0.22em; /* Espaciado fijo, no forzado */
             max-width: 540px;
             width: 100%;
-            letter-spacing: 0.05em;
+            text-align: left;
         }
 
         p {
@@ -125,7 +125,6 @@
             .container { width: 100%; padding: 12% 8%; }
             .video-wrapper { display: none; }
             h1, h2.subtitle, p, .site-footer { max-width: 100%; }
-            h2.subtitle { font-size: 0.55rem; }
         }
     </style>
 </head>
@@ -138,13 +137,7 @@
 
     <main class="container">
         <h1>Luis Albornoz</h1>
-        <h2 class="subtitle">
-            <span>Ilusionista</span>
-            <span>·</span>
-            <span>Gestor Cultural</span>
-            <span>·</span>
-            <span>Conferencista</span>
-        </h2>
+        <h2 class="subtitle">ILUSIONISTA · GESTOR CULTURAL · CONFERENCISTA</h2>
 
         <p>Radicado en el desierto de Atacama, desarrollo procesos culturales que entrelazan arte, territorio e innovación social.</p>
         <p>Exploro el asombro como herramienta de transformación y la descentralización como práctica concreta para el desarrollo cultural.</p>
