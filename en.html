@@ -100,7 +100,9 @@
         .video-wrapper {
             position: fixed; right: 0; bottom: 0; height: 100%;
             display: flex; align-items: flex-end; pointer-events: none; z-index: 1;
-            -webkit-mask-image: radial-gradient(ellipse at 100% 100%, black 50%, transparent 95%);
+            /* Máscara quirúrgica: oculta solo el rincón inferior derecho */
+            -webkit-mask-image: radial-gradient(ellipse at 98% 98%, transparent 0%, black 15%);
+            mask-image: radial-gradient(ellipse at 98% 98%, transparent 0%, black 15%);
         }
 
         .video-ghost {
@@ -140,7 +142,7 @@
             <div class="footer-line"></div>
             <div class="footer-content footer-links">
                 <div class="footer-left">
-                    <a onclick="copyEmail('en')">CONTACT</a>
+                    <a onclick="handleContact('en')">CONTACT</a>
                     <a href="https://www.instagram.com/luisalbornozcortes/" target="_blank">IG</a>
                 </div>
                 <div class="footer-right">
@@ -163,10 +165,10 @@
     </div>
 
     <script>
-        function copyEmail(lang) {
+        function handleContact(lang) {
             const email = "luisalbornoz@gmail.com";
             
-            // 1. Copiar al portapapeles (Infalible)
+            // 1. Copia al portapapeles (Para todos)
             navigator.clipboard.writeText(email).then(() => {
                 const notice = document.getElementById('copy-notice');
                 notice.innerText = lang === 'es' ? "Correo copiado al portapapeles" : "Email copied to clipboard";
@@ -174,10 +176,11 @@
                 setTimeout(() => { notice.style.opacity = "0"; }, 2500);
             });
 
-            // 2. Intentar abrir el mailto después de un breve delay (Si el sistema lo permite)
-            setTimeout(() => {
+            // 2. Solo abre el mailto si detecta que es un dispositivo móvil (iOS/Android)
+            const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+            if (isMobile) {
                 window.location.href = `mailto:${email}?subject=Inquiry`;
-            }, 100);
+            }
         }
 
         function accessProfessional(tipo) {
