@@ -7,7 +7,7 @@
     <meta name="description" content="Luis Albornoz, ilusionista y gestor cultural radicado en el Desierto de Atacama. Desarrollo de proyectos escénicos e innovación social." />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=IM+Fell+DW+Pica+SC&family=Inter+Tight:wght@300;400;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@300;400;500;800&display=swap" rel="stylesheet">
 
     <style>
         :root {
@@ -45,12 +45,14 @@
         }
 
         h1 { 
-            font-family: "IM Fell DW Pica SC", serif;
-            font-weight: 400;
-            font-size: 3.2rem;
-            margin: 0 0 0.8rem 0; 
-            letter-spacing: 0.02em; 
+            font-family: "Inter Tight", sans-serif;
+            font-weight: 800; /* EXTRABOLD */
+            font-size: clamp(3rem, 8vw, 5rem);
+            margin: 0 0 0.5rem 0; 
+            letter-spacing: -0.04em; 
+            text-transform: uppercase;
             color: #fff;
+            line-height: 0.85;
         }
 
         h2.subtitle {
@@ -100,7 +102,6 @@
         .video-wrapper {
             position: fixed; right: 0; bottom: 0; height: 100%;
             display: flex; align-items: flex-end; pointer-events: none; z-index: 1;
-            /* Máscara quirúrgica: oculta solo el rincón inferior derecho */
             -webkit-mask-image: radial-gradient(ellipse at 98% 98%, transparent 0%, black 15%);
             mask-image: radial-gradient(ellipse at 98% 98%, transparent 0%, black 15%);
         }
@@ -168,7 +169,6 @@
         function handleContact(lang) {
             const email = "luisalbornoz@gmail.com";
             
-            // 1. Copia al portapapeles para todos los dispositivos
             navigator.clipboard.writeText(email).then(() => {
                 const notice = document.getElementById('copy-notice');
                 notice.innerText = lang === 'es' ? "Correo copiado al portapapeles" : "Email copied to clipboard";
@@ -176,7 +176,6 @@
                 setTimeout(() => { notice.style.opacity = "0"; }, 2500);
             });
 
-            // 2. Solo intenta abrir el gestor de correo en dispositivos móviles
             const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
             if (isMobile) {
                 window.location.href = `mailto:${email}?subject=Consulta%20Profesional`;
