@@ -3,167 +3,179 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Luis Albornoz | Ilusionista y Gestor Cultural</title>
+    <title>Luis Albornoz | Ilusionista · Gestor Cultural</title>
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;800&display=swap" rel="stylesheet">
 
     <style>
-        /* Reset y Estilos Base */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+        /* ESTILOS ORIGINALES REUPERADOS */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
 
         body {
-            background-color: #000000;
-            color: #ffffff;
+            background-color: #000;
+            color: #fff;
             font-family: 'Inter Tight', sans-serif;
-            line-height: 1.6;
             overflow-x: hidden;
         }
 
-        /* HEADER - Único cambio solicitado */
-        header {
+        /* Video Background original */
+        .video-background {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            object-fit: cover;
+            opacity: 0.4;
+        }
+
+        /* HERO - Único lugar con el cambio de tipografía */
+        .hero {
             height: 100vh;
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
             text-align: center;
-            padding: 20px;
+            position: relative;
         }
 
-        header h1 {
+        .hero h1 {
             font-family: 'Inter Tight', sans-serif;
-            font-weight: 800; /* EXTRABOLD */
-            font-size: clamp(3rem, 10vw, 6rem);
+            font-weight: 800; /* EXTRABOLD SOLICITADO */
+            font-size: clamp(3.5rem, 12vw, 7rem);
             text-transform: uppercase;
             letter-spacing: -0.05em;
-            line-height: 0.85;
-            margin-bottom: 10px;
+            line-height: 0.8;
+            margin-bottom: 20px;
         }
 
-        header p {
+        .hero p {
             font-weight: 400;
             font-size: clamp(0.8rem, 2vw, 1.1rem);
-            color: rgba(255, 255, 255, 0.6);
+            color: rgba(255, 255, 255, 0.7);
             text-transform: uppercase;
             letter-spacing: 0.4em;
         }
 
-        /* SECCIONES (Respetando tu estructura anterior) */
+        /* SECCIONES ORIGINALES */
         section {
-            padding: 80px 20px;
-            max-width: 1200px;
-            margin: 0 auto;
+            padding: 100px 10%;
+            position: relative;
+            background: rgba(0,0,0,0.8); /* Mantiene legibilidad sobre el video */
         }
 
-        h2 {
+        .section-title {
             font-weight: 800;
             font-size: 2rem;
             text-transform: uppercase;
-            margin-bottom: 40px;
+            margin-bottom: 50px;
             letter-spacing: -0.02em;
         }
 
-        .grid-proyectos {
+        .grid-container {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 20px;
+            gap: 40px;
         }
 
-        .proyecto-card {
-            border: 1px solid rgba(255, 255, 255, 0.1);
+        .card {
+            border: 1px solid rgba(255,255,255,0.2);
             padding: 40px;
-            transition: all 0.3s ease;
-            cursor: pointer;
-        }
-
-        .proyecto-card:hover {
-            background-color: #ffffff;
-            color: #000000;
-        }
-
-        .bio-content {
-            max-width: 800px;
-            font-size: 1.2rem;
-            color: rgba(255, 255, 255, 0.8);
-        }
-
-        .contacto-link {
-            font-size: 2rem;
-            font-weight: 800;
-            color: #ffffff;
+            transition: 0.3s;
             text-decoration: none;
-            border-bottom: 2px solid #ffffff;
+            color: #fff;
+        }
+
+        .card:hover {
+            background: #fff;
+            color: #000;
+        }
+
+        .bio-text {
+            max-width: 800px;
+            font-size: 1.25rem;
+            line-height: 1.8;
+        }
+
+        .contact-link {
+            font-size: clamp(1.5rem, 5vw, 3rem);
+            font-weight: 800;
+            color: #fff;
+            text-decoration: none;
+            border-bottom: 3px solid #fff;
         }
 
         footer {
-            padding: 40px;
+            padding: 60px;
             text-align: center;
             font-size: 0.8rem;
-            color: rgba(255, 255, 255, 0.4);
+            letter-spacing: 0.3em;
             text-transform: uppercase;
-            letter-spacing: 0.2em;
+            opacity: 0.5;
         }
 
-        /* Máscara para video */
-        .video-overlay-fix {
+        /* Tu parche para el logo del video */
+        .mask {
             position: fixed;
             bottom: 0;
             right: 0;
-            width: 80px;
-            height: 80px;
+            width: 100px;
+            height: 100px;
             background: #000;
-            z-index: 9999;
+            z-index: 100;
         }
     </style>
 </head>
 <body>
 
-    <header>
+    <video class="video-background" autoplay muted loop playsinline>
+        <source src="tu-video.mp4" type="video/mp4">
+    </video>
+
+    <header class="hero">
         <h1>Luis Albornoz</h1>
         <p>Ilusionista · Gestor Cultural · Conferencista</p>
     </header>
 
-    <section id="proyectos">
-        <h2>Dossiers</h2>
-        <div class="grid-proyectos">
-            <div class="proyecto-card">
+    <section id="dossiers">
+        <h2 class="section-title">Proyectos y Dossiers</h2>
+        <div class="grid-container">
+            <a href="dossier-un-mago.pdf" class="card">
                 <h3>Un Mago en el Desierto</h3>
-                <p>Proyecto Circulación Nacional 2026</p>
-            </div>
-            <div class="proyecto-card">
+                <p>Proyecto Fondart de Circulación Nacional 2026.</p>
+            </a>
+            <a href="dossier-corporativo.pdf" class="card">
+                <h3>Belleza en la Empresa</h3>
+                <p>Innovación social y asombro aplicado.</p>
+            </a>
+            <a href="dossier-atacamagica.pdf" class="card">
                 <h3>Atacamagica</h3>
-                <p>Fundación y Festival Internacional</p>
-            </div>
-            <div class="proyecto-card">
-                <h3>Conferencias</h3>
-                <p>Innovación y Gestión del Conocimiento</p>
-            </div>
+                <p>Festival Internacional de Ilusionismo.</p>
+            </a>
         </div>
     </section>
 
-    <section id="bio">
-        <h2>Trayectoria</h2>
-        <div class="bio-content">
-            <p>Luis Albornoz Cortés es ilusionista y gestor cultural. Seleccionado como uno de los 100 líderes de innovación en Chile por Fundación Chile. Su trabajo vincula la poética del territorio con el asombro contemporáneo.</p>
+    <section id="trayectoria">
+        <h2 class="section-title">Trayectoria</h2>
+        <div class="bio-text">
+            <p>Luis Albornoz es un ilusionista contemporáneo con más de 20 años de experiencia. Su trabajo integra la poética del paisaje del Desierto de Atacama con el arte del asombro, habiéndose presentado en el prestigioso Magic Castle de Hollywood.</p>
         </div>
     </section>
 
     <section id="contacto" style="text-align: center;">
-        <h2>Contacto</h2>
-        <a href="mailto:hola@luisalbornoz.cl" class="contacto-link">hola@luisalbornoz.cl</a>
+        <h2 class="section-title">Contacto</h2>
+        <a href="mailto:hola@luisalbornoz.cl" class="contact-link">hola@luisalbornoz.cl</a>
     </section>
 
     <footer>
-        &copy; 2026 Luis Albornoz · Atacama, Chile
+        &copy; 2026 Luis Albornoz · Copiapó, Atacama
     </footer>
 
-    <div class="video-overlay-fix"></div>
+    <div class="mask"></div>
 
 </body>
 </html>
