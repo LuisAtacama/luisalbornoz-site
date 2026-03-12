@@ -3,33 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Luis Albornoz | Ilusionista · Gestor Cultural · Conferencista</title>
-
+    <title>Luis Albornoz | Ilusionista y Gestor Cultural</title>
+    
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;800&display=swap" rel="stylesheet">
 
     <style>
-        /* CONFIGURACIÓN BASE */
-        :root {
-            --bg-color: #050505;
-            --text-main: #ffffff;
-            --text-dim: rgba(255, 255, 255, 0.6);
-            --accent: #ffffff;
+        /* Reset y Estilos Base */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
         }
 
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-
         body {
+            background-color: #000000;
+            color: #ffffff;
             font-family: 'Inter Tight', sans-serif;
-            background-color: var(--bg-color);
-            color: var(--text-main);
             line-height: 1.6;
             overflow-x: hidden;
         }
 
-        /* HEADER / HERO */
-        .hero {
+        /* HEADER - Único cambio solicitado */
+        header {
             height: 100vh;
             display: flex;
             flex-direction: column;
@@ -39,163 +36,134 @@
             padding: 20px;
         }
 
-        .main-title {
-            font-weight: 800;
-            font-size: clamp(2.8rem, 10vw, 5.5rem);
+        header h1 {
+            font-family: 'Inter Tight', sans-serif;
+            font-weight: 800; /* EXTRABOLD */
+            font-size: clamp(3rem, 10vw, 6rem);
             text-transform: uppercase;
             letter-spacing: -0.05em;
             line-height: 0.85;
-            margin-bottom: 15px;
+            margin-bottom: 10px;
         }
 
-        .sub-title {
+        header p {
             font-weight: 400;
-            font-size: clamp(0.7rem, 2vw, 0.95rem);
-            color: var(--text-dim);
+            font-size: clamp(0.8rem, 2vw, 1.1rem);
+            color: rgba(255, 255, 255, 0.6);
             text-transform: uppercase;
             letter-spacing: 0.4em;
         }
 
-        /* SECCIONES GENERALES */
+        /* SECCIONES (Respetando tu estructura anterior) */
         section {
-            padding: 100px 20px;
-            max-width: 1000px;
+            padding: 80px 20px;
+            max-width: 1200px;
             margin: 0 auto;
         }
 
         h2 {
             font-weight: 800;
-            font-size: clamp(1.5rem, 5vw, 2.5rem);
+            font-size: 2rem;
             text-transform: uppercase;
-            letter-spacing: -0.03em;
             margin-bottom: 40px;
-            border-bottom: 1px solid rgba(255,255,255,0.1);
-            padding-bottom: 10px;
+            letter-spacing: -0.02em;
         }
 
-        /* GRID DE DOSSIERS */
-        .dossier-grid {
+        .grid-proyectos {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 30px;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
         }
 
-        .dossier-card {
-            border: 1px solid rgba(255,255,255,0.1);
-            padding: 30px;
-            transition: all 0.4s ease;
-            text-decoration: none;
-            color: inherit;
-            display: block;
+        .proyecto-card {
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            padding: 40px;
+            transition: all 0.3s ease;
+            cursor: pointer;
         }
 
-        .dossier-card:hover {
-            background: #ffffff;
+        .proyecto-card:hover {
+            background-color: #ffffff;
             color: #000000;
         }
 
-        .dossier-card h3 {
+        .bio-content {
+            max-width: 800px;
+            font-size: 1.2rem;
+            color: rgba(255, 255, 255, 0.8);
+        }
+
+        .contacto-link {
+            font-size: 2rem;
             font-weight: 800;
-            text-transform: uppercase;
-            margin-bottom: 10px;
-        }
-
-        /* BIOGRAFÍA */
-        .bio-text {
-            font-size: 1.1rem;
-            color: var(--text-dim);
-            max-width: 700px;
-        }
-
-        .bio-text strong {
-            color: #fff;
-            font-weight: 800;
-        }
-
-        /* CONTACTO */
-        .contact-content {
-            text-align: center;
-        }
-
-        .email-link {
-            font-size: clamp(1.2rem, 4vw, 2rem);
-            font-weight: 800;
+            color: #ffffff;
             text-decoration: none;
-            color: var(--text-main);
-            letter-spacing: -0.02em;
-            display: inline-block;
-            margin-top: 20px;
-            border-bottom: 2px solid #fff;
+            border-bottom: 2px solid #ffffff;
         }
 
         footer {
-            padding: 50px 20px;
+            padding: 40px;
             text-align: center;
             font-size: 0.8rem;
-            color: var(--text-dim);
-            letter-spacing: 0.1em;
+            color: rgba(255, 255, 255, 0.4);
             text-transform: uppercase;
+            letter-spacing: 0.2em;
         }
 
-        /* OCULTAR VIDEO ICON (MÁSCARA) */
-        .video-mask {
+        /* Máscara para video */
+        .video-overlay-fix {
             position: fixed;
             bottom: 0;
             right: 0;
-            width: 100px;
-            height: 100px;
-            background: var(--bg-color);
-            z-index: 999;
+            width: 80px;
+            height: 80px;
+            background: #000;
+            z-index: 9999;
         }
     </style>
 </head>
 <body>
 
-    <header class="hero">
-        <h1 class="main-title">Luis Albornoz</h1>
-        <p class="sub-title">Ilusionista · Gestor Cultural · Conferencista</p>
+    <header>
+        <h1>Luis Albornoz</h1>
+        <p>Ilusionista · Gestor Cultural · Conferencista</p>
     </header>
 
     <section id="proyectos">
-        <h2>Dossiers y Proyectos</h2>
-        <div class="dossier-grid">
-            <a href="#" class="dossier-card">
+        <h2>Dossiers</h2>
+        <div class="grid-proyectos">
+            <div class="proyecto-card">
                 <h3>Un Mago en el Desierto</h3>
-                <p>Circulación Nacional 2026. Folio 840182.</p>
-            </a>
-            <a href="#" class="dossier-card">
-                <h3>Creación Escénica</h3>
-                <p>Poética del territorio y asombro contemporáneo.</p>
-            </a>
-            <a href="#" class="dossier-card">
-                <h3>Belleza en la Empresa</h3>
-                <p>Conferencias sobre innovación y resiliencia emocional.</p>
-            </a>
+                <p>Proyecto Circulación Nacional 2026</p>
+            </div>
+            <div class="proyecto-card">
+                <h3>Atacamagica</h3>
+                <p>Fundación y Festival Internacional</p>
+            </div>
+            <div class="proyecto-card">
+                <h3>Conferencias</h3>
+                <p>Innovación y Gestión del Conocimiento</p>
+            </div>
         </div>
     </section>
 
     <section id="bio">
         <h2>Trayectoria</h2>
-        <div class="bio-text">
-            <p><strong>Luis Albornoz</strong> es ilusionista, creador escénico y gestor cultural. Seleccionado como uno de los 100 líderes de innovación en Chile por Fundación Chile.</p>
-            <br>
-            <p>Director de Fundación Atacamagica, su trabajo entrelaza el arte del ilusionismo con la identidad del Desierto de Atacama, presentándose en escenarios prestigiosos como el Magic Castle de Hollywood.</p>
+        <div class="bio-content">
+            <p>Luis Albornoz Cortés es ilusionista y gestor cultural. Seleccionado como uno de los 100 líderes de innovación en Chile por Fundación Chile. Su trabajo vincula la poética del territorio con el asombro contemporáneo.</p>
         </div>
     </section>
 
-    <section id="contacto">
+    <section id="contacto" style="text-align: center;">
         <h2>Contacto</h2>
-        <div class="contact-content">
-            <p>Para colaboraciones, prensa o contrataciones:</p>
-            <a href="mailto:hola@luisalbornoz.cl" class="email-link">hola@luisalbornoz.cl</a>
-        </div>
+        <a href="mailto:hola@luisalbornoz.cl" class="contacto-link">hola@luisalbornoz.cl</a>
     </section>
 
     <footer>
         &copy; 2026 Luis Albornoz · Atacama, Chile
     </footer>
 
-    <div class="video-mask"></div>
+    <div class="video-overlay-fix"></div>
 
 </body>
 </html>
