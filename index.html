@@ -5,6 +5,45 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Luis Albornoz | Ilusionista, Gestor Cultural y Conferencista</title>
     <meta name="description" content="Luis Albornoz, ilusionista y gestor cultural radicado en el Desierto de Atacama. Desarrollo de proyectos escénicos e innovación social." />
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Luis Albornoz",
+      "url": "https://www.luisalbornoz.cl",
+      "jobTitle": ["Ilusionista", "Gestor Cultural", "Conferencista"],
+      "description": "Luis Albornoz es ilusionista, creador escénico y gestor cultural radicado en el Desierto de Atacama. Especialista en innovación social y el uso del asombro como herramienta de transformación.",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Copiapó",
+        "addressRegion": "Atacama",
+        "addressCountry": "CL"
+      },
+      "sameAs": [
+        "https://www.instagram.com/luisalbornozcortes/"
+      ],
+      "knowsAbout": [
+        "Ilusionismo contemporáneo",
+        "Gestión del Conocimiento",
+        "Innovación social",
+        "Dramaturgia del paisaje",
+        "Desierto de Atacama"
+      ],
+      "hasOccupation": [
+        {
+          "@type": "Occupation",
+          "name": "Ilusionista"
+        },
+        {
+          "@type": "Occupation",
+          "name": "Conferencista",
+          "description": "Speaker en temas de innovación social, belleza y gestión cultural."
+        }
+      ]
+    }
+    </script>
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=IM+Fell+DW+Pica+SC&family=Inter+Tight:wght@300;400;900&display=swap" rel="stylesheet">
@@ -58,12 +97,11 @@
             text-align: left;
         }
 
-        /* AJUSTE: Más espacio entre nombre y bajada */
         h2.subtitle {
             font-size: 0.72rem; 
             text-transform: uppercase; 
             color: var(--muted);
-            margin-top: 1.2rem; /* Aumentado para generar más aire */
+            margin-top: 1.2rem;
             margin-bottom: 3rem; 
             font-weight: 300;
             letter-spacing: 0.22em; 
@@ -121,11 +159,10 @@
         @keyframes slowFloat { 0% { transform: translateY(0) } 100% { transform: translateY(12px) } }
 
         @media (max-width: 900px) {
-            /* AJUSTE: Separar nombre de ES/EN en móviles */
             .container { 
                 width: 100%; 
-                padding: 20% 8% 12% 8%; /* Aumentado padding superior */
-                justify-content: flex-start; /* Empieza más arriba pero con margen */
+                padding: 20% 8% 12% 8%;
+                justify-content: flex-start;
                 padding-top: 120px; 
             }
             .video-wrapper { display: none; }
