@@ -44,11 +44,10 @@
             min-height: 100vh;
         }
 
-        /* AJUSTE: Nombre reducido y en Inter Tight */
         h1 { 
             font-family: "Inter Tight", sans-serif;
             font-weight: 900;
-            font-size: 2.7rem; /* Reducido levemente */
+            font-size: 2.7rem; 
             margin: 0; 
             letter-spacing: -0.02em; 
             color: #fff;
@@ -59,15 +58,15 @@
             text-align: left;
         }
 
-        /* AJUSTE: Bajada justificada a la izquierda (sin expandir) */
+        /* AJUSTE: Más espacio entre nombre y bajada */
         h2.subtitle {
             font-size: 0.72rem; 
             text-transform: uppercase; 
             color: var(--muted);
-            margin-top: 0.6rem; 
+            margin-top: 1.2rem; /* Aumentado para generar más aire */
             margin-bottom: 3rem; 
             font-weight: 300;
-            letter-spacing: 0.22em; /* Espaciado fijo, no forzado */
+            letter-spacing: 0.22em; 
             max-width: 540px;
             width: 100%;
             text-align: left;
@@ -122,7 +121,13 @@
         @keyframes slowFloat { 0% { transform: translateY(0) } 100% { transform: translateY(12px) } }
 
         @media (max-width: 900px) {
-            .container { width: 100%; padding: 12% 8%; }
+            /* AJUSTE: Separar nombre de ES/EN en móviles */
+            .container { 
+                width: 100%; 
+                padding: 20% 8% 12% 8%; /* Aumentado padding superior */
+                justify-content: flex-start; /* Empieza más arriba pero con margen */
+                padding-top: 120px; 
+            }
             .video-wrapper { display: none; }
             h1, h2.subtitle, p, .site-footer { max-width: 100%; }
         }
