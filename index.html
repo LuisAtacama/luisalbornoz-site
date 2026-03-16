@@ -196,7 +196,6 @@
         function accessProfessional(tipo) {
             const masterKey = "DESIERTO2026";
             
-            // Si es obra o press, pide clave directo
             if (tipo === 'obra' || tipo === 'press') {
                 const input = prompt("Acceso Restringido. Ingresa clave:");
                 if (input === masterKey) {
@@ -208,7 +207,6 @@
                 return;
             }
 
-            // Si es FORMACIÓN, primero selecciona el área y luego pide la clave
             if (tipo === 'formacion') {
                 const sector = prompt("FORMACIÓN | Selecciona área de interés:\n1. Corporativo\n2. Sociocultural\n(Escribe 1 o 2)");
                 
@@ -217,12 +215,12 @@
                     if (input === masterKey) {
                         if (sector === "1") {
                             const capCorp = prompt("ÁREA CORPORATIVA | Selecciona programa:\n1. En Busca de la Belleza\n2. Presentaciones Memorables (Alrededor del Fuego)\n(Escribe 1 o 2)");
-                            if (capCorp === "1") window.open("luis-albornoz-belleza-empresa.pdf", '_blank');
-                            else if (capCorp === "2") window.open("luis-albornoz-fuego-empresa.pdf", '_blank');
+                            if (capCorp === "1") window.open("luis-albornoz-conferencia-belleza-corporativa.pdf", '_blank');
+                            else if (capCorp === "2") window.open("luis-albornoz-taller-presentaciones-memorables-empresa.pdf", '_blank');
                         } else {
                             const capSoc = prompt("ÁREA SOCIOCULTURAL | Selecciona programa:\n1. En Busca de la Belleza\n2. Presentaciones Memorables (Alrededor del Fuego)\n(Escribe 1 o 2)");
-                            if (capSoc === "1") window.open("luis-albornoz-belleza-cultural.pdf", '_blank');
-                            else if (capSoc === "2") window.open("luis-albornoz-fuego-general.pdf", '_blank');
+                            if (capSoc === "1") window.open("luis-albornoz-gestion-cultural-belleza-social.pdf", '_blank');
+                            else if (capSoc === "2") window.open("luis-albornoz-conferencia-alrededor-del-fuego-general.pdf", '_blank');
                         }
                     } else if (input !== null) {
                         alert("Clave incorrecta.");
