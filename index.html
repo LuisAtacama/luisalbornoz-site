@@ -5,45 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Luis Albornoz | Ilusionista, Gestor Cultural y Conferencista</title>
     <meta name="description" content="Luis Albornoz, ilusionista y gestor cultural radicado en el Desierto de Atacama. Desarrollo de proyectos escénicos e innovación social." />
-    
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Person",
-      "name": "Luis Albornoz",
-      "url": "https://www.luisalbornoz.cl",
-      "jobTitle": ["Ilusionista", "Gestor Cultural", "Conferencista"],
-      "description": "Luis Albornoz es ilusionista, creador escénico y gestor cultural radicado en el Desierto de Atacama. Especialista en innovación social y el uso del asombro como herramienta de transformación.",
-      "address": {
-        "@type": "PostalAddress",
-        "addressLocality": "Copiapó",
-        "addressRegion": "Atacama",
-        "addressCountry": "CL"
-      },
-      "sameAs": [
-        "https://www.instagram.com/luisalbornozcortes/"
-      ],
-      "knowsAbout": [
-        "Ilusionismo contemporáneo",
-        "Gestión del Conocimiento",
-        "Innovación social",
-        "Dramaturgia del paisaje",
-        "Desierto de Atacama"
-      ],
-      "hasOccupation": [
-        {
-          "@type": "Occupation",
-          "name": "Ilusionista"
-        },
-        {
-          "@type": "Occupation",
-          "name": "Conferencista",
-          "description": "Speaker en temas de innovación social, belleza y gestión cultural."
-        }
-      ]
-    }
-    </script>
-
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=IM+Fell+DW+Pica+SC&family=Inter+Tight:wght@300;400;900&display=swap" rel="stylesheet">
@@ -101,7 +62,7 @@
             font-size: 0.72rem; 
             text-transform: uppercase; 
             color: var(--muted);
-            margin-top: 1.2rem;
+            margin-top: 1.2rem; 
             margin-bottom: 3rem; 
             font-weight: 300;
             letter-spacing: 0.22em; 
@@ -161,8 +122,8 @@
         @media (max-width: 900px) {
             .container { 
                 width: 100%; 
-                padding: 20% 8% 12% 8%;
-                justify-content: flex-start;
+                padding: 20% 8% 12% 8%; 
+                justify-content: flex-start; 
                 padding-top: 120px; 
             }
             .video-wrapper { display: none; }
@@ -199,7 +160,7 @@
                 </div>
                 <div class="footer-right">
                     <a onclick="accessProfessional('obra')">CREACIÓN</a>
-                    <a onclick="accessProfessional('transferencia')">CONFERENCIAS</a>
+                    <a onclick="accessProfessional('formacion')">FORMACIÓN</a>
                     <a onclick="accessProfessional('press')">KIT DE PRENSA</a>
                 </div>
             </div>
@@ -234,27 +195,39 @@
 
         function accessProfessional(tipo) {
             const masterKey = "DESIERTO2026";
-            const input = prompt("Acceso Restringido. Ingresa clave:");
+            
+            // Si es obra o press, pide clave directo
+            if (tipo === 'obra' || tipo === 'press') {
+                const input = prompt("Acceso Restringido. Ingresa clave:");
+                if (input === masterKey) {
+                    if (tipo === 'obra') window.open("luis-albornoz-un-mago-en-el-desierto-dossier.pdf", '_blank');
+                    if (tipo === 'press') window.open("https://drive.google.com/drive/folders/1Z386t4rUbsZg7R92Y4rG-MYBZl6e0bnV?usp=sharing", '_blank');
+                } else if (input !== null) {
+                    alert("Clave incorrecta.");
+                }
+                return;
+            }
 
-            if (input === masterKey) {
-                if (tipo === 'obra') {
-                    window.open("luis-albornoz-un-mago-en-el-desierto-dossier.pdf", '_blank');
-                } 
-                else if (tipo === 'transferencia') {
-                    const perfil = prompt("Selecciona tu perfil para el dossier adecuado:\n1. Empresa / Innovación\n2. Institución Cultural / Social\n(Escribe 1 o 2)");
-                    if (perfil === "1") {
-                        window.open("luis-albornoz-belleza-empresa.pdf", '_blank');
-                    } else if (perfil === "2") {
-                        window.open("luis-albornoz-belleza-cultural.pdf", '_blank');
-                    } else {
-                        alert("Opción no válida.");
+            // Si es FORMACIÓN, primero selecciona el área y luego pide la clave
+            if (tipo === 'formacion') {
+                const sector = prompt("FORMACIÓN | Selecciona área de interés:\n1. Corporativo\n2. Sociocultural\n(Escribe 1 o 2)");
+                
+                if (sector === "1" || sector === "2") {
+                    const input = prompt("Contenido Protegido. Ingresa clave para acceder:");
+                    if (input === masterKey) {
+                        if (sector === "1") {
+                            const capCorp = prompt("ÁREA CORPORATIVA | Selecciona programa:\n1. En Busca de la Belleza\n2. Presentaciones Memorables (Alrededor del Fuego)\n(Escribe 1 o 2)");
+                            if (capCorp === "1") window.open("luis-albornoz-belleza-empresa.pdf", '_blank');
+                            else if (capCorp === "2") window.open("luis-albornoz-fuego-empresa.pdf", '_blank');
+                        } else {
+                            const capSoc = prompt("ÁREA SOCIOCULTURAL | Selecciona programa:\n1. En Busca de la Belleza\n2. Presentaciones Memorables (Alrededor del Fuego)\n(Escribe 1 o 2)");
+                            if (capSoc === "1") window.open("luis-albornoz-belleza-cultural.pdf", '_blank');
+                            else if (capSoc === "2") window.open("luis-albornoz-fuego-general.pdf", '_blank');
+                        }
+                    } else if (input !== null) {
+                        alert("Clave incorrecta.");
                     }
                 }
-                else if (tipo === 'press') {
-                    window.open("https://drive.google.com/drive/folders/1Z386t4rUbsZg7R92Y4rG-MYBZl6e0bnV?usp=sharing", '_blank');
-                }
-            } else if (input !== null) {
-                alert("Clave incorrecta.");
             }
         }
     </script>
