@@ -208,23 +208,22 @@
             }
 
             if (tipo === 'formacion') {
-                const sector = prompt("EDUCATION | Select area of interest:\n1. Corporate\n2. Sociocultural\n(Type 1 or 2)");
+                const input = prompt("Protected Education Area. Enter key to access:");
                 
-                if (sector === "1" || sector === "2") {
-                    const input = prompt("Protected Content. Enter key to access:");
-                    if (input === masterKey) {
-                        if (sector === "1") {
-                            const capCorp = prompt("CORPORATE AREA | Select program:\n1. In Search of Beauty\n2. Memorable Presentations\n(Type 1 or 2)");
-                            if (capCorp === "1") window.open("luis-albornoz-conferencia-taller-belleza-corporativa.pdf", '_blank');
-                            else if (capCorp === "2") window.open("luis-albornoz-conferencia-taller-presentaciones-memorables-corporativa.pdf", '_blank');
-                        } else {
-                            const capSoc = prompt("SOCIOCULTURAL AREA | Select program:\n1. In Search of Beauty\n2. Memorable Presentations\n(Type 1 or 2)");
-                            if (capSoc === "1") window.open("luis-albornoz-conferencia-taller-belleza-sociocultural.pdf", '_blank');
-                            else if (capSoc === "2") window.open("luis-albornoz-conferencia-taller-presentaciones-memorables-sociocultural.pdf", '_blank');
-                        }
-                    } else if (input !== null) {
-                        alert("Incorrect key.");
+                if (input === masterKey) {
+                    const sector = prompt("ACCESS GRANTED | Select area of interest:\n1. Corporate\n2. Sociocultural\n(Type 1 or 2)");
+                    
+                    if (sector === "1") {
+                        const capCorp = prompt("CORPORATE AREA | Select program:\n1. In Search of Beauty\n2. Memorable Presentations\n(Type 1 or 2)");
+                        if (capCorp === "1") window.open("luis-albornoz-conferencia-taller-belleza-corporativa.pdf", '_blank');
+                        else if (capCorp === "2") window.open("luis-albornoz-conferencia-taller-presentaciones-memorables-corporativa.pdf", '_blank');
+                    } else if (sector === "2") {
+                        const capSoc = prompt("SOCIOCULTURAL AREA | Select program:\n1. In Search of Beauty\n2. Memorable Presentations\n(Type 1 or 2)");
+                        if (capSoc === "1") window.open("luis-albornoz-conferencia-taller-belleza-sociocultural.pdf", '_blank');
+                        else if (capSoc === "2") window.open("luis-albornoz-conferencia-taller-presentaciones-memorables-sociocultural.pdf", '_blank');
                     }
+                } else if (input !== null) {
+                    alert("Incorrect key.");
                 }
             }
         }
