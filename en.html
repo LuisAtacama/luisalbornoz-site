@@ -62,7 +62,7 @@
             font-size: 0.72rem; 
             text-transform: uppercase; 
             color: var(--muted);
-            margin-top: 1.2rem; /* Increased spacing */
+            margin-top: 1.2rem; 
             margin-bottom: 3rem; 
             font-weight: 300;
             letter-spacing: 0.22em; 
@@ -160,7 +160,7 @@
                 </div>
                 <div class="footer-right">
                     <a onclick="accessProfessional('obra')">CREATION</a>
-                    <a onclick="accessProfessional('transferencia')">CONFERENCES</a>
+                    <a onclick="accessProfessional('formacion')">EDUCATION</a>
                     <a onclick="accessProfessional('press')">PRESS KIT</a>
                 </div>
             </div>
@@ -182,7 +182,7 @@
             const email = "luisalbornoz@gmail.com";
             navigator.clipboard.writeText(email).then(() => {
                 const notice = document.getElementById('copy-notice');
-                notice.innerText = lang === 'es' ? "Correo copiado al portapapeles" : "Email copied to clipboard";
+                notice.innerText = lang === 'en' ? "Email copied to clipboard" : "Correo copiado al portapapeles";
                 notice.style.opacity = "1";
                 setTimeout(() => { notice.style.opacity = "0"; }, 2500);
             });
@@ -195,27 +195,37 @@
 
         function accessProfessional(tipo) {
             const masterKey = "DESIERTO2026";
-            const input = prompt("Restricted Access. Enter key:");
+            
+            if (tipo === 'obra' || tipo === 'press') {
+                const input = prompt("Restricted Access. Enter key:");
+                if (input === masterKey) {
+                    if (tipo === 'obra') window.open("luis-albornoz-un-mago-en-el-desierto-dossier.pdf", '_blank');
+                    if (tipo === 'press') window.open("https://drive.google.com/drive/folders/1Z386t4rUbsZg7R92Y4rG-MYBZl6e0bnV?usp=sharing", '_blank');
+                } else if (input !== null) {
+                    alert("Incorrect key.");
+                }
+                return;
+            }
 
-            if (input === masterKey) {
-                if (tipo === 'obra') {
-                    window.open("luis-albornoz-un-mago-en-el-desierto-dossier.pdf", '_blank');
-                } 
-                else if (tipo === 'transferencia') {
-                    const perfil = prompt("Select your profile for the appropriate dossier:\n1. Corporate / Innovation\n2. Cultural / Social Institution\n(Type 1 or 2)");
-                    if (perfil === "1") {
-                        window.open("luis-albornoz-belleza-empresa.pdf", '_blank');
-                    } else if (perfil === "2") {
-                        window.open("luis-albornoz-belleza-cultural.pdf", '_blank');
-                    } else {
-                        alert("Invalid option.");
+            if (tipo === 'formacion') {
+                const sector = prompt("EDUCATION | Select area of interest:\n1. Corporate\n2. Sociocultural\n(Type 1 or 2)");
+                
+                if (sector === "1" || sector === "2") {
+                    const input = prompt("Protected Content. Enter key to access:");
+                    if (input === masterKey) {
+                        if (sector === "1") {
+                            const capCorp = prompt("CORPORATE AREA | Select program:\n1. In Search of Beauty\n2. Memorable Presentations\n(Type 1 or 2)");
+                            if (capCorp === "1") window.open("luis-albornoz-conferencia-taller-belleza-corporativa.pdf", '_blank');
+                            else if (capCorp === "2") window.open("luis-albornoz-conferencia-taller-presentaciones-memorables-corporativa.pdf", '_blank');
+                        } else {
+                            const capSoc = prompt("SOCIOCULTURAL AREA | Select program:\n1. In Search of Beauty\n2. Memorable Presentations\n(Type 1 or 2)");
+                            if (capSoc === "1") window.open("luis-albornoz-conferencia-taller-belleza-sociocultural.pdf", '_blank');
+                            else if (capSoc === "2") window.open("luis-albornoz-conferencia-taller-presentaciones-memorables-sociocultural.pdf", '_blank');
+                        }
+                    } else if (input !== null) {
+                        alert("Incorrect key.");
                     }
                 }
-                else if (tipo === 'press') {
-                    window.open("https://drive.google.com/drive/folders/1Z386t4rUbsZg7R92Y4rG-MYBZl6e0bnV?usp=sharing", '_blank');
-                }
-            } else if (input !== null) {
-                alert("Incorrect key.");
             }
         }
     </script>
