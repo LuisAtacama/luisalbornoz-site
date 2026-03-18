@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Luis Albornoz | Ilusionista, Gestor Cultural y Conferencista</title>
-    <meta name="description" content="Luis Albornoz, ilusionista y gestor cultural radicado en el Desierto de Atacama. Desarrollo de proyectos escénicos e innovación social." />
+    <title>Luis Albornoz | Illusionist, Cultural Manager & Speaker</title>
+    <meta name="description" content="Luis Albornoz, illusionist and cultural manager based in the Atacama Desert. Developing performing arts and social innovation projects." />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=IM+Fell+DW+Pica+SC&family=Inter+Tight:wght@300;400;900&display=swap" rel="stylesheet">
@@ -79,7 +79,6 @@
 
         .statement { margin-top: .2rem; color: rgba(255, 255, 255, .86); font-weight: 400; }
 
-        /* --- Estilos del Footer con Simetría Total --- */
         .site-footer { margin-top: 4rem; max-width: 540px; padding-bottom: 40px; }
         .footer-line { height: 1px; background: rgba(255, 255, 255, .15); width: 100%; margin-bottom: 24px; }
 
@@ -91,7 +90,6 @@
             font-weight: 300;
         }
 
-        /* Unificación estricta de tamaño para todos los enlaces del footer */
         .footer-links a, .footer-links span, .direct-email {
             color: var(--muted);
             text-decoration: none;
@@ -152,21 +150,21 @@
 <body>
 
     <nav class="lang-switch">
-        <a href="index.html" class="active">ES</a> · 
-        <a href="en.html">EN</a>
+        <a href="index.html">ES</a> · 
+        <a href="en.html" class="active">EN</a>
     </nav>
 
     <main class="container">
         <h1>Luis Albornoz</h1>
-        <h2 class="subtitle">ILUSIONISTA · GESTOR CULTURAL · CONFERENCISTA</h2>
+        <h2 class="subtitle">ILLUSIONIST · CULTURAL MANAGER · SPEAKER</h2>
 
-        <p>Radicado en el desierto de Atacama, desarrollo procesos culturales que entrelazan arte, territorio e innovación social.</p>
-        <p>Exploro el asombro como herramienta de transformación y la descentralización como práctica concreta para el desarrollo cultural.</p>
-        <p>Me interesa la fragilidad, el tiempo y la experiencia humana como espacios de encuentro entre personas y comunidades.</p>
+        <p>Based in the Atacama Desert, I develop cultural processes that intertwine art, territory, and social innovation.</p>
+        <p>I explore wonder as a tool for transformation and decentralization as a concrete practice for cultural development.</p>
+        <p>I am interested in fragility, time, and the human experience as spaces for connection between people and communities.</p>
 
         <p class="statement">
-            El arte no es opcional.<br>
-            Es una obligación si queremos una sociedad más humana y más sensible.
+            Art is not optional.<br>
+            It is an obligation if we want a more humane and sensitive society.
         </p>
 
         <footer class="site-footer">
@@ -174,7 +172,7 @@
             <div class="footer-content footer-links">
                 <div class="footer-left-group">
                     <div>
-                        <a onclick="handleContact('es')" class="direct-email">HOLA@LUISALBORNOZ.CL</a>
+                        <a onclick="handleContact('en')" class="direct-email">HOLA@LUISALBORNOZ.CL</a>
                     </div>
                     <div style="margin-top: 16px;">
                         <a href="https://www.instagram.com/luisalbornozcortes/" target="_blank">IG</a>
@@ -183,21 +181,21 @@
                 
                 <div class="footer-right-group text-right">
                     <div>
-                        <a onclick="accessProfessional('obra')">CREACIÓN</a>
+                        <a onclick="accessProfessional('work')">CREATION</a>
                     </div>
                     <div style="margin-top: 16px;">
-                        <a onclick="accessProfessional('formacion')">FORMACIÓN</a>
+                        <a onclick="accessProfessional('learning')">LEARNING & KEYNOTES</a>
                     </div>
                     <div style="margin-top: 16px;">
-                        <a onclick="accessProfessional('press')">KIT DE PRENSA</a>
+                        <a onclick="accessProfessional('press')">PRESS KIT</a>
                     </div>
                 </div>
             </div>
-            <div class="footer-loc">Copiapó. Región de Atacama. Chile</div>
+            <div class="footer-loc">Copiapó. Atacama Region. Chile</div>
         </footer>
     </main>
 
-    <div id="copy-notice">Correo copiado al portapapeles</div>
+    <div id="copy-notice">Email copied to clipboard</div>
 
     <div class="video-wrapper">
         <video autoplay muted loop playsinline class="video-ghost">
@@ -217,41 +215,43 @@
             });
 
             setTimeout(() => {
-                window.location.href = `mailto:${email}?subject=Consulta%20Profesional%3A%20Luis%20Albornoz`;
+                window.location.href = `mailto:${email}?subject=Professional%20Inquiry%3A%20Luis%20Albornoz`;
             }, 300);
         }
 
-        function accessProfessional(tipo) {
-            const masterKey = "DESIERTO2026";
+        function accessProfessional(type) {
+            const keyGeneral = "CREA2026";
+            const keyPress = "DESIERTO2026";
             
-            if (tipo === 'obra' || tipo === 'press') {
-                const input = prompt("Acceso Restringido. Ingresa clave:");
-                if (input === masterKey) {
-                    if (tipo === 'obra') window.open("luis-albornoz-obra-un mago-en-el-desierto-dossier.pdf", '_blank');
-                    if (tipo === 'press') window.open("https://drive.google.com/drive/folders/1Z386t4rUbsZg7R92Y4rG-MYBZl6e0bnV?usp=sharing", '_blank');
+            if (type === 'work' || type === 'learning') {
+                const input = prompt("Protected Access. Enter password to continue:");
+                if (input === keyGeneral) {
+                    if (type === 'work') {
+                        window.open("luis-albornoz-obra-un mago-en-el-desierto-dossier.pdf", '_blank');
+                    } else if (type === 'learning') {
+                        const sector = prompt("ACCESS GRANTED | Select area of interest:\n1. Corporate\n2. Sociocultural\n(Type 1 or 2)");
+                        if (sector === "1") {
+                            const capCorp = prompt("CORPORATE AREA | Select program:\n1. In Search of Beauty\n2. Memorable Presentations\n(Type 1 or 2)");
+                            if (capCorp === "1") window.open("luis-albornoz-conferencia-taller-belleza-corporativa.pdf", '_blank');
+                            else if (capCorp === "2") window.open("luis-albornoz-conferencia-taller-presentaciones-memorables-corporativa.pdf", '_blank');
+                        } else if (sector === "2") {
+                            const capSoc = prompt("SOCIOCULTURAL AREA | Select program:\n1. In Search of Beauty\n2. Memorable Presentations\n(Type 1 or 2)");
+                            if (capSoc === "1") window.open("luis-albornoz-conferencia-taller-belleza-sociocultural.pdf", '_blank');
+                            else if (capSoc === "2") window.open("luis-albornoz-conferencia-taller-presentaciones-memorables-sociocultural.pdf", '_blank');
+                        }
+                    }
                 } else if (input !== null) {
-                    alert("Clave incorrecta.");
+                    alert("Incorrect password.");
                 }
                 return;
             }
 
-            if (tipo === 'formacion') {
-                const input = prompt("Área de Formación Protegida. Ingresa clave para acceder:");
-                
-                if (input === masterKey) {
-                    const sector = prompt("ACCESO CONCEDIDO | Selecciona área de interés:\n1. Corporativa\n2. Sociocultural\n(Escribe 1 o 2)");
-                    
-                    if (sector === "1") {
-                        const capCorp = prompt("ÁREA CORPORATIVA | Selecciona programa:\n1. En Busca de la Belleza\n2. Presentaciones Memorables\n(Escribe 1 o 2)");
-                        if (capCorp === "1") window.open("luis-albornoz-conferencia-taller-belleza-corporativa.pdf", '_blank');
-                        else if (capCorp === "2") window.open("luis-albornoz-conferencia-taller-presentaciones-memorables-corporativa.pdf", '_blank');
-                    } else if (sector === "2") {
-                        const capSoc = prompt("ÁREA SOCIOCULTURAL | Selecciona programa:\n1. En Busca de la Belleza\n2. Presentaciones Memorables\n(Escribe 1 o 2)");
-                        if (capSoc === "1") window.open("luis-albornoz-conferencia-taller-belleza-sociocultural.pdf", '_blank');
-                        else if (capSoc === "2") window.open("luis-albornoz-conferencia-taller-presentaciones-memorables-sociocultural.pdf", '_blank');
-                    }
+            if (type === 'press') {
+                const input = prompt("Press Kit Access. Enter password:");
+                if (input === keyPress) {
+                    window.open("https://drive.google.com/drive/folders/1Z386t4rUbsZg7R92Y4rG-MYBZl6e0bnV?usp=sharing", '_blank');
                 } else if (input !== null) {
-                    alert("Clave incorrecta.");
+                    alert("Incorrect password.");
                 }
             }
         }
