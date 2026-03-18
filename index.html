@@ -79,30 +79,42 @@
 
         .statement { margin-top: .2rem; color: rgba(255, 255, 255, .86); font-weight: 400; }
 
+        /* --- Estilos del Footer Corregidos --- */
         .site-footer { margin-top: 4rem; max-width: 540px; padding-bottom: 40px; }
         .footer-line { height: 1px; background: rgba(255, 255, 255, .15); width: 100%; margin-bottom: 24px; }
 
         .footer-content {
-            display: flex; justify-content: space-between;
-            align-items: flex-start; font-size: 0.82rem;
-            letter-spacing: 0.12em; text-transform: uppercase; font-weight: 300;
+            display: grid;
+            grid-template-columns: 1fr 1fr; /* Dos columnas iguales */
+            gap: 16px; /* Espacio entre columnas y filas */
+            font-size: 0.82rem;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            font-weight: 300;
         }
 
-        .footer-left, .footer-right { display: flex; flex-direction: column; gap: 12px; }
-        .footer-right { text-align: right; }
+        .footer-links a, .footer-links span {
+            color: var(--muted);
+            text-decoration: none;
+            transition: 0.4s;
+            cursor: pointer;
+            display: inline-block; /* Importante para alineación */
+        }
 
-        .footer-links a { color: var(--muted); text-decoration: none; transition: 0.4s; cursor: pointer; }
         .footer-links a:hover { color: #fff; }
 
+        /* Estilo específico para resaltar el correo */
         .direct-email { 
-            font-size: 0.75rem; 
-            color: #fff; 
-            margin-top: 4px; 
-            letter-spacing: 0.15em;
+            color: #fff !important; 
             opacity: 0.85;
+            cursor: pointer;
         }
 
+        /* Justificación derecha para la columna profesional */
+        .text-right { text-align: right; }
+
         .footer-loc { margin-top: 32px; font-size: 0.82rem; color: rgba(255,255,255,.45); font-weight: 300; }
+        /* ------------------------------------- */
 
         #copy-notice {
             position: fixed; bottom: 40px; left: 60px;
@@ -136,6 +148,8 @@
             }
             .video-wrapper { display: none; }
             h1, h2.subtitle, p, .site-footer { max-width: 100%; }
+            .footer-content { grid-template-columns: 1fr; gap: 24px; text-align: center; }
+            .text-right { text-align: center; }
         }
     </style>
 </head>
@@ -162,15 +176,25 @@
         <footer class="site-footer">
             <div class="footer-line"></div>
             <div class="footer-content footer-links">
-                <div class="footer-left">
-                    <a onclick="handleContact('es')">CONTACTO</a>
-                    <span class="direct-email">hola@luisalbornoz.cl</span>
-                    <a href="https://www.instagram.com/luisalbornozcortes/" target="_blank" style="margin-top: 8px;">IG</a>
+                <div class="footer-left-group">
+                    <div>
+                        <a onclick="handleContact('es')" class="direct-email">hola@luisalbornoz.cl</a>
+                    </div>
+                    <div style="margin-top: 16px;">
+                        <a href="https://www.instagram.com/luisalbornozcortes/" target="_blank">IG</a>
+                    </div>
                 </div>
-                <div class="footer-right">
-                    <a onclick="accessProfessional('obra')">CREACIÓN</a>
-                    <a onclick="accessProfessional('formacion')">FORMACIÓN</a>
-                    <a onclick="accessProfessional('press')">KIT DE PRENSA</a>
+                
+                <div class="footer-right-group text-right">
+                    <div>
+                        <a onclick="accessProfessional('obra')">CREACIÓN</a>
+                    </div>
+                    <div style="margin-top: 16px;">
+                        <a onclick="accessProfessional('formacion')">FORMACIÓN</a>
+                    </div>
+                    <div style="margin-top: 16px;">
+                        <a onclick="accessProfessional('press')">KIT DE PRENSA</a>
+                    </div>
                 </div>
             </div>
             <div class="footer-loc">Copiapó. Región de Atacama. Chile</div>
@@ -189,6 +213,7 @@
     <script>
         function handleContact(lang) {
             const email = "hola@luisalbornoz.cl";
+            // Copia al portapapeles
             navigator.clipboard.writeText(email).then(() => {
                 const notice = document.getElementById('copy-notice');
                 notice.innerText = lang === 'es' ? "Correo copiado al portapapeles" : "Email copied to clipboard";
@@ -196,7 +221,10 @@
                 setTimeout(() => { notice.style.opacity = "0"; }, 2500);
             });
 
-            window.location.href = `mailto:${email}?subject=Consulta%20Profesional%3A%20Luis%20Albornoz`;
+            // Abre el gestor de correos automáticamente
+            setTimeout(() => {
+                window.location.href = `mailto:${email}?subject=Consulta%20Profesional%3A%20Luis%20Albornoz`;
+            }, 300); // Pequeña pausa para asegurar la copia
         }
 
         function accessProfessional(tipo) {
