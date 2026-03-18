@@ -79,42 +79,38 @@
 
         .statement { margin-top: .2rem; color: rgba(255, 255, 255, .86); font-weight: 400; }
 
-        /* --- Estilos del Footer Corregidos --- */
+        /* --- Estilos del Footer con Simetría Total --- */
         .site-footer { margin-top: 4rem; max-width: 540px; padding-bottom: 40px; }
         .footer-line { height: 1px; background: rgba(255, 255, 255, .15); width: 100%; margin-bottom: 24px; }
 
         .footer-content {
             display: grid;
-            grid-template-columns: 1fr 1fr; /* Dos columnas iguales */
-            gap: 16px; /* Espacio entre columnas y filas */
-            font-size: 0.82rem;
-            letter-spacing: 0.12em;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
             text-transform: uppercase;
             font-weight: 300;
         }
 
-        .footer-links a, .footer-links span {
+        /* Unificación estricta de tamaño para todos los enlaces del footer */
+        .footer-links a, .footer-links span, .direct-email {
             color: var(--muted);
             text-decoration: none;
             transition: 0.4s;
             cursor: pointer;
-            display: inline-block; /* Importante para alineación */
+            display: inline-block;
+            font-size: 0.82rem !important; 
+            letter-spacing: 0.12em;
         }
 
-        .footer-links a:hover { color: #fff; }
+        .footer-links a:hover, .direct-email:hover { color: #fff; }
 
-        /* Estilo específico para resaltar el correo */
         .direct-email { 
             color: #fff !important; 
             opacity: 0.85;
-            cursor: pointer;
         }
 
-        /* Justificación derecha para la columna profesional */
         .text-right { text-align: right; }
-
         .footer-loc { margin-top: 32px; font-size: 0.82rem; color: rgba(255,255,255,.45); font-weight: 300; }
-        /* ------------------------------------- */
 
         #copy-notice {
             position: fixed; bottom: 40px; left: 60px;
@@ -178,7 +174,7 @@
             <div class="footer-content footer-links">
                 <div class="footer-left-group">
                     <div>
-                        <a onclick="handleContact('es')" class="direct-email">hola@luisalbornoz.cl</a>
+                        <a onclick="handleContact('es')" class="direct-email">HOLA@LUISALBORNOZ.CL</a>
                     </div>
                     <div style="margin-top: 16px;">
                         <a href="https://www.instagram.com/luisalbornozcortes/" target="_blank">IG</a>
@@ -213,7 +209,6 @@
     <script>
         function handleContact(lang) {
             const email = "hola@luisalbornoz.cl";
-            // Copia al portapapeles
             navigator.clipboard.writeText(email).then(() => {
                 const notice = document.getElementById('copy-notice');
                 notice.innerText = lang === 'es' ? "Correo copiado al portapapeles" : "Email copied to clipboard";
@@ -221,10 +216,9 @@
                 setTimeout(() => { notice.style.opacity = "0"; }, 2500);
             });
 
-            // Abre el gestor de correos automáticamente
             setTimeout(() => {
                 window.location.href = `mailto:${email}?subject=Consulta%20Profesional%3A%20Luis%20Albornoz`;
-            }, 300); // Pequeña pausa para asegurar la copia
+            }, 300);
         }
 
         function accessProfessional(tipo) {
