@@ -79,6 +79,7 @@
 
         .statement { margin-top: .2rem; color: rgba(255, 255, 255, .86); font-weight: 400; }
 
+        /* --- Footer Styles with Total Symmetry --- */
         .site-footer { margin-top: 4rem; max-width: 540px; padding-bottom: 40px; }
         .footer-line { height: 1px; background: rgba(255, 255, 255, .15); width: 100%; margin-bottom: 24px; }
 
@@ -86,30 +87,29 @@
             display: grid;
             grid-template-columns: 1fr 1fr;
             gap: 16px;
-            font-size: 0.82rem;
-            letter-spacing: 0.12em;
             text-transform: uppercase;
             font-weight: 300;
         }
 
-        .footer-links a, .footer-links span {
+        /* Strict font size unification for all footer links */
+        .footer-links a, .footer-links span, .direct-email {
             color: var(--muted);
             text-decoration: none;
             transition: 0.4s;
             cursor: pointer;
             display: inline-block;
+            font-size: 0.82rem !important; 
+            letter-spacing: 0.12em;
         }
 
-        .footer-links a:hover { color: #fff; }
+        .footer-links a:hover, .direct-email:hover { color: #fff; }
 
         .direct-email { 
             color: #fff !important; 
             opacity: 0.85;
-            cursor: pointer;
         }
 
         .text-right { text-align: right; }
-
         .footer-loc { margin-top: 32px; font-size: 0.82rem; color: rgba(255,255,255,.45); font-weight: 300; }
 
         #copy-notice {
@@ -186,7 +186,7 @@
                         <a onclick="accessProfessional('work')">CREATION</a>
                     </div>
                     <div style="margin-top: 16px;">
-                        <a onclick="accessProfessional('training')">TRAINING</a>
+                        <a onclick="accessProfessional('learning')">LEARNING & KEYNOTES</a>
                     </div>
                     <div style="margin-top: 16px;">
                         <a onclick="accessProfessional('press')">PRESS KIT</a>
@@ -235,7 +235,7 @@
                 return;
             }
 
-            if (type === 'training') {
+            if (type === 'learning') {
                 const input = prompt("Protected Area. Enter password to access:");
                 
                 if (input === masterKey) {
