@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Luis Albornoz | Illusionist, Cultural Manager and Speaker</title>
-    <meta name="description" content="Luis Albornoz, illusionist and cultural manager based in the Atacama Desert. Development of scenic projects and social innovation." />
+    <title>Luis Albornoz | Illusionist, Cultural Manager & Speaker</title>
+    <meta name="description" content="Luis Albornoz, illusionist and cultural manager based in the Atacama Desert. Developing performing arts and social innovation projects." />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=IM+Fell+DW+Pica+SC&family=Inter+Tight:wght@300;400;900&display=swap" rel="stylesheet">
@@ -83,16 +83,32 @@
         .footer-line { height: 1px; background: rgba(255, 255, 255, .15); width: 100%; margin-bottom: 24px; }
 
         .footer-content {
-            display: flex; justify-content: space-between;
-            align-items: flex-start; font-size: 0.82rem;
-            letter-spacing: 0.12em; text-transform: uppercase; font-weight: 300;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+            font-size: 0.82rem;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            font-weight: 300;
         }
 
-        .footer-left, .footer-right { display: flex; flex-direction: column; gap: 12px; }
-        .footer-right { text-align: right; }
+        .footer-links a, .footer-links span {
+            color: var(--muted);
+            text-decoration: none;
+            transition: 0.4s;
+            cursor: pointer;
+            display: inline-block;
+        }
 
-        .footer-links a { color: var(--muted); text-decoration: none; transition: 0.4s; cursor: pointer; }
         .footer-links a:hover { color: #fff; }
+
+        .direct-email { 
+            color: #fff !important; 
+            opacity: 0.85;
+            cursor: pointer;
+        }
+
+        .text-right { text-align: right; }
 
         .footer-loc { margin-top: 32px; font-size: 0.82rem; color: rgba(255,255,255,.45); font-weight: 300; }
 
@@ -128,6 +144,8 @@
             }
             .video-wrapper { display: none; }
             h1, h2.subtitle, p, .site-footer { max-width: 100%; }
+            .footer-content { grid-template-columns: 1fr; gap: 24px; text-align: center; }
+            .text-right { text-align: center; }
         }
     </style>
 </head>
@@ -144,7 +162,7 @@
 
         <p>Based in the Atacama Desert, I develop cultural processes that intertwine art, territory, and social innovation.</p>
         <p>I explore wonder as a tool for transformation and decentralization as a concrete practice for cultural development.</p>
-        <p>I am interested in fragility, time, and the human experience as spaces for encounter between people and communities.</p>
+        <p>I am interested in fragility, time, and the human experience as spaces for connection between people and communities.</p>
 
         <p class="statement">
             Art is not optional.<br>
@@ -154,14 +172,25 @@
         <footer class="site-footer">
             <div class="footer-line"></div>
             <div class="footer-content footer-links">
-                <div class="footer-left">
-                    <a onclick="handleContact('en')">CONTACT</a>
-                    <a href="https://www.instagram.com/luisalbornozcortes/" target="_blank">IG</a>
+                <div class="footer-left-group">
+                    <div>
+                        <a onclick="handleContact('en')" class="direct-email">HOLA@LUISALBORNOZ.CL</a>
+                    </div>
+                    <div style="margin-top: 16px;">
+                        <a href="https://www.instagram.com/luisalbornozcortes/" target="_blank">IG</a>
+                    </div>
                 </div>
-                <div class="footer-right">
-                    <a onclick="accessProfessional('obra')">CREATION</a>
-                    <a onclick="accessProfessional('formacion')">EDUCATION</a>
-                    <a onclick="accessProfessional('press')">PRESS KIT</a>
+                
+                <div class="footer-right-group text-right">
+                    <div>
+                        <a onclick="accessProfessional('work')">CREATION</a>
+                    </div>
+                    <div style="margin-top: 16px;">
+                        <a onclick="accessProfessional('training')">TRAINING</a>
+                    </div>
+                    <div style="margin-top: 16px;">
+                        <a onclick="accessProfessional('press')">PRESS KIT</a>
+                    </div>
                 </div>
             </div>
             <div class="footer-loc">Copiapó. Atacama Region. Chile</div>
@@ -179,36 +208,35 @@
 
     <script>
         function handleContact(lang) {
-            const email = "luisalbornoz@gmail.com";
+            const email = "hola@luisalbornoz.cl";
             navigator.clipboard.writeText(email).then(() => {
                 const notice = document.getElementById('copy-notice');
-                notice.innerText = lang === 'en' ? "Email copied to clipboard" : "Correo copiado al portapapeles";
+                notice.innerText = lang === 'es' ? "Correo copiado al portapapeles" : "Email copied to clipboard";
                 notice.style.opacity = "1";
                 setTimeout(() => { notice.style.opacity = "0"; }, 2500);
             });
 
-            const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
-            if (isMobile) {
-                window.location.href = `mailto:${email}?subject=Professional%20Inquiry`;
-            }
+            setTimeout(() => {
+                window.location.href = `mailto:${email}?subject=Professional%20Inquiry%3A%20Luis%20Albornoz`;
+            }, 300);
         }
 
-        function accessProfessional(tipo) {
+        function accessProfessional(type) {
             const masterKey = "DESIERTO2026";
             
-            if (tipo === 'obra' || tipo === 'press') {
-                const input = prompt("Restricted Access. Enter key:");
+            if (type === 'work' || type === 'press') {
+                const input = prompt("Restricted Access. Please enter password:");
                 if (input === masterKey) {
-                    if (tipo === 'obra') window.open("luis-albornoz-un-mago-en-el-desierto-dossier.pdf", '_blank');
-                    if (tipo === 'press') window.open("https://drive.google.com/drive/folders/1Z386t4rUbsZg7R92Y4rG-MYBZl6e0bnV?usp=sharing", '_blank');
+                    if (type === 'work') window.open("luis-albornoz-obra-un mago-en-el-desierto-dossier.pdf", '_blank');
+                    if (type === 'press') window.open("https://drive.google.com/drive/folders/1Z386t4rUbsZg7R92Y4rG-MYBZl6e0bnV?usp=sharing", '_blank');
                 } else if (input !== null) {
-                    alert("Incorrect key.");
+                    alert("Incorrect password.");
                 }
                 return;
             }
 
-            if (tipo === 'formacion') {
-                const input = prompt("Protected Education Area. Enter key to access:");
+            if (type === 'training') {
+                const input = prompt("Protected Area. Enter password to access:");
                 
                 if (input === masterKey) {
                     const sector = prompt("ACCESS GRANTED | Select area of interest:\n1. Corporate\n2. Sociocultural\n(Type 1 or 2)");
@@ -223,7 +251,7 @@
                         else if (capSoc === "2") window.open("luis-albornoz-conferencia-taller-presentaciones-memorables-sociocultural.pdf", '_blank');
                     }
                 } else if (input !== null) {
-                    alert("Incorrect key.");
+                    alert("Incorrect password.");
                 }
             }
         }
