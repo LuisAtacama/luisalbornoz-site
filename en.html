@@ -28,8 +28,9 @@
             height: 100%;
         }
 
+        /* Corregido: Posición absoluta para que suba con el scroll */
         .lang-switch {
-            position: fixed; top: 40px; right: 60px;
+            position: absolute; top: 40px; right: 60px;
             font-size: 0.75rem; letter-spacing: 0.2em;
             text-transform: uppercase; z-index: 9999;
         }
@@ -79,6 +80,7 @@
 
         .statement { margin-top: .2rem; color: rgba(255, 255, 255, .86); font-weight: 400; }
 
+        /* --- Footer with Homogenized Visual Coherence --- */
         .site-footer { margin-top: 4rem; max-width: 540px; padding-bottom: 40px; }
         .footer-line { height: 1px; background: rgba(255, 255, 255, .15); width: 100%; margin-bottom: 24px; }
 
@@ -87,17 +89,18 @@
             grid-template-columns: 1fr 1fr;
             gap: 16px;
             text-transform: uppercase;
-            font-weight: 300;
         }
 
+        /* Strict font unification for visual symmetry */
         .footer-links a, .footer-links span, .direct-email {
             color: var(--muted);
             text-decoration: none;
             transition: 0.4s;
             cursor: pointer;
             display: inline-block;
-            font-size: 0.82rem !important; 
-            letter-spacing: 0.12em;
+            font-weight: 300 !important; 
+            font-size: 0.8rem !important; 
+            letter-spacing: 0.12em !important;
         }
 
         .footer-links a:hover, .direct-email:hover { color: #fff; }
@@ -142,8 +145,10 @@
             }
             .video-wrapper { display: none; }
             h1, h2.subtitle, p, .site-footer { max-width: 100%; }
-            .footer-content { grid-template-columns: 1fr; gap: 24px; text-align: center; }
-            .text-right { text-align: center; }
+            /* Corrected: Maintain two-column grid on mobile */
+            .footer-content { grid-template-columns: 1fr 1fr; }
+            .text-right { text-align: right; }
+            .lang-switch { right: 20px; top: 20px; }
         }
     </style>
 </head>
