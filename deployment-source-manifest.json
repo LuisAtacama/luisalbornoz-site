@@ -1,0 +1,1262 @@
+{
+  "baseDeployment": "dpl_2hBzJzVTG7dXWGeQit6EBuac9Y67",
+  "project": "prj_iOpEenMsq3rwAEVrv87IlU1DrtMN",
+  "unchangedFiles": [
+    {
+      "file": ".npmrc",
+      "sha": "0bc97ee1a5f41148e16988044264bedc31d0cc3c"
+    },
+    {
+      "file": ".openai/hosting.json",
+      "sha": "e1974d12047f6198266621de0a999cfe4d8806d2"
+    },
+    {
+      "file": ".vercelignore",
+      "sha": "80952b2e9bd4cb6d0baa6e2959e83e0171970295"
+    },
+    {
+      "file": "AGENTS.md",
+      "sha": "8a38a9be445fb29e9ce77bb23d1086eb2dc3d656"
+    },
+    {
+      "file": "CLAUDE.md",
+      "sha": "c140473a3a5fbe89301c99d9d0d1b76c5971f2c3"
+    },
+    {
+      "file": "README.md",
+      "sha": "28f769fdaaa577519a4268ff5b94543d98fc4b89"
+    },
+    {
+      "file": "app/[section]/[slug]/page.tsx",
+      "sha": "42276f7c69baaa6513b35dfbfe521370a69ea095"
+    },
+    {
+      "file": "app/api/contact/route.ts",
+      "sha": "776244a7b3ff2114d911ede287eaf4d3cf63b06c"
+    },
+    {
+      "file": "app/arte-accion-social/page.tsx",
+      "sha": "a439a6923fc3c80f6e97b43a1682c2abfb0d5669"
+    },
+    {
+      "file": "app/award-2026/award.module.css",
+      "sha": "afb606b15371069c369ff021b7150b180d48b7cb"
+    },
+    {
+      "file": "app/award-2026/page.tsx",
+      "sha": "084ec21127f63e93182f4a4fc3399b8558e507ec"
+    },
+    {
+      "file": "app/chatgpt-auth.ts",
+      "sha": "57f95eac1484855c670eb7ac96bc160e7b030dea"
+    },
+    {
+      "file": "app/conferencias-y-talleres/page.tsx",
+      "sha": "df6287f0bdd1d3f6cf807a69247d3458655e4be8"
+    },
+    {
+      "file": "app/en/[section]/[slug]/page.tsx",
+      "sha": "6d6de66ad47eddee8392a83c72e1a5cf2e28ac2d"
+    },
+    {
+      "file": "app/en/arte-accion-social/page.tsx",
+      "sha": "75aa416a1c572e5e345dd68d6960d528392f81bf"
+    },
+    {
+      "file": "app/en/conferencias-y-talleres/page.tsx",
+      "sha": "5e39689750d7f83ac32a6c7c62be527168b17676"
+    },
+    {
+      "file": "app/en/ilusionismo-contemporaneo/page.tsx",
+      "sha": "1c0b72457deb9e2ea0b3e2eb164604c91abe84f4"
+    },
+    {
+      "file": "app/en/layout.tsx",
+      "sha": "80255e341dfecae90a3350775efa563111552de8"
+    },
+    {
+      "file": "app/en/page.tsx",
+      "sha": "9d97ef9b55cf47ec748f40b782e209ce9d104b25"
+    },
+    {
+      "file": "app/en/performances/[slug]/page.tsx",
+      "sha": "1f3b6b4b1d1b6bd11f7ed59ba7ef07428788ecbe"
+    },
+    {
+      "file": "app/en/prensa/page.tsx",
+      "sha": "80a68763a5a0090c649264152aabb54dfc44ac36"
+    },
+    {
+      "file": "app/en/trayectoria/page.tsx",
+      "sha": "962ff416a4623dc73741679bd009ed7bef79663b"
+    },
+    {
+      "file": "app/globals.css",
+      "sha": "df9b5ced7efa81d384b888545f1c93b12555dc56"
+    },
+    {
+      "file": "app/ilusionismo-contemporaneo/page.tsx",
+      "sha": "74626a209325fe9d4541bf35f3c82721f595c03f"
+    },
+    {
+      "file": "app/layout.tsx",
+      "sha": "bfa48ebacc2adf9840db19b524ccb22a56ffd86c"
+    },
+    {
+      "file": "app/page.tsx",
+      "sha": "8bea6d458b4cb39953798517e0b0a78ac29f1150"
+    },
+    {
+      "file": "app/performances/[slug]/page.tsx",
+      "sha": "227f813b1ff9205e4052b5f4d2d08ca38a1801ac"
+    },
+    {
+      "file": "app/prensa/page.tsx",
+      "sha": "3a7de310461846db33fc10d98ef38861407d4f55"
+    },
+    {
+      "file": "app/prototipos/manual-para-salvar-al-mundo/_components/PrototypeNav.tsx",
+      "sha": "d09d332530f2476002697751bfc2cd1e5f35a8fb"
+    },
+    {
+      "file": "app/prototipos/manual-para-salvar-al-mundo/bitacora/page.tsx",
+      "sha": "160f55e6d41c007972d8d1addd43f88c7856c9f6"
+    },
+    {
+      "file": "app/prototipos/manual-para-salvar-al-mundo/manual-prototype.module.css",
+      "sha": "063f0f1fe830ea2f9e141da41317f668d31ad003"
+    },
+    {
+      "file": "app/prototipos/manual-para-salvar-al-mundo/page.tsx",
+      "sha": "a9669ac22cd5f9ad079574bf61d13ba683828b6f"
+    },
+    {
+      "file": "app/robots.ts",
+      "sha": "af4ff6873800163cfb80a5dcc049b53068ebe92f"
+    },
+    {
+      "file": "app/sitemap.ts",
+      "sha": "f3faec5962ad79c68cda3f6a2fe77e6a667aff1b"
+    },
+    {
+      "file": "app/trayectoria/page.tsx",
+      "sha": "402986642be8a1bf331700ac022dea78b8dba9df"
+    },
+    {
+      "file": "build/sites-vite-plugin.LICENSE",
+      "sha": "b4005d826078e5a519e83677c1609982f6b6be1b"
+    },
+    {
+      "file": "build/sites-vite-plugin.ts",
+      "sha": "b0fe5a7e8d411a0383b9cfcf7f744285273cc14f"
+    },
+    {
+      "file": "cloudflare-env.d.ts",
+      "sha": "13d514b9bd229530cf2455207c4ee041aea6b4f0"
+    },
+    {
+      "file": "components.json",
+      "sha": "071e3c0866fa155a273f08565e761a9e6c91b97e"
+    },
+    {
+      "file": "components/portfolio/AdvisorySection.tsx",
+      "sha": "cbe3cbedd9e2ad60b3f217e7e8206bc9f6a5b391"
+    },
+    {
+      "file": "components/portfolio/Breadcrumbs.tsx",
+      "sha": "01bf867a143ba7e90a6ef972450cc14c3684c0b1"
+    },
+    {
+      "file": "components/portfolio/ContactForm.tsx",
+      "sha": "c861955e67db1ca39524ea435c569f64c22e6e59"
+    },
+    {
+      "file": "components/portfolio/ContentHubPage.tsx",
+      "sha": "75768f35b8240754814f7671c5c9db436ebe0f41"
+    },
+    {
+      "file": "components/portfolio/Hero.tsx",
+      "sha": "9b3f8996349a742bd0d0ead15fca75eee649e097"
+    },
+    {
+      "file": "components/portfolio/JsonLd.tsx",
+      "sha": "f18100124e1b02ff9bd4819e6a227cd660cadae2"
+    },
+    {
+      "file": "components/portfolio/LanguageSwitcher.tsx",
+      "sha": "944a59789599ead9995726c17abd463b73b84723"
+    },
+    {
+      "file": "components/portfolio/ManualProjectPage.tsx",
+      "sha": "8648db060811a8681bfcfa410517390f04da7501"
+    },
+    {
+      "file": "components/portfolio/PerformanceSection.tsx",
+      "sha": "84db7d99f8dbc2e6fc47688c1bf92dfcc5253991"
+    },
+    {
+      "file": "components/portfolio/Portfolio.tsx",
+      "sha": "4a5dd0eba9b303b9640047c6c2191c5b5e7b17ea"
+    },
+    {
+      "file": "components/portfolio/PortfolioPage.tsx",
+      "sha": "6a6cce395028ba71caf9ab46c986c06b4d6d5e33"
+    },
+    {
+      "file": "components/portfolio/ProjectCard.tsx",
+      "sha": "2f7394d52ea2f4155079d16a085612dcbb219972"
+    },
+    {
+      "file": "components/portfolio/ProjectDetail.tsx",
+      "sha": "eef882eaa16f934d139c0199afd1c34133ba5c48"
+    },
+    {
+      "file": "components/portfolio/ProjectPlaceholder.tsx",
+      "sha": "89c275f0ad299ac55434d8ba3bd00931d23b1a96"
+    },
+    {
+      "file": "components/portfolio/SiteFooter.tsx",
+      "sha": "fa04d25c1fdf8c8c5b2044a93f756d17e0c99fc0"
+    },
+    {
+      "file": "components/portfolio/SiteHeader.tsx",
+      "sha": "81dbbf3952686ee2c977c097b73a19995fa9e153"
+    },
+    {
+      "file": "components/portfolio/StandalonePerformancePage.tsx",
+      "sha": "336cd8ce9642f0486c15b803efd97e8f418b4561"
+    },
+    {
+      "file": "components/portfolio/StandaloneProjectPage.tsx",
+      "sha": "e0762c8ff55df82a450226a3b357bf2b5cce7faf"
+    },
+    {
+      "file": "components/ui/accordion.tsx",
+      "sha": "539f4b0bf4704818ad1352b328e68dbe57f5471a"
+    },
+    {
+      "file": "components/ui/alert-dialog.tsx",
+      "sha": "870fc4c64b209e677dfe94958e901a4d50a2d4e9"
+    },
+    {
+      "file": "components/ui/alert.tsx",
+      "sha": "80ac45632c53358992bbfb955370ae87e9e107fb"
+    },
+    {
+      "file": "components/ui/aspect-ratio.tsx",
+      "sha": "186021629af4684f62369c6d8410338465b091a7"
+    },
+    {
+      "file": "components/ui/attachment.tsx",
+      "sha": "2771dc56985fee6818a3ae372e8707262ab1de64"
+    },
+    {
+      "file": "components/ui/avatar.tsx",
+      "sha": "057e4ec5f9a85b7aeb0bd55b2a3ceb7c81f26553"
+    },
+    {
+      "file": "components/ui/badge.tsx",
+      "sha": "dd14174bad0e7cd658d5f0c0479d48697c9b50f5"
+    },
+    {
+      "file": "components/ui/breadcrumb.tsx",
+      "sha": "20195df0d0f9f85db00e57fd6865e12b0d6167cf"
+    },
+    {
+      "file": "components/ui/bubble.tsx",
+      "sha": "f0e2cf88c1cb506c24f1a703eb95c862dfe37ed7"
+    },
+    {
+      "file": "components/ui/button-group.tsx",
+      "sha": "58144148969b5fe227d349e8afe697c2f25508ae"
+    },
+    {
+      "file": "components/ui/button.tsx",
+      "sha": "2ee6bfd1bae7f37ec48c0fbe8812d956f72968c0"
+    },
+    {
+      "file": "components/ui/calendar.tsx",
+      "sha": "3ec93352f855f99aeaafb8c2c4748635b3a56b12"
+    },
+    {
+      "file": "components/ui/card.tsx",
+      "sha": "1f9a9a608a0985d7f22ef37cb5c965bb68c4e5ce"
+    },
+    {
+      "file": "components/ui/carousel.tsx",
+      "sha": "46588b1ac2efd1668d18a59b24741ac2452fa9f9"
+    },
+    {
+      "file": "components/ui/chart.tsx",
+      "sha": "56660512d82d5ac19eba4c05f6d94adbb3ac6c98"
+    },
+    {
+      "file": "components/ui/checkbox.tsx",
+      "sha": "9f40ef7e1f43606bd8e6d8558ee4e5d06bb2a736"
+    },
+    {
+      "file": "components/ui/collapsible.tsx",
+      "sha": "e9fc6a0cf48b2b363a4b544490c2663e9793a545"
+    },
+    {
+      "file": "components/ui/combobox.tsx",
+      "sha": "0fb8cdfed6c09ae8153af8222f29477ce9bd8e3c"
+    },
+    {
+      "file": "components/ui/command.tsx",
+      "sha": "532ad0e19ea88e2e1837111e547fe755bcaed12b"
+    },
+    {
+      "file": "components/ui/context-menu.tsx",
+      "sha": "3f4a73c4a676744180c2b1c7e2c23a47046f444d"
+    },
+    {
+      "file": "components/ui/dialog.tsx",
+      "sha": "d5d93691062ae4f522b682cce1fc7b4ac5b634ba"
+    },
+    {
+      "file": "components/ui/direction.tsx",
+      "sha": "f5c285ee85de720559125212021f181b2425ce0c"
+    },
+    {
+      "file": "components/ui/drawer.tsx",
+      "sha": "16e744a88b565c22b399512517f489da26592fed"
+    },
+    {
+      "file": "components/ui/dropdown-menu.tsx",
+      "sha": "e2b3b7d0e773eb7248a2f82a05b47dcaec7d2dd7"
+    },
+    {
+      "file": "components/ui/empty.tsx",
+      "sha": "04918d70011b844e59fbe82718ed22630feeeedb"
+    },
+    {
+      "file": "components/ui/field.tsx",
+      "sha": "e670bd471562ad48d64ee64d61a5abf65bb729fa"
+    },
+    {
+      "file": "components/ui/form.tsx",
+      "sha": "2cf37958326fc7b95821bbbc5f78b18bc6ea1e21"
+    },
+    {
+      "file": "components/ui/hover-card.tsx",
+      "sha": "afd73957d5dd9c0940bda9013c2cf1901eca1d39"
+    },
+    {
+      "file": "components/ui/input-group.tsx",
+      "sha": "1bcc305fbda7ecdddeb8e220abea23ef523b6ef2"
+    },
+    {
+      "file": "components/ui/input-otp.tsx",
+      "sha": "23a2174867d61f5d26e5dc2ff084e134ea405590"
+    },
+    {
+      "file": "components/ui/input.tsx",
+      "sha": "06c34b72fef9dc67cd6b5af1e0ce5305f0cdb56d"
+    },
+    {
+      "file": "components/ui/item.tsx",
+      "sha": "68654e49bdc8f28cfc44032709290987edb0b0ff"
+    },
+    {
+      "file": "components/ui/kbd.tsx",
+      "sha": "526205369e35330fae576d34a115138d7a911668"
+    },
+    {
+      "file": "components/ui/label.tsx",
+      "sha": "a99938256badeaa5f000f008140391c7e61c3d19"
+    },
+    {
+      "file": "components/ui/marker.tsx",
+      "sha": "2d934e568f0743d71dd242f72f1a1c77b92fa74f"
+    },
+    {
+      "file": "components/ui/menubar.tsx",
+      "sha": "dbb362a2dbac0cc593a46a08bc1f90f6a6f256f5"
+    },
+    {
+      "file": "components/ui/message-scroller.tsx",
+      "sha": "a761ec08c37bc473abc816f97bc43b7d91c27391"
+    },
+    {
+      "file": "components/ui/message.tsx",
+      "sha": "d80cd40eb488371e33b32caff60213ebe8b4aba0"
+    },
+    {
+      "file": "components/ui/native-select.tsx",
+      "sha": "0b01089407e5c5ac13e3e11c54bfab09bd691f16"
+    },
+    {
+      "file": "components/ui/navigation-menu.tsx",
+      "sha": "4b12065be4faf144deec6ada9aa8d817bde57c1f"
+    },
+    {
+      "file": "components/ui/pagination.tsx",
+      "sha": "53c460ab54ad675036c7d9e80edfc53ea1c3f7b0"
+    },
+    {
+      "file": "components/ui/popover.tsx",
+      "sha": "ec814498a0efcca5c51efe9ba76cb3bd992d968e"
+    },
+    {
+      "file": "components/ui/progress.tsx",
+      "sha": "097c7400942bb55ae5b93e5e51beda3e07a4aab8"
+    },
+    {
+      "file": "components/ui/radio-group.tsx",
+      "sha": "096a64f0005023206cf9271bc8ca6625529d25ba"
+    },
+    {
+      "file": "components/ui/resizable.tsx",
+      "sha": "847fb071da9c752315617aa399d3ba434e1e80bd"
+    },
+    {
+      "file": "components/ui/scroll-area.tsx",
+      "sha": "4aaa43f6cd28194551dd86533731fccbc5e0763e"
+    },
+    {
+      "file": "components/ui/select.tsx",
+      "sha": "60ccee176393e5fc0471921cf40a45c31f347004"
+    },
+    {
+      "file": "components/ui/separator.tsx",
+      "sha": "b3c5437c3d6ecf3e9720a07a18249d232b5d32a6"
+    },
+    {
+      "file": "components/ui/sheet.tsx",
+      "sha": "928f0a396f78253608b3a5996fed5fa56b64e965"
+    },
+    {
+      "file": "components/ui/sidebar.tsx",
+      "sha": "4c22cbad22e3841536f1179377f476cc128cd81d"
+    },
+    {
+      "file": "components/ui/skeleton.tsx",
+      "sha": "b6519faed74d6c006f6174911b766c0e15e28713"
+    },
+    {
+      "file": "components/ui/slider.tsx",
+      "sha": "b48db732996f51569efb1fc281e7d98a672d8ffb"
+    },
+    {
+      "file": "components/ui/sonner.tsx",
+      "sha": "5dca69a0e1a5ded1ab58b2f7504f5d17ecb2f2eb"
+    },
+    {
+      "file": "components/ui/spinner.tsx",
+      "sha": "698020d2553ad0b4d840e98d117d5007fd4f1aad"
+    },
+    {
+      "file": "components/ui/switch.tsx",
+      "sha": "6d1415d4c12600632ed80c276263cb42fe925310"
+    },
+    {
+      "file": "components/ui/table.tsx",
+      "sha": "a8c83829252031e7d8d004f4155ea318e51eb43a"
+    },
+    {
+      "file": "components/ui/tabs.tsx",
+      "sha": "e85c28393783c6ca68a51b43de856be5d23ed17d"
+    },
+    {
+      "file": "components/ui/textarea.tsx",
+      "sha": "e3ee46f069b757baa95302d1a30e03c2927edcc1"
+    },
+    {
+      "file": "components/ui/toggle-group.tsx",
+      "sha": "cff2c3706d481ecdfedd177e8c848deed663e111"
+    },
+    {
+      "file": "components/ui/toggle.tsx",
+      "sha": "fe98a386ffb1ca975f675410ab4a3f6adb1c14fb"
+    },
+    {
+      "file": "components/ui/tooltip.tsx",
+      "sha": "7b503022ca77ae37a5a27006dcacf0779fc0c2f2"
+    },
+    {
+      "file": "data/i18n.ts",
+      "sha": "eb107aefd4783a7e6897c55ef1e22a872ede9ee2"
+    },
+    {
+      "file": "data/performances-en.ts",
+      "sha": "a796a769e7d321da36a7555564d081c74e321d6a"
+    },
+    {
+      "file": "data/performances.ts",
+      "sha": "8020ec04c599191bc85e21cc902fb0884163d6fa"
+    },
+    {
+      "file": "data/portfolio-en.ts",
+      "sha": "e808ca4a0b131f8f67b65605478bf542daebb4c1"
+    },
+    {
+      "file": "data/portfolio.ts",
+      "sha": "db0dfe7863a380a2a8e67b9ab461005d85824ef8"
+    },
+    {
+      "file": "data/seo-pages-en.ts",
+      "sha": "75b2bc2bb86f5dc51bb78345a14d061cf613bb2c"
+    },
+    {
+      "file": "data/seo-pages.ts",
+      "sha": "06f85d3ea1a0a6ac45f7824f31b6b53d49fa0c49"
+    },
+    {
+      "file": "db/index.ts",
+      "sha": "5f0021f310f036bfeb8a1e2c758f582babacc2d3"
+    },
+    {
+      "file": "db/schema.ts",
+      "sha": "47d7e72a086ab33e142ba75487f29416573c8419"
+    },
+    {
+      "file": "drizzle.config.ts",
+      "sha": "5df729a362aff2748c00427a87289295269df66a"
+    },
+    {
+      "file": "drizzle/meta/_journal.json",
+      "sha": "5f00b24c8826b8cbaa2bfe7cae853a1e3cb98eb9"
+    },
+    {
+      "file": "eslint.config.mjs",
+      "sha": "4cabe66146f961658a3c76465bcb57e80314404e"
+    },
+    {
+      "file": "examples/d1/app/api/notes/route.ts",
+      "sha": "79967ad93a9ff68f48f82828078ab85ad00e2ec8"
+    },
+    {
+      "file": "examples/d1/db/schema.ts",
+      "sha": "766d1eb792e84dadf6ff4b9ecc5c65e3e68ab70a"
+    },
+    {
+      "file": "hooks/use-mobile.ts",
+      "sha": "cdb9aae9ca8d354d767e8da4731ff7eb4a16d532"
+    },
+    {
+      "file": "lib/portfolio-analytics.ts",
+      "sha": "4d3083ce3de1a1a34f8eb93b9d2d9f5c4a0a3f14"
+    },
+    {
+      "file": "lib/utils.ts",
+      "sha": "edf351d874d6710ffff09bbbad7de26cace8fd8c"
+    },
+    {
+      "file": "next-env.d.ts",
+      "sha": "915946e261450f4fb6aab2ca862c8b440b748240"
+    },
+    {
+      "file": "next.config.ts",
+      "sha": "0300f895470acd3cecf681d705465d73d97db85d"
+    },
+    {
+      "file": "package.json",
+      "sha": "7f5d9b9202c127f81974529713362180be5ec94b"
+    },
+    {
+      "file": "pnpm-lock.yaml",
+      "sha": "ce43928e4ac9abe17a8ecf2a0ce220ed600ab552"
+    },
+    {
+      "file": "pnpm-workspace.yaml",
+      "sha": "3edb058f08490c4c649626556480aca61ad6acc9"
+    },
+    {
+      "file": "postcss.config.mjs",
+      "sha": "8f8be689e9af58f80351df6e6b551146822f42a4"
+    },
+    {
+      "file": "proxy.ts",
+      "sha": "27faa74a20729d1bcebd89e29518c37cfada4923"
+    },
+    {
+      "file": "public/asesorias/acompanamiento-artistas/grafica.png",
+      "sha": "2a7e69814166c1c82ac3be601d7a4b9ee98b2c75"
+    },
+    {
+      "file": "public/asesorias/acompanamiento-artistas/mano-estrella-desktop.png",
+      "sha": "f8f7bb1a15f0bffb288284f6d04ef4de7f2f6978"
+    },
+    {
+      "file": "public/asesorias/cultiva-tango/identidad.jpg",
+      "sha": "0e20511f1d16a33111623521935d2d00e03f1cb9"
+    },
+    {
+      "file": "public/asesorias/daniel-ketchedjian/retrato.jpg",
+      "sha": "7df800149f8d35bdf856a8f2bde53a462fd34380"
+    },
+    {
+      "file": "public/asesorias/ilusion/escena.jpg",
+      "sha": "8d29f8f2df91cd750460d9f35824bd0ee64e8b67"
+    },
+    {
+      "file": "public/asesorias/ilusion/grafica.jpg",
+      "sha": "56ead717547b679d403516339c34c6a881480891"
+    },
+    {
+      "file": "public/asesorias/jean-paul/el-mago-del-fin-del-mundo.jpg",
+      "sha": "2923cfdcb98f851f9b0417339b9a27c3c75f4d31"
+    },
+    {
+      "file": "public/asesorias/jean-paul/escena.jpg",
+      "sha": "e5222194fc9b68816f916b982ddaca966dbd5479"
+    },
+    {
+      "file": "public/asesorias/jean-paul/invisible.jpg",
+      "sha": "30c67ac72776475875cdea7fed7f536bfd5d63a0"
+    },
+    {
+      "file": "public/asesorias/jean-paul/magiko.jpg",
+      "sha": "0cbaf3c0a8e7c2b0ae6bc573bca9435d4a3a16e3"
+    },
+    {
+      "file": "public/asesorias/jean-paul/mapa-magico.jpg",
+      "sha": "5fa9357801e988b90f40517216acab5505813ab0"
+    },
+    {
+      "file": "public/asesorias/jean-paul/retrato.jpg",
+      "sha": "2b83284fcaf3f0f6789c5a635d29b17027c9d685"
+    },
+    {
+      "file": "public/asesorias/jean-paul/trascender.jpg",
+      "sha": "6934baaec0ac4551a691b85bdaed84a4567e8132"
+    },
+    {
+      "file": "public/asesorias/jean-paul/ver-para-creer.jpg",
+      "sha": "908ce2a6c4e71c0c79bca80c5c39b94d314a0fb3"
+    },
+    {
+      "file": "public/asesorias/tim/afiche.jpg",
+      "sha": "035541243743d6379d7def074b81b854c0e6b668"
+    },
+    {
+      "file": "public/asesorias/tim/escena-estudio.jpg",
+      "sha": "ecef84d8cf4fb36b0e1ac4307d5a595e6c4bb973"
+    },
+    {
+      "file": "public/asesorias/tim/identidad.jpg",
+      "sha": "e8e77a3fe5a2fdc1c8bb759339c3963abe2fe2af"
+    },
+    {
+      "file": "public/asesorias/tim/movimiento-blanco.jpg",
+      "sha": "52884f9506982f942517a75b0073ce6dd890cb31"
+    },
+    {
+      "file": "public/asesorias/tim/movimiento-negro.jpg",
+      "sha": "42df6a107d2a66b75f6896b06145f71730637a28"
+    },
+    {
+      "file": "public/asesorias/tim/team.jpg",
+      "sha": "a77078237ca8080d9f7c4391fec14773482a67c1"
+    },
+    {
+      "file": "public/asesorias/vina-del-mar/escenario.jpg",
+      "sha": "e6242d20073fd7ba77b2991875d08a02d95666bb"
+    },
+    {
+      "file": "public/asesorias/vina-del-mar/reconocimiento.jpg",
+      "sha": "a808cddbd2c8259056c6bf843f36c690fff82d09"
+    },
+    {
+      "file": "public/cv/Curriculum_artistico_Luis_Albornoz_Cortes_SEP2026.pdf",
+      "sha": "ebec174f63b0da4560dfd2240e8766736ddcdca4"
+    },
+    {
+      "file": "public/favicon.svg",
+      "sha": "9ffbe7bc648256372c5b8520a36174231d6f56f8"
+    },
+    {
+      "file": "public/file.svg",
+      "sha": "43e2751ad2c3e5f28ebe755f2863e8d505827106"
+    },
+    {
+      "file": "public/globe.svg",
+      "sha": "bc7491d499a6d08cd34d102fab946adda3316864"
+    },
+    {
+      "file": "public/performances/innovaimpacto/escenario.jpg",
+      "sha": "92dca2837a4c8bf2d222dc2308c7d1f7c9b1119d"
+    },
+    {
+      "file": "public/performances/innovaimpacto/participacion-innovaimpacto-bolivia-2026.mp4",
+      "sha": "190adb8b122af4f571d27f4f0bd74fa706d473dd"
+    },
+    {
+      "file": "public/performances/innovaimpacto/portada.jpg",
+      "sha": "742aa9127e9e21e10e2a8b92de8825db99c8aa03"
+    },
+    {
+      "file": "public/performances/innovaimpacto/presentaciones-experiencia.mp4",
+      "sha": "bca36f365cd29df5ac07f3dc8a33fcd793c17d73"
+    },
+    {
+      "file": "public/performances/innovaimpacto/registro-innova-impacto-01.jpg",
+      "sha": "7f6458cb1cb14bc12438eaa7099fd7ca3c6fecad"
+    },
+    {
+      "file": "public/performances/innovaimpacto/registro-innova-impacto-02.jpg",
+      "sha": "6c14eb8026b7d492ed9ebe701fca39dc2270e9b4"
+    },
+    {
+      "file": "public/performances/innovaimpacto/registro-innova-impacto-03.jpg",
+      "sha": "cbb7b77900e698a3c45b21502d8a2a9ccfcf5898"
+    },
+    {
+      "file": "public/performances/innovaimpacto/registro-innova-impacto-04.jpg",
+      "sha": "f09b7f957c614cee98a0119fc1964cc2a208d182"
+    },
+    {
+      "file": "public/performances/magic-castle/acto-campana-publico.jpg",
+      "sha": "fe53d7a84e02e9d0b9c49cd78e42341513727149"
+    },
+    {
+      "file": "public/performances/magic-castle/actuacion-cartomagia-01.jpg",
+      "sha": "567e062b67c92cd0526cd774ef481b2fbdbeb576"
+    },
+    {
+      "file": "public/performances/magic-castle/actuacion-cartomagia-02.jpg",
+      "sha": "ac809b08e2401eff608f88a2921ab1137f72e9e7"
+    },
+    {
+      "file": "public/performances/magic-castle/close-up-gallery-publico.jpg",
+      "sha": "8673e8b5cd026514180bbc4631f6f2557416eccb"
+    },
+    {
+      "file": "public/performances/magic-castle/conversacion-publico.jpg",
+      "sha": "e5527a91ed34c9de3d7ec1af7582cdeaa4882933"
+    },
+    {
+      "file": "public/performances/magic-castle/escenario-close-up-gallery.jpg",
+      "sha": "4f869708e2282600b59414902a1cc39ea62fe1c6"
+    },
+    {
+      "file": "public/performances/magic-castle/funcion-01.jpg",
+      "sha": "e888ce3b2d3bad859fcb17079d8c9bcf8a40aaf3"
+    },
+    {
+      "file": "public/performances/magic-castle/funcion-02.jpg",
+      "sha": "fb40cce7ac46ba63aa4de6d1354723daf093bbb0"
+    },
+    {
+      "file": "public/performances/magic-castle/grafica.png",
+      "sha": "c7649a5c14fd704daaf5cb5afaf520ef294a1ebd"
+    },
+    {
+      "file": "public/performances/magic-castle/participacion-espectadora.jpg",
+      "sha": "02991ca806c392386ee3b186fbac6e7079513ceb"
+    },
+    {
+      "file": "public/performances/magic-castle/portada.jpg",
+      "sha": "03ef5445e2278d8b53f0ede642a6232fc60f1d17"
+    },
+    {
+      "file": "public/performances/magic-castle/poster-retro-magic-castle.png",
+      "sha": "97f8ab0d382db226ee5e31acf9d46bd645e38d13"
+    },
+    {
+      "file": "public/performances/magic-castle/prensa-el-mostrador.png",
+      "sha": "3f73b699d02888aae93614f5e7040cf408663c7b"
+    },
+    {
+      "file": "public/performances/magic-underground/afiche.jpg",
+      "sha": "65b690c563e345a3d2aca28b3864a8ab1bf44d25"
+    },
+    {
+      "file": "public/performances/magic-underground/espacio.jpg",
+      "sha": "c4025383be8730ef85b24f422e07a31eecc46d54"
+    },
+    {
+      "file": "public/performances/magic-underground/junto-a-jean-paul.jpg",
+      "sha": "225db5545fcc721ed02df8ca6bee8cadc5fbe805"
+    },
+    {
+      "file": "public/performances/magic-underground/portada.jpg",
+      "sha": "56fb456c4f4a1fa65cf7087a9e6cb6cb7cf09df2"
+    },
+    {
+      "file": "public/performances/pata-de-cabra/afiche.png",
+      "sha": "f7c62777bf9d6ce56355f78529186d81b8425d19"
+    },
+    {
+      "file": "public/performances/pata-de-cabra/artistas-internacionales.png",
+      "sha": "8806b990ac54619861a6d9f06fa7eb5e88358893"
+    },
+    {
+      "file": "public/performances/pata-de-cabra/escena-01-magia-en-mesa.png",
+      "sha": "81b02182bbd4c2e8fa5201d7f77f2c7b0308ec80"
+    },
+    {
+      "file": "public/performances/pata-de-cabra/escena-01-magia-en-mesa.webp",
+      "sha": "468e155602eb450cd5ed4f544d113988124f6126"
+    },
+    {
+      "file": "public/performances/pata-de-cabra/escena-02-conferencia-escenario.png",
+      "sha": "67555d734f46ac82ad1f939e64e841159cc7ad60"
+    },
+    {
+      "file": "public/performances/pata-de-cabra/escena-02-conferencia-escenario.webp",
+      "sha": "4df4b82be176155cb31ef311afa36f44cad31258"
+    },
+    {
+      "file": "public/performances/pata-de-cabra/escena-03-presentacion-luces-violetas.png",
+      "sha": "32f48a711c8595f54422a7c6c62c0f742084b594"
+    },
+    {
+      "file": "public/performances/pata-de-cabra/escena-04-magia-telon-rojo.png",
+      "sha": "af8ee6de5cc78894762ff81c2b21a81fdd4a2cdc"
+    },
+    {
+      "file": "public/performances/pata-de-cabra/escena-04-magia-telon-rojo.webp",
+      "sha": "54ac3f4e2b38ef5f704e86d9f3545122ae677b2e"
+    },
+    {
+      "file": "public/performances/pata-de-cabra/escena-05-interaccion-con-publico.png",
+      "sha": "6cf556c031c6606f479a7bfb894c9f9d8dbff7ce"
+    },
+    {
+      "file": "public/performances/pata-de-cabra/escena-05-interaccion-con-publico.webp",
+      "sha": "6e9e2b01db987493930d8a80f8c65a458447eab9"
+    },
+    {
+      "file": "public/performances/pata-de-cabra/escena-06-abrazo-escenico.png",
+      "sha": "3cc9f3f904bfa59c43f30478e252d16305b47ec7"
+    },
+    {
+      "file": "public/performances/pata-de-cabra/escena-06-abrazo-escenico.webp",
+      "sha": "bd984a09499888cccba7671f63df0d6f92d3d950"
+    },
+    {
+      "file": "public/performances/pata-de-cabra/performance.jpg",
+      "sha": "ec2d4c3498d6ff8347b89dd6aa0de5d959724c0f"
+    },
+    {
+      "file": "public/performances/pata-de-cabra/portada.jpg",
+      "sha": "68ffed177fb75ebe19cd34d064c2973c5a675587"
+    },
+    {
+      "file": "public/performances/pata-de-cabra/presentacion-en-vivo-camara-letrero.png",
+      "sha": "9af8333181257c819c2c7c9b0518fac3b87b9f08"
+    },
+    {
+      "file": "public/performances/pata-de-cabra/saludo-final-0p8a3635.jpg",
+      "sha": "19332edbc119c617d79bbab898c9e8cb9a4b21fc"
+    },
+    {
+      "file": "public/performances/trenes-culturales/portada.jpg",
+      "sha": "13fc26a32163a2e9510af9e2bc7879b9e418b134"
+    },
+    {
+      "file": "public/projects/alrededor-del-fuego/conversacion-alrededor-del-fuego.jpg",
+      "sha": "c211351ee66a95b7314434c08455b7c282a7a080"
+    },
+    {
+      "file": "public/projects/alrededor-del-fuego/experiencia-innovaimpacto-bolivia-2026.mp4",
+      "sha": "54ac0e9561caedfc8b62ce3d43310c301d6b668b"
+    },
+    {
+      "file": "public/projects/alrededor-del-fuego/exposicion-participante.jpg",
+      "sha": "5407b72f769db3306b9e9d3707c59f4b643de97a"
+    },
+    {
+      "file": "public/projects/alrededor-del-fuego/portada-ampliada.png",
+      "sha": "3cec18abeb2333a0c1c4c44a8eed4ed9d72fc767"
+    },
+    {
+      "file": "public/projects/alrededor-del-fuego/presentacion-catalitica-extendida.png",
+      "sha": "ddb9f263467dc76f8798bac1b206a3ae13780074"
+    },
+    {
+      "file": "public/projects/alrededor-del-fuego/presentacion-catalitica.jpg",
+      "sha": "cc2490e12af771e0935454906f303db260f46891"
+    },
+    {
+      "file": "public/projects/arte-circo-y-solidaridad/funcion-parque-maleta.jpg",
+      "sha": "b4fdd5f38d2838199e753f17022ae626c60183df"
+    },
+    {
+      "file": "public/projects/arte-circo-y-solidaridad/funcion-parque-participacion.jpg",
+      "sha": "b1eedebd54f4d6503f3742b23d2a13c09861276d"
+    },
+    {
+      "file": "public/projects/arte-circo-y-solidaridad/funcion.png",
+      "sha": "d3289fe6b59a989e2cdfec05d1cced714699c71d"
+    },
+    {
+      "file": "public/projects/arte-circo-y-solidaridad/prensa-emol-2003.png",
+      "sha": "108f23c1dacec0b47d72a6825643f86468850591"
+    },
+    {
+      "file": "public/projects/el-abrazo/videollamada.png",
+      "sha": "5cfac50a63c05617cd4d2bd2db9ab2ca38602ae9"
+    },
+    {
+      "file": "public/projects/en-busca-de-la-belleza-proyectos-integrados/el-abrazo-remoto.jpg",
+      "sha": "2e2efd6bbfbd31070e427bae046f43c5e7207ec6"
+    },
+    {
+      "file": "public/projects/en-busca-de-la-belleza-proyectos-integrados/publico-01.jpg",
+      "sha": "0676543f46671b5ac9dd325929a9b551193a6aec"
+    },
+    {
+      "file": "public/projects/en-busca-de-la-belleza-proyectos-integrados/publico-02.jpg",
+      "sha": "d94916ec5d14167bcd84062920607a6bcad75b70"
+    },
+    {
+      "file": "public/projects/en-busca-de-la-belleza/conferencia-proyeccion.jpg",
+      "sha": "921265ecf09dd1cfde65ca5b2f1ee7a046924f5b"
+    },
+    {
+      "file": "public/projects/en-busca-de-la-belleza/conferencia.png",
+      "sha": "3a9c1f1b5e544db189254068e48a09a012111ca8"
+    },
+    {
+      "file": "public/projects/en-busca-de-la-belleza/creacion-territorial.jpg",
+      "sha": "d14107a0755c41887938d7cea2a6b1113133efa9"
+    },
+    {
+      "file": "public/projects/en-busca-de-la-belleza/efecto-cometa.jpg",
+      "sha": "a5a7126d9a2d1c603501396c936f6584b4a1cdcf"
+    },
+    {
+      "file": "public/projects/en-busca-de-la-belleza/prensa-fiis-2017.png",
+      "sha": "bf7c25ad794a70398210ace0aec1cf7e15060546"
+    },
+    {
+      "file": "public/projects/en-busca-de-la-belleza/prensa-tedx-2012.png",
+      "sha": "75af237539156c480cad57dd1ac265474a6d58b7"
+    },
+    {
+      "file": "public/projects/en-busca-de-la-belleza/tedx.jpg",
+      "sha": "6b89c3dd5d011b053baccd1508177e29eaa9b76f"
+    },
+    {
+      "file": "public/projects/festival-atacamagica-kusiy/escena-participativa.png",
+      "sha": "b1d7194378990cea9059852cdced2d03c91077c9"
+    },
+    {
+      "file": "public/projects/festival-atacamagica-kusiy/funcion-especial.png",
+      "sha": "4a92ec9a411b92b88d5254f00d9f8622051d0123"
+    },
+    {
+      "file": "public/projects/festival-atacamagica-kusiy/hospital.png",
+      "sha": "2e10dfac0c6794c5e206f7363ababbf14e86c36a"
+    },
+    {
+      "file": "public/projects/festival-atacamagica-kusiy/participacion-escenica.png",
+      "sha": "c0d0b874ff748ca873c404f281c4f2b52a33d580"
+    },
+    {
+      "file": "public/projects/festival-atacamagica-kusiy/publico-nina.png",
+      "sha": "2ed577a12be0e0b13c81d5a49875068f92699f9a"
+    },
+    {
+      "file": "public/projects/festival-atacamagica/hospital.jpg",
+      "sha": "786c1504fa016b54c9e964ff70da42675e7c222e"
+    },
+    {
+      "file": "public/projects/festival-atacamagica/prensa/magic-magazine-en-01.jpg",
+      "sha": "775c9856010e1f4651624a8d9f0d3cd493d7bceb"
+    },
+    {
+      "file": "public/projects/festival-atacamagica/prensa/magic-magazine-en-02.jpg",
+      "sha": "711576c0987dfb498cdb534689af62cbe44f85bd"
+    },
+    {
+      "file": "public/projects/festival-atacamagica/prensa/magic-magazine-es-01.jpg",
+      "sha": "7228abe25fbcb404f319ddc5ecfa123323b2df05"
+    },
+    {
+      "file": "public/projects/festival-atacamagica/prensa/magic-magazine-es-02.jpg",
+      "sha": "8e70f2bed408e4e2eaba855c0fe5457f936eae8c"
+    },
+    {
+      "file": "public/projects/festival-atacamagica/prensa/magic-magazine-portada.jpg",
+      "sha": "f43ddc86b7ec522ecdc4ed218e8f60ae64dbef5d"
+    },
+    {
+      "file": "public/projects/festival-atacamagica/publico-teatro.jpg",
+      "sha": "03b97cbe3e4ca1e2be14e35278f5aa424a07b223"
+    },
+    {
+      "file": "public/projects/festival-atacamagica/publico.png",
+      "sha": "2b8f0e94a5323f0672e110f59f609353d92fa05b"
+    },
+    {
+      "file": "public/projects/festival-atacamagica/territorio.jpg",
+      "sha": "4b304f2686b6acabecaf694ddc2974812a3bd90b"
+    },
+    {
+      "file": "public/projects/geografias-del-asombro/fotografia.jpg",
+      "sha": "1c519f4cdfc29075c0328571fcfb1c09fa438230"
+    },
+    {
+      "file": "public/projects/geografias-del-asombro/ilusionismo.jpg",
+      "sha": "60608b395ea64eccadb25809fb701df611a6bede"
+    },
+    {
+      "file": "public/projects/geografias-del-asombro/isla.jpg",
+      "sha": "28e47d9d179105267a98f33d53531872f48f0445"
+    },
+    {
+      "file": "public/projects/geografias-del-asombro/memoria.jpg",
+      "sha": "da10dcd61909fe035681d6da433dec18ba225bbb"
+    },
+    {
+      "file": "public/projects/imagino/actividad-estudiantes.jpg",
+      "sha": "a60756ab26072d2bf0675e77defa4ff8dcc0a8c7"
+    },
+    {
+      "file": "public/projects/imagino/estudiantes.png",
+      "sha": "7f6d1ff824ec61aba4c74ef32f2c11f76f02f915"
+    },
+    {
+      "file": "public/projects/imagino/reaccion-estudiantes-01.jpg",
+      "sha": "6c66aa08c212abf1e71287fe19bfd6e5352a8df1"
+    },
+    {
+      "file": "public/projects/imagino/reaccion-estudiantes-02.jpg",
+      "sha": "151b848973e11ed622f85b5ef0aa1164740d47c6"
+    },
+    {
+      "file": "public/projects/imagino/taller-docentes.jpg",
+      "sha": "f5f6246d84ca303dda970290ec0b0fede2f1d114"
+    },
+    {
+      "file": "public/projects/imagino/taller-estudiantes.jpg",
+      "sha": "c22da777952e53bff63ada4eaadcae1e9c2e9b84"
+    },
+    {
+      "file": "public/projects/innovamagica/aula.jpg",
+      "sha": "81dc9c647174f59b41f76c8d732da537b5fd6641"
+    },
+    {
+      "file": "public/projects/innovamagica/grupo-estudiantes.jpg",
+      "sha": "7a994c084fc2456666ecdd1f690d5d41c4b4b8da"
+    },
+    {
+      "file": "public/projects/innovamagica/presentacion-estudiantes.jpg",
+      "sha": "a7d89b9b8a1c047c1c06607477a7e0508cdc2d3d"
+    },
+    {
+      "file": "public/projects/innovamagica/taller-estudiantes.jpg",
+      "sha": "bab913baff4050a6287e04a690a065eff6c13d5d"
+    },
+    {
+      "file": "public/projects/maleta-de-payaso/funcion-escolar.jpg",
+      "sha": "a3a15160c2dcd5d303a47398fd738471a8812345"
+    },
+    {
+      "file": "public/projects/maleta-de-payaso/funcion-patio-escolar-sin-bordes.jpg",
+      "sha": "fdb98b810b36cde3a76cac60f21476b7a9c7f56b"
+    },
+    {
+      "file": "public/projects/maleta-de-payaso/funcion-patio-escolar.jpg",
+      "sha": "f73c5f88c3c4488d3795ebffeda4538a9e41996f"
+    },
+    {
+      "file": "public/projects/maleta-de-payaso/funcion.png",
+      "sha": "227abed600edacfdec04c5fff3bb743514af7f86"
+    },
+    {
+      "file": "public/projects/maleta-de-payaso/interaccion-ninos-sin-bordes.jpg",
+      "sha": "956c87114450354dfe20a77609c1897ad5709261"
+    },
+    {
+      "file": "public/projects/maleta-de-payaso/publico-infantil.jpg",
+      "sha": "c7bb08bf0c3f4df5eab1a371bd0cdb73b6d9488c"
+    },
+    {
+      "file": "public/projects/maleta-de-payaso/publico-risas-sin-bordes.jpg",
+      "sha": "97401b1081b40e005ee0dd7770864ee1ffae1945"
+    },
+    {
+      "file": "public/projects/maleta-de-payaso/taller-pintura-aula.png",
+      "sha": "140ee509319ce78e3f51af91fc4962c353b18393"
+    },
+    {
+      "file": "public/projects/maleta-de-payaso/taller-pintura-nina.png",
+      "sha": "88eab813811e0bff50fc8139f186cc1671c33b09"
+    },
+    {
+      "file": "public/projects/maleta-de-payaso/taller-pintura-patio.png",
+      "sha": "1f91c2ced8783856cb483d919ab88b5f0885268a"
+    },
+    {
+      "file": "public/projects/pequenos-misterios/portada-2026.png",
+      "sha": "2b170269de1aebbf601291e035a69fdf330d505a"
+    },
+    {
+      "file": "public/projects/pequenos-misterios/portada.png",
+      "sha": "d93e354f655e00d4488230946e480ebc09a898e8"
+    },
+    {
+      "file": "public/projects/reuniones-magicas/construccion-efectos.png",
+      "sha": "f9812c5bcbb94b2762fe88ae52ba7115d17a1454"
+    },
+    {
+      "file": "public/projects/reuniones-magicas/dibujo-ilusionismo.png",
+      "sha": "cba78ae03b2df53c632ce504921974562a90a939"
+    },
+    {
+      "file": "public/projects/reuniones-magicas/dibujo-presentacion.png",
+      "sha": "b1208134c4ff8590686c88500fea13599ba924e0"
+    },
+    {
+      "file": "public/projects/reuniones-magicas/taller-residencia.png",
+      "sha": "b24edcb561efa9e394b32ca7af265ae4bbf03c21"
+    },
+    {
+      "file": "public/projects/reuniones-magicas/testimonio-dibujo.png",
+      "sha": "22fcb519769239f66491e5bc8b27ecc8e6b135ed"
+    },
+    {
+      "file": "public/projects/salvar-el-mundo/identidad.jpg",
+      "sha": "2bfb7f3cef5427039fcc3275c03081b4565a8c79"
+    },
+    {
+      "file": "public/projects/thaumazein/identidad.jpg",
+      "sha": "c1f966179e2ecc19de8a6fbd1a9f7f44ff8545dd"
+    },
+    {
+      "file": "public/projects/thaumazein/udd.jpg",
+      "sha": "47a4cefd6cd8453ca219af144377be607b7d7d6c"
+    },
+    {
+      "file": "public/projects/un-mago-en-el-desierto/contraluz-ambar.jpg",
+      "sha": "035477f1e61e613e9b00b117de747cddec42dffb"
+    },
+    {
+      "file": "public/projects/un-mago-en-el-desierto/escena-bolivia.jpg",
+      "sha": "2dcec128f1c3a32cadb6f696bab2193846efcb91"
+    },
+    {
+      "file": "public/projects/un-mago-en-el-desierto/escena-y-publico.jpg",
+      "sha": "9617391f2294e8b42b05bda02ebfd81bc8cfc643"
+    },
+    {
+      "file": "public/projects/un-mago-en-el-desierto/participacion-publico.jpg",
+      "sha": "fdf5c69a52b52d40c93950ef6824f45ebaf3561e"
+    },
+    {
+      "file": "public/projects/un-mago-en-el-desierto/prensa-circulacion-bolivia.png",
+      "sha": "5f7148b4aaeddcc1106bc8a9bc2bad218c00965c"
+    },
+    {
+      "file": "public/projects/un-mago-en-el-desierto/prensa-diario-atacama-bolivia-2026.png",
+      "sha": "c234356f9631a12b598f5b6818629ec0762f4031"
+    },
+    {
+      "file": "public/projects/un-mago-en-el-desierto/prensa-diario-atacama-un-mago-2026.png",
+      "sha": "c46aac6cc6c0d8bb0ddff8132846518bafaf6fde"
+    },
+    {
+      "file": "public/projects/un-mago-en-el-desierto/publico-teatro-azul.png",
+      "sha": "db07764d565d467eead5b8eee83e2935744fe7d6"
+    },
+    {
+      "file": "public/projects/vivo-sonando/prensa-diario-atacama-01.png",
+      "sha": "4c5d2412ea999019cb7dd7af805735190cfd5a94"
+    },
+    {
+      "file": "public/projects/vivo-sonando/prensa-diario-atacama-02.png",
+      "sha": "1fa5595e424332a3b134c8c3e06860715d4c12e9"
+    },
+    {
+      "file": "public/projects/vivo-sonando/sueno-casa-familia.jpg",
+      "sha": "4a5dee797b1e08f5b39b93ef29bcf11acae3f947"
+    },
+    {
+      "file": "public/projects/vivo-sonando/sueno-familia.jpg",
+      "sha": "d17b205c36340272210c4b86645ee94adef3d57d"
+    },
+    {
+      "file": "public/projects/vivo-sonando/sueno-mejor-lider.jpg",
+      "sha": "c642263a115a402a8fac33855cdad1484ccf5479"
+    },
+    {
+      "file": "public/projects/vivo-sonando/taller.png",
+      "sha": "994f62c49e52e7d6f744d50e3bfbdef1843ea58e"
+    },
+    {
+      "file": "public/prototypes/manual-para-salvar-al-mundo/bases-crtic-lab-nunoa-2026.png",
+      "sha": "244420d2b09f474038988f50e48721b7cf415fb3"
+    },
+    {
+      "file": "public/prototypes/manual-para-salvar-al-mundo/caja-cerrada.png",
+      "sha": "63b146518871e66e048c2b5484370864ddcc7737"
+    },
+    {
+      "file": "public/prototypes/manual-para-salvar-al-mundo/logo-crtic.webp",
+      "sha": "35a8c52ebc7932f8cdaee6fbc30e36b0e395616c"
+    },
+    {
+      "file": "public/prototypes/manual-para-salvar-al-mundo/logo-iniciativa-corfo.webp",
+      "sha": "27a6411c1adf381f15b90a8ffa79ecfabacc5ef5"
+    },
+    {
+      "file": "public/prototypes/manual-para-salvar-al-mundo/logo-nunoa-hub.png",
+      "sha": "64877817a09aad015a92287388573b9962acb75d"
+    },
+    {
+      "file": "public/window.svg",
+      "sha": "aaa393c36db17afe79aa846c53d64832d3ef55d6"
+    },
+    {
+      "file": "scripts/build-verified.sh",
+      "sha": "317eb841a67f69fc70a01444a1a46e8541aad436"
+    },
+    {
+      "file": "scripts/execution-profile.mjs",
+      "sha": "d17e3a523e3052c4cea081cfe1cd1189d2fcce2b"
+    },
+    {
+      "file": "scripts/install-ci.mjs",
+      "sha": "b7482161d6239622a5348d63e6f95f413cc63a1a"
+    },
+    {
+      "file": "scripts/install-ci.sh",
+      "sha": "fbd02ce241333e7914e8a2695f8aa4559034bbcb"
+    },
+    {
+      "file": "scripts/install-pnpm.sh",
+      "sha": "4f05d5d282f3f9d07836e6dec2cc5acef0c2e230"
+    },
+    {
+      "file": "scripts/pnpm-install.mjs",
+      "sha": "3d08f52f8fc91312c4a06e947fc6b318592cb38d"
+    },
+    {
+      "file": "scripts/run-framework.mjs",
+      "sha": "0b4706c22091d9668bf3446674b6237c1c3b363f"
+    },
+    {
+      "file": "scripts/sites-env.mjs",
+      "sha": "b81973dd33c1d5f10527eb8c3e8ab78242248960"
+    },
+    {
+      "file": "scripts/sites-env.sh",
+      "sha": "a3adb314556d4b08d475f89f27c914498154b553"
+    },
+    {
+      "file": "tsconfig.json",
+      "sha": "9a455427ceb248f68de8ec4f1afe1416581e4323"
+    },
+    {
+      "file": "vendor/shadcn-tailwind-4.13.0.LICENSE.md",
+      "sha": "8845c7b4958bee400b5d89c797425f16dbe53b41"
+    },
+    {
+      "file": "vendor/shadcn-tailwind-4.13.0.css",
+      "sha": "131855a652a1e62ae57b04b704a153a2c6eebe55"
+    },
+    {
+      "file": "vercel.json",
+      "sha": "cc4ad9b6daf691e993e24d957478b6f13f34e682"
+    },
+    {
+      "file": "vite.config.ts",
+      "sha": "4a3c8a79d82415fdf186eb5dc4555782966b1a38"
+    }
+  ]
+}
