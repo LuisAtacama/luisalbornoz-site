@@ -45,6 +45,12 @@ figcaption{font-size:.8rem;line-height:1.5;color:var(--muted);margin-top:12px}
 .alliance-marks{display:flex;justify-content:center;align-items:center;background:#000;padding:clamp(20px,3vw,36px);margin-top:30px}
 .alliance-marks img{display:block;width:100%;max-width:488px;height:auto}
 .section{border-top:1px solid var(--line);display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);gap:clamp(30px,7vw,110px);padding:60px 0 65px}
+.section--tone{position:relative;isolation:isolate;border-top:0}
+.section--tone::before{content:"";position:absolute;inset:0;z-index:-1;background:var(--section-bg);box-shadow:0 0 0 100vmax var(--section-bg);clip-path:inset(0 -100vmax)}
+.section--tone+.section{border-top:0}
+.section--sand{--section-bg:#ece8df;--line:#d4cec2;--muted:#625f59}
+.section--ink{--section-bg:#11110f;--muted:#c7c3ba;--accent:#dfa380;color:var(--paper)}
+.section--terracotta{--section-bg:#9d402c;--muted:#f5dfd4;color:var(--paper)}
 .section h2{font-size:clamp(3.4rem,6vw,6.5rem);max-width:100%;letter-spacing:-.035em;line-height:.94;text-wrap:balance}
 .section p{font-family:var(--serif);font-size:var(--body-size);line-height:1.45;margin:0 0 20px;max-width:44em}
 .steps{margin:24px 0 0;padding:0;list-style:none;counter-reset:step}
@@ -75,6 +81,9 @@ figcaption{font-size:.8rem;line-height:1.5;color:var(--muted);margin-top:12px}
 .registration .button{display:inline-flex;justify-content:center;min-width:min(100%,15rem)}
 .button{display:flex;justify-content:space-between;align-items:center;gap:24px;min-height:44px;padding:16px 20px;background:var(--ink);color:var(--paper);text-decoration:none;font-size:.9rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase}
 .button:hover{background:var(--accent);color:white}
+.section--terracotta .button{background:var(--paper);color:var(--ink);border:1px solid var(--paper)}
+.section--terracotta .button:hover{background:var(--ink);color:var(--paper);border-color:var(--ink)}
+.section--terracotta a:focus-visible{outline-color:var(--paper)}
 footer{margin:0 var(--gutter);padding:25px 0 30px;border-top:1px solid var(--line);display:flex;justify-content:space-between;gap:20px;font-size:.8rem;line-height:1.8;letter-spacing:.05em;text-transform:uppercase}footer a{text-decoration:none}
 @media(min-width:1600px){main{max-width:1550px;margin:auto}}
 @media(max-width:1180px){.desktop-nav{gap:.8rem 1.25rem}.desktop-nav a{font-size:.98rem}}
@@ -124,7 +133,7 @@ footer{margin:0 var(--gutter);padding:25px 0 30px;border-top:1px solid var(--lin
 <ul class="topics"><li><strong>Estructura y claridad.</strong> <span>Definir el mensaje principal, sintetizar y construir una apertura y un cierre.</span></li><li><strong>Relación con la audiencia.</strong> <span>Reconocer a quienes escuchan y orientar la presentación hacia su propósito.</span></li><li><strong>Voz y presencia.</strong> <span>Trabajar el ritmo, el silencio y el lenguaje corporal.</span></li><li><strong>Apoyo visual.</strong> <span>Revisar la jerarquía de contenidos y la coherencia entre el discurso y las diapositivas, cuando corresponda.</span></li></ul>
 <p class="subheading">A quién está dirigido</p><p>A profesionales, emprendedores y personas de equipos u organizaciones que necesitan comunicar ideas, conseguir apoyo para un proyecto o presentar una propuesta. El punto de partida es una presentación que quieras trabajar.</p></div>
 </section>
-<section class="section" aria-labelledby="metodologia">
+<section class="section section--tone section--sand" aria-labelledby="metodologia">
 <div><p class="kicker">Antes, durante y después</p><h2 id="metodologia">Cuatro horas de práctica</h2><p class="side-note">Laboratorio presencial con un grupo de hasta 12 personas y tiempo para presentaciones individuales.</p></div>
 <div><ol class="steps"><li><div><strong>Antes del taller</strong><span>Prepara una exposición de hasta tres minutos sobre un tema real. Puedes presentarla solo de forma oral o con PowerPoint.</span></div></li><li><div><strong>Durante la jornada</strong><span>Combinaremos ejercicios con las presentaciones del grupo. Recibirás una devolución individual en el momento. La grabación de tu exposición requerirá tu consentimiento.</span></div></li><li><div><strong>Seguimiento previsto</strong><span>Video de tu exposición e informe personalizado con recomendaciones para el relato oral y, cuando corresponda, el PowerPoint. El plazo propuesto de entrega por email es de hasta diez días hábiles después del taller, sujeto a confirmación.</span></div></li></ol>
 <p class="scope-note">Antes de la inscripción se confirmarán el alcance y el plazo del seguimiento, junto con las condiciones de consentimiento, resguardo y acceso al video. La entrega del registro a cada participante será privada.</p>
@@ -134,7 +143,7 @@ footer{margin:0 var(--gutter);padding:25px 0 30px;border-top:1px solid var(--lin
 <div><p class="kicker">Experiencia en La Paz</p><h2 id="resultados">Lo que reportaron los participantes</h2><p class="side-note">Primera edición del BootLab Alrededor del fuego, con 15 participantes.</p></div>
 <div><dl class="metrics"><div><dt>100%</dt><dd>Reportó una mejora en su claridad y seguridad para presentar proyectos.</dd></div><div><dt>70%</dt><dd>Terminó evaluando su claridad y seguridad en los niveles 9 o 10 de la escala.</dd></div><div><dt>100%</dt><dd>Identificó al menos una herramienta o un cambio concreto para aplicar en su próxima presentación.</dd></div></dl><p class="evidence-note">Porcentajes correspondientes a quienes respondieron la evaluación. Son resultados de autoevaluación de esa edición.</p></div>
 </section>
-<section class="section" aria-labelledby="testimonio">
+<section class="section section--tone section--ink" aria-labelledby="testimonio">
 <div><p class="kicker">Experiencia en La Paz</p><h2 id="testimonio">Testimonio</h2></div>
 <div><blockquote class="testimonial"><p>"Salí completamente inspirada. ¡Hasta el cuaderno que nos regalaste me parece mágico! Mis ideas, que antes se resistían a salir, ahora fluyen con una facilidad increíble."</p></blockquote><p class="testimonial-author">Lykke E. Andersen</p><p class="testimonial-bio">Doctora en Economía por la Universidad de Aarhus, Dinamarca. Directora ejecutiva de SDSN Bolivia.</p><p class="testimonial-bio">Ha dirigido INESAD y trabajado como consultora del Banco Mundial, el BID y Naciones Unidas. Su investigación se centra en desarrollo y medio ambiente en América Latina. Participó en el BootLab de La Paz.</p><a class="text-link" href="https://sdsnbolivia.org/lykke-e-andersen/" target="_blank" rel="noopener noreferrer">Ver perfil de Lykke</a></div>
 </section>
@@ -142,7 +151,7 @@ footer{margin:0 var(--gutter);padding:25px 0 30px;border-top:1px solid var(--lin
 <div><p class="kicker">Creación y conducción</p><h2 id="facilitador">Luis Albornoz</h2><a class="text-link" href="/trayectoria">Conocer mi trayectoria</a></div>
 <div><p class="subheading alliance-heading">En alianza con <a class="partner-link" href="https://www.catalytic-a.com/" target="_blank" rel="noopener noreferrer">catalytic-A</a></p><p>Esta edición en Santa Cruz da continuidad a la colaboración entre Luis Albornoz y catalytic-A iniciada en La Paz. La alianza combina herramientas narrativas y escénicas con experiencia en formación y aprendizaje organizacional, para trabajar las presentaciones de cada participante mediante ejercicios y devolución individual.</p><div class="alliance-marks"><img src="https://luisalbornoz-site.vercel.app/bootlab-santacruz/assets/alianza-logos.png" alt="catalytic-A, Fundación Atacamagica e Imaginario" width="488" height="128" loading="lazy" decoding="async"></div></div>
 </section>
-<section class="section" id="preinscripcion" aria-labelledby="convocatoria"><div><p class="kicker">Santa Cruz / 25 de noviembre</p><h2 id="convocatoria">La próxima edición</h2><p style="margin-top:24px">Estamos coordinando esta edición junto a catalytic-A. El horario, el lugar y el valor se informarán al abrir la convocatoria.</p></div><div class="registration"><a class="button" href="https://docs.google.com/forms/d/e/1FAIpQLScSTikugOZsR901DbChM9ghMwpnx1nDyFDP56k8UDgApFU0-Q/viewform" aria-label="Abrir formulario de preinscripción">Preinscripción</a></div></section>
+<section class="section section--tone section--terracotta" id="preinscripcion" aria-labelledby="convocatoria"><div><p class="kicker">Santa Cruz / 25 de noviembre</p><h2 id="convocatoria">La próxima edición</h2><p style="margin-top:24px">Estamos coordinando esta edición junto a catalytic-A. El horario, el lugar y el valor se informarán al abrir la convocatoria.</p></div><div class="registration"><a class="button" href="https://docs.google.com/forms/d/e/1FAIpQLScSTikugOZsR901DbChM9ghMwpnx1nDyFDP56k8UDgApFU0-Q/viewform" aria-label="Abrir formulario de preinscripción">Preinscripción</a></div></section>
 </main>
 <footer><div>Luis Albornoz<br>Atacama, Chile</div><div>Fundación Atacamagica · catalytic-A</div><a href="/#contacto">Contacto ↗</a></footer>
 </body></html>
