@@ -61,14 +61,13 @@ figcaption{font-size:.8rem;line-height:1.5;color:var(--muted);margin-top:12px}
 .testimonial{margin:0;border-left:2px solid var(--accent);padding-left:30px}
 .section .testimonial p{font-family:var(--serif);font-size:clamp(27px,2.6vw,35px);line-height:1.25;letter-spacing:-.015em;margin:0}
 .section .testimonial p+p{margin-top:20px}
+.section .testimonial-bio{font-size:1.25rem;line-height:1.45;color:var(--muted);margin:28px 0 0}
+.section .alliance-heading{margin-top:0}
 #preinscripcion{scroll-margin-top:6rem}
-.registration{background:#ecebe6;padding:38px;align-self:start}
-.registration .kicker{color:var(--accent);margin-bottom:16px}
-.registration h3{font:500 clamp(33px,3vw,44px)/1.08 var(--serif);letter-spacing:-.03em;margin:0 0 18px}
-.registration p{font-size:var(--detail-size);line-height:1.45}
+.registration{align-self:center}
+.registration .button{display:inline-flex;justify-content:center;min-width:min(100%,15rem)}
 .button{display:flex;justify-content:space-between;align-items:center;gap:24px;min-height:44px;padding:16px 20px;background:var(--ink);color:var(--paper);text-decoration:none;font-size:.9rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase}
 .button:hover{background:var(--accent);color:white}
-.registration .note{font-family:var(--sans);font-size:.875rem;color:var(--muted);line-height:1.65;margin-top:18px;margin-bottom:0}
 footer{margin:0 var(--gutter);padding:25px 0 30px;border-top:1px solid var(--line);display:flex;justify-content:space-between;gap:20px;font-size:.8rem;line-height:1.8;letter-spacing:.05em;text-transform:uppercase}footer a{text-decoration:none}
 @media(min-width:1600px){main{max-width:1550px;margin:auto}}
 @media(max-width:1180px){.desktop-nav{gap:.8rem 1.25rem}.desktop-nav a{font-size:.98rem}}
@@ -89,7 +88,7 @@ footer{margin:0 var(--gutter);padding:25px 0 30px;border-top:1px solid var(--lin
   h1{font-size:clamp(4rem,18vw,6rem)}h1 span{font-size:clamp(2rem,9vw,3.6rem);margin-top:20px}.intro{font-size:1.5rem;margin-top:25px}
   .hero figure img{aspect-ratio:16/10}
   .section{grid-template-columns:1fr;gap:26px;padding:37px 0 42px}.section h2{font-size:clamp(3.25rem,12vw,4.5rem);max-width:17ch}
-  .registration{padding:26px}footer{flex-direction:column;gap:13px}
+  footer{flex-direction:column;gap:13px}
   .metrics>div{grid-template-columns:90px minmax(0,1fr);gap:18px}
   .testimonial{padding-left:20px}.section .side-note{max-width:none}.section .testimonial p{font-size:27px}
 }
@@ -108,7 +107,7 @@ footer{margin:0 var(--gutter);padding:25px 0 30px;border-top:1px solid var(--lin
 <h1 id="titulo">BootLab<span>Presentaciones memorables<br>que inspiran acción</span></h1>
 <p class="intro">Una jornada práctica con Luis Albornoz para trabajar tus ideas, proyectos y propuestas. Construye un mensaje claro, reconoce a tu audiencia y preséntalo con mayor seguridad.</p>
 <div class="event-meta"><strong>Santa Cruz de la Sierra, Bolivia</strong><strong>25 de noviembre de 2026</strong><strong>4 horas presenciales <span>/ Hasta 12 participantes</span></strong><span>En colaboración con <a class="partner-link" href="https://www.catalytic-a.com/" target="_blank" rel="noopener noreferrer">catalytic-A</a>.</span></div>
-<a class="text-link" href="#preinscripcion">Información de preinscripción</a>
+<a class="text-link" href="#preinscripcion">Preinscripción</a>
 </div>
 <figure><img src="https://luisalbornoz.cl/projects/alrededor-del-fuego/exposicion-participante.jpg" alt="Una persona presenta sus ideas durante el taller Alrededor del fuego" width="1667" height="943" fetchpriority="high"><figcaption>El trabajo parte de las presentaciones reales de quienes participan.</figcaption></figure>
 </section>
@@ -129,15 +128,14 @@ footer{margin:0 var(--gutter);padding:25px 0 30px;border-top:1px solid var(--lin
 <div><dl class="metrics"><div><dt>100%</dt><dd>Reportó una mejora en su claridad y seguridad para presentar proyectos.</dd></div><div><dt>70%</dt><dd>Terminó evaluando su claridad y seguridad en los niveles 9 o 10 de la escala.</dd></div><div><dt>100%</dt><dd>Identificó al menos una herramienta o un cambio concreto para aplicar en su próxima presentación.</dd></div></dl><p class="evidence-note">Porcentajes correspondientes a quienes respondieron la evaluación. Son resultados de autoevaluación de esa edición.</p></div>
 </section>
 <section class="section" aria-labelledby="testimonio">
-<div><p class="kicker">Testimonio</p><h2 id="testimonio">Lykke E. Andersen</h2><p class="side-note">Economista y participante del BootLab en La Paz.</p></div>
-<blockquote class="testimonial"><p>"Salí completamente inspirada. ¡Hasta el cuaderno que nos regalaste me parece mágico! Mis ideas, que antes se resistían a salir, ahora fluyen con una facilidad increíble cuando tomo el lápiz y escribo sobre ese papel blanco con un corazón en la esquina."</p></blockquote>
+<div><p class="kicker">Testimonio</p><h2 id="testimonio">Lykke E. Andersen</h2><p class="side-note">Doctora en Economía por la Universidad de Aarhus, Dinamarca. Directora ejecutiva de SDSN Bolivia.</p></div>
+<div><blockquote class="testimonial"><p>"Salí completamente inspirada. ¡Hasta el cuaderno que nos regalaste me parece mágico! Mis ideas, que antes se resistían a salir, ahora fluyen con una facilidad increíble."</p></blockquote><p class="testimonial-bio">Ha dirigido INESAD y trabajado como consultora del Banco Mundial, el BID y Naciones Unidas. Su investigación se centra en desarrollo y medio ambiente en América Latina. Participó en el BootLab de La Paz.</p><a class="text-link" href="https://sdsnbolivia.org/lykke-e-andersen/" target="_blank" rel="noopener noreferrer">Ver perfil de Lykke</a></div>
 </section>
 <section class="section" aria-labelledby="facilitador">
-<div><p class="kicker">Creación y conducción</p><h2 id="facilitador">Luis Albornoz</h2></div>
-<div><p>Ilusionista, creador escénico y gestor cultural chileno. Relacionador público, magíster en Gestión del Conocimiento y director de Fundación Atacamagica.</p><p>Se ha presentado en The Magic Castle de Hollywood y Fundación Chile lo reconoció entre los 100 Líderes de la Innovación. Fue consultor artístico de la obertura de la noche de cierre del Festival de Viña del Mar 2024.</p><a class="text-link" href="/trayectoria">Conocer su trayectoria</a>
-<p class="subheading"><a class="partner-link" href="https://www.catalytic-a.com/" target="_blank" rel="noopener noreferrer">En colaboración con catalytic-A</a></p><p>Consultora con sede en La Paz y trabajo en América Latina. Acompaña a empresas y organizaciones mediante investigación aplicada, diseño estratégico, formación e innovación colaborativa, atendiendo a los desafíos de cada equipo.</p></div>
+<div><p class="kicker">Creación y conducción</p><h2 id="facilitador">Luis Albornoz</h2><a class="text-link" href="/trayectoria">Conocer mi trayectoria</a></div>
+<div><p class="subheading alliance-heading">En alianza con <a class="partner-link" href="https://www.catalytic-a.com/" target="_blank" rel="noopener noreferrer">catalytic-A</a></p><p>Esta edición en Santa Cruz da continuidad a la colaboración entre Luis Albornoz y catalytic-A iniciada en La Paz. La alianza combina herramientas narrativas y escénicas con experiencia en formación y aprendizaje organizacional, para trabajar las presentaciones de cada participante mediante ejercicios y devolución individual.</p></div>
 </section>
-<section class="section" id="preinscripcion" aria-labelledby="convocatoria"><div><p class="kicker">Santa Cruz / 25 de noviembre</p><h2 id="convocatoria">La próxima edición</h2><p style="margin-top:24px">Estamos coordinando esta edición junto a catalytic-A. El horario, el lugar y el valor se informarán al abrir la convocatoria.</p></div><div class="registration"><p class="kicker">Preinscripción</p><h3>Próximamente en esta página</h3><p>El formulario aún no está habilitado. Si quieres consultar por el taller, puedes escribirnos mientras se completa la convocatoria.</p><a class="button" href="mailto:hola@luisalbornoz.cl?cc=luisalbornoz%40gmail.com&amp;subject=Consulta%20BootLab%20Santa%20Cruz">Consultar por el BootLab</a><p class="note">Una consulta por correo no implica pago ni reserva de cupo.</p></div></section>
+<section class="section" id="preinscripcion" aria-labelledby="convocatoria"><div><p class="kicker">Santa Cruz / 25 de noviembre</p><h2 id="convocatoria">La próxima edición</h2><p style="margin-top:24px">Estamos coordinando esta edición junto a catalytic-A. El horario, el lugar y el valor se informarán al abrir la convocatoria.</p></div><div class="registration"><a class="button" href="mailto:hola@luisalbornoz.cl?cc=luisalbornoz%40gmail.com&amp;subject=Preinscripci%C3%B3n%20BootLab%20Santa%20Cruz%20-%2025%20de%20noviembre&amp;body=Hola%2C%20quiero%20preinscribirme%20en%20el%20BootLab%20de%20Santa%20Cruz%20del%2025%20de%20noviembre%20de%202026.%0A%0ANombre%3A%0ACorreo%20electr%C3%B3nico%3A%0ATel%C3%A9fono%20de%20contacto%3A%0AOrganizaci%C3%B3n%20%28opcional%29%3A%0A%0AQuedo%20a%20la%20espera%20de%20la%20informaci%C3%B3n%20sobre%20horario%2C%20lugar%20y%20valor." aria-label="Preinscripción por correo electrónico">Preinscripción</a></div></section>
 </main>
 <footer><div>Luis Albornoz<br>Atacama, Chile</div><div>Fundación Atacamagica · catalytic-A</div><a href="/#contacto">Contacto ↗</a></footer>
 </body></html>
