@@ -1251,10 +1251,6 @@
       "sha": "131855a652a1e62ae57b04b704a153a2c6eebe55"
     },
     {
-      "file": "vercel.json",
-      "sha": "cc4ad9b6daf691e993e24d957478b6f13f34e682"
-    },
-    {
       "file": "vite.config.ts",
       "sha": "4a3c8a79d82415fdf186eb5dc4555782966b1a38"
     }

@@ -1,7 +1,9 @@
-# BootLab Santa Cruz integration
+# Minimal BootLab button
 
-These three files add a native BootLab page and an exact Alrededor del fuego route that reuses the existing project component with an additional resource link.
+Supersedes the native BootLab integration. The user requested restoring the original ficha and adding only a button linking to the separate BootLab page.
 
-The live portfolio source is newer than the earlier Sites/GitHub checkout. `deployment-source-manifest.json` references all 314 unchanged files from the October 22 production deployment by immutable Vercel content SHA. Deployment is assembled from those unchanged files plus these three files. Do not deploy this branch as a standalone application or replace the current portfolio with the older GitHub main branch.
+Assemble the deployment from `deployment-source-manifest.json` plus `vercel.json` and `scripts/add-bootlab-link.mjs`. All original production source files are reused by immutable SHA. The build script adds one link to the existing Alrededor del fuego project data and scoped button styles. This makes the button available in both the original dialog and the original standalone ficha. It does not replace routes, components, navigation or page layouts.
 
-After production promotion, disable the legacy project-level rewrite for `/bootlab-santacruz` so that the native route is served. Existing artwork, global styles, header and footer are reused once.
+The `/bootlab-santacruz` project-level rewrite stays enabled, serving the existing separate landing page from `https://luisalbornoz-site.vercel.app/bootlab-santacruz/index.html`.
+
+The full current source is retained in Vercel. The older GitHub main and Sites checkout must not replace it. This branch is a versioned patch, not a standalone application.
