@@ -42,8 +42,9 @@ figure{margin:0}figure img{display:block;width:100%;height:auto}
 figcaption{font-size:.8rem;line-height:1.5;color:var(--muted);margin-top:12px}
 .word-art{display:block;width:clamp(160px,18vw,240px);max-width:65%;height:auto;margin:42px auto 0;filter:invert(1);mix-blend-mode:multiply;opacity:.9}
 .workbook-image{margin-top:24px}
-.alliance-marks{display:flex;justify-content:center;align-items:center;background:#000;padding:clamp(20px,3vw,36px);margin-top:30px}
-.alliance-marks img{display:block;width:100%;max-width:488px;height:auto}
+/* Frame the supplied transparent artwork without changing its pixels or proportions. */
+.alliance-marks{position:relative;overflow:hidden;aspect-ratio:1289/311;margin-top:30px}
+.alliance-marks img{position:absolute;display:block;width:158.882855%;max-width:none;height:auto;left:-30.566330%;top:-135.369775%}
 .section{border-top:1px solid var(--line);display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);gap:clamp(30px,7vw,110px);padding:60px 0 65px}
 .section--tone{position:relative;isolation:isolate;border-top:0}
 .section--tone::before{content:"";position:absolute;inset:0;z-index:-1;background:var(--section-bg);box-shadow:0 0 0 100vmax var(--section-bg);clip-path:inset(0 -100vmax)}
@@ -149,7 +150,7 @@ footer{margin:0 var(--gutter);padding:25px 0 30px;border-top:1px solid var(--lin
 </section>
 <section class="section" aria-labelledby="facilitador">
 <div><p class="kicker">Creación y conducción</p><h2 id="facilitador">Luis Albornoz</h2><a class="text-link" href="/trayectoria">Conocer mi trayectoria</a></div>
-<div><p class="subheading alliance-heading">En alianza con <a class="partner-link" href="https://www.catalytic-a.com/" target="_blank" rel="noopener noreferrer">catalytic-A</a></p><p>Esta edición en Santa Cruz da continuidad a la colaboración entre Luis Albornoz y catalytic-A iniciada en La Paz. La alianza combina herramientas narrativas y escénicas con experiencia en formación y aprendizaje organizacional, para trabajar las presentaciones de cada participante mediante ejercicios y devolución individual.</p><div class="alliance-marks"><img src="https://luisalbornoz-site.vercel.app/bootlab-santacruz/assets/alianza-logos.png" alt="catalytic-A, Fundación Atacamagica e Imaginario" width="488" height="128" loading="lazy" decoding="async"></div></div>
+<div><p class="subheading alliance-heading">En alianza con <a class="partner-link" href="https://www.catalytic-a.com/" target="_blank" rel="noopener noreferrer">catalytic-A</a></p><p>Esta edición en Santa Cruz da continuidad a la colaboración entre Luis Albornoz y catalytic-A iniciada en La Paz. La alianza combina herramientas narrativas y escénicas con experiencia en formación y aprendizaje organizacional, para trabajar las presentaciones de cada participante mediante ejercicios y devolución individual.</p><div class="alliance-marks"><img src="https://luisalbornoz-site.vercel.app/bootlab-santacruz/assets/tres-logotipos-definidos-fundacion.png" alt="catalytic-A, Fundación Atacamagica e Imaginario" width="2048" height="1152" loading="lazy" decoding="async"></div></div>
 </section>
 <section class="section section--tone section--terracotta" id="preinscripcion" aria-labelledby="convocatoria"><div><p class="kicker">Santa Cruz / 25 de noviembre</p><h2 id="convocatoria">La próxima edición</h2><p style="margin-top:24px">Estamos coordinando esta edición junto a catalytic-A. El horario, el lugar y el valor se informarán al abrir la convocatoria.</p></div><div class="registration"><a class="button" href="https://docs.google.com/forms/d/e/1FAIpQLScSTikugOZsR901DbChM9ghMwpnx1nDyFDP56k8UDgApFU0-Q/viewform" aria-label="Abrir formulario de preinscripción">Preinscripción</a></div></section>
 </main>
